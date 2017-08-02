@@ -1,0 +1,37 @@
+Start testing: Aug 01 22:29 CDT
+----------------------------------------------------------
+1/1 Testing: nn_test
+1/1 Test: nn_test
+Command: "/home/jiguangshen/HPC_MachineLearning/bin/neural_net_unittest" "WORKING_DIRECTORY" "/home/jiguangshen/HPC_MachineLearning/src/../bin"
+Directory: /home/jiguangshen/HPC_MachineLearning/src
+"nn_test" start time: Aug 01 22:29 CDT
+Output:
+----------------------------------------------------------
+[==========] Running 4 tests from 2 test cases.
+[----------] Global test environment set-up.
+[----------] 2 tests from neuron
+[ RUN      ] neuron.neuron_ctr
+[       OK ] neuron.neuron_ctr (0 ms)
+[ RUN      ] neuron.neuron_rand
+[       OK ] neuron.neuron_rand (0 ms)
+[----------] 2 tests from neuron (0 ms total)
+
+[----------] 2 tests from layer
+[ RUN      ] layer.layer_ctr
+[       OK ] layer.layer_ctr (0 ms)
+[ RUN      ] layer.layer_cal
+[       OK ] layer.layer_cal (0 ms)
+[----------] 2 tests from layer (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 4 tests from 2 test cases ran. (0 ms total)
+[  PASSED  ] 4 tests.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"nn_test" end time: Aug 01 22:29 CDT
+"nn_test" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Aug 01 22:29 CDT
