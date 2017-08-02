@@ -32,10 +32,10 @@ CMAKE_COMMAND = /usr/local/bin/cmake
 RM = /usr/local/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/jiguangshen/HPC_MachineLearning/src
+CMAKE_SOURCE_DIR = /home/jiguangshen/HPC_MachineLearning/MLcpp/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/jiguangshen/HPC_MachineLearning/src
+CMAKE_BINARY_DIR = /home/jiguangshen/HPC_MachineLearning/MLcpp/src
 
 # Include any dependencies generated for this target.
 include neural_network.unittest/CMakeFiles/neural_net_unittest.dir/depend.make
@@ -48,17 +48,17 @@ include neural_network.unittest/CMakeFiles/neural_net_unittest.dir/flags.make
 
 neural_network.unittest/CMakeFiles/neural_net_unittest.dir/main.cpp.o: neural_network.unittest/CMakeFiles/neural_net_unittest.dir/flags.make
 neural_network.unittest/CMakeFiles/neural_net_unittest.dir/main.cpp.o: neural_network.unittest/main.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/jiguangshen/HPC_MachineLearning/src/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jiguangshen/HPC_MachineLearning/MLcpp/src/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object neural_network.unittest/CMakeFiles/neural_net_unittest.dir/main.cpp.o"
-	cd /home/jiguangshen/HPC_MachineLearning/src/neural_network.unittest && g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/neural_net_unittest.dir/main.cpp.o -c /home/jiguangshen/HPC_MachineLearning/src/neural_network.unittest/main.cpp
+	cd /home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network.unittest && g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/neural_net_unittest.dir/main.cpp.o -c /home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network.unittest/main.cpp
 
 neural_network.unittest/CMakeFiles/neural_net_unittest.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/neural_net_unittest.dir/main.cpp.i"
-	cd /home/jiguangshen/HPC_MachineLearning/src/neural_network.unittest && g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/jiguangshen/HPC_MachineLearning/src/neural_network.unittest/main.cpp > CMakeFiles/neural_net_unittest.dir/main.cpp.i
+	cd /home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network.unittest && g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network.unittest/main.cpp > CMakeFiles/neural_net_unittest.dir/main.cpp.i
 
 neural_network.unittest/CMakeFiles/neural_net_unittest.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/neural_net_unittest.dir/main.cpp.s"
-	cd /home/jiguangshen/HPC_MachineLearning/src/neural_network.unittest && g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/jiguangshen/HPC_MachineLearning/src/neural_network.unittest/main.cpp -o CMakeFiles/neural_net_unittest.dir/main.cpp.s
+	cd /home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network.unittest && g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network.unittest/main.cpp -o CMakeFiles/neural_net_unittest.dir/main.cpp.s
 
 neural_network.unittest/CMakeFiles/neural_net_unittest.dir/main.cpp.o.requires:
 .PHONY : neural_network.unittest/CMakeFiles/neural_net_unittest.dir/main.cpp.o.requires
@@ -72,17 +72,17 @@ neural_network.unittest/CMakeFiles/neural_net_unittest.dir/main.cpp.o.provides.b
 
 neural_network.unittest/CMakeFiles/neural_net_unittest.dir/neuron_test.cpp.o: neural_network.unittest/CMakeFiles/neural_net_unittest.dir/flags.make
 neural_network.unittest/CMakeFiles/neural_net_unittest.dir/neuron_test.cpp.o: neural_network.unittest/neuron_test.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/jiguangshen/HPC_MachineLearning/src/CMakeFiles $(CMAKE_PROGRESS_2)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jiguangshen/HPC_MachineLearning/MLcpp/src/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object neural_network.unittest/CMakeFiles/neural_net_unittest.dir/neuron_test.cpp.o"
-	cd /home/jiguangshen/HPC_MachineLearning/src/neural_network.unittest && g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/neural_net_unittest.dir/neuron_test.cpp.o -c /home/jiguangshen/HPC_MachineLearning/src/neural_network.unittest/neuron_test.cpp
+	cd /home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network.unittest && g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/neural_net_unittest.dir/neuron_test.cpp.o -c /home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network.unittest/neuron_test.cpp
 
 neural_network.unittest/CMakeFiles/neural_net_unittest.dir/neuron_test.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/neural_net_unittest.dir/neuron_test.cpp.i"
-	cd /home/jiguangshen/HPC_MachineLearning/src/neural_network.unittest && g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/jiguangshen/HPC_MachineLearning/src/neural_network.unittest/neuron_test.cpp > CMakeFiles/neural_net_unittest.dir/neuron_test.cpp.i
+	cd /home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network.unittest && g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network.unittest/neuron_test.cpp > CMakeFiles/neural_net_unittest.dir/neuron_test.cpp.i
 
 neural_network.unittest/CMakeFiles/neural_net_unittest.dir/neuron_test.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/neural_net_unittest.dir/neuron_test.cpp.s"
-	cd /home/jiguangshen/HPC_MachineLearning/src/neural_network.unittest && g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/jiguangshen/HPC_MachineLearning/src/neural_network.unittest/neuron_test.cpp -o CMakeFiles/neural_net_unittest.dir/neuron_test.cpp.s
+	cd /home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network.unittest && g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network.unittest/neuron_test.cpp -o CMakeFiles/neural_net_unittest.dir/neuron_test.cpp.s
 
 neural_network.unittest/CMakeFiles/neural_net_unittest.dir/neuron_test.cpp.o.requires:
 .PHONY : neural_network.unittest/CMakeFiles/neural_net_unittest.dir/neuron_test.cpp.o.requires
@@ -96,17 +96,17 @@ neural_network.unittest/CMakeFiles/neural_net_unittest.dir/neuron_test.cpp.o.pro
 
 neural_network.unittest/CMakeFiles/neural_net_unittest.dir/layer_test.cpp.o: neural_network.unittest/CMakeFiles/neural_net_unittest.dir/flags.make
 neural_network.unittest/CMakeFiles/neural_net_unittest.dir/layer_test.cpp.o: neural_network.unittest/layer_test.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/jiguangshen/HPC_MachineLearning/src/CMakeFiles $(CMAKE_PROGRESS_3)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jiguangshen/HPC_MachineLearning/MLcpp/src/CMakeFiles $(CMAKE_PROGRESS_3)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object neural_network.unittest/CMakeFiles/neural_net_unittest.dir/layer_test.cpp.o"
-	cd /home/jiguangshen/HPC_MachineLearning/src/neural_network.unittest && g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/neural_net_unittest.dir/layer_test.cpp.o -c /home/jiguangshen/HPC_MachineLearning/src/neural_network.unittest/layer_test.cpp
+	cd /home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network.unittest && g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/neural_net_unittest.dir/layer_test.cpp.o -c /home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network.unittest/layer_test.cpp
 
 neural_network.unittest/CMakeFiles/neural_net_unittest.dir/layer_test.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/neural_net_unittest.dir/layer_test.cpp.i"
-	cd /home/jiguangshen/HPC_MachineLearning/src/neural_network.unittest && g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/jiguangshen/HPC_MachineLearning/src/neural_network.unittest/layer_test.cpp > CMakeFiles/neural_net_unittest.dir/layer_test.cpp.i
+	cd /home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network.unittest && g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network.unittest/layer_test.cpp > CMakeFiles/neural_net_unittest.dir/layer_test.cpp.i
 
 neural_network.unittest/CMakeFiles/neural_net_unittest.dir/layer_test.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/neural_net_unittest.dir/layer_test.cpp.s"
-	cd /home/jiguangshen/HPC_MachineLearning/src/neural_network.unittest && g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/jiguangshen/HPC_MachineLearning/src/neural_network.unittest/layer_test.cpp -o CMakeFiles/neural_net_unittest.dir/layer_test.cpp.s
+	cd /home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network.unittest && g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network.unittest/layer_test.cpp -o CMakeFiles/neural_net_unittest.dir/layer_test.cpp.s
 
 neural_network.unittest/CMakeFiles/neural_net_unittest.dir/layer_test.cpp.o.requires:
 .PHONY : neural_network.unittest/CMakeFiles/neural_net_unittest.dir/layer_test.cpp.o.requires
@@ -118,40 +118,67 @@ neural_network.unittest/CMakeFiles/neural_net_unittest.dir/layer_test.cpp.o.prov
 neural_network.unittest/CMakeFiles/neural_net_unittest.dir/layer_test.cpp.o.provides.build: neural_network.unittest/CMakeFiles/neural_net_unittest.dir/layer_test.cpp.o
 .PHONY : neural_network.unittest/CMakeFiles/neural_net_unittest.dir/layer_test.cpp.o.provides.build
 
+neural_network.unittest/CMakeFiles/neural_net_unittest.dir/nnet_test.cpp.o: neural_network.unittest/CMakeFiles/neural_net_unittest.dir/flags.make
+neural_network.unittest/CMakeFiles/neural_net_unittest.dir/nnet_test.cpp.o: neural_network.unittest/nnet_test.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jiguangshen/HPC_MachineLearning/MLcpp/src/CMakeFiles $(CMAKE_PROGRESS_4)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object neural_network.unittest/CMakeFiles/neural_net_unittest.dir/nnet_test.cpp.o"
+	cd /home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network.unittest && g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/neural_net_unittest.dir/nnet_test.cpp.o -c /home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network.unittest/nnet_test.cpp
+
+neural_network.unittest/CMakeFiles/neural_net_unittest.dir/nnet_test.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/neural_net_unittest.dir/nnet_test.cpp.i"
+	cd /home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network.unittest && g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network.unittest/nnet_test.cpp > CMakeFiles/neural_net_unittest.dir/nnet_test.cpp.i
+
+neural_network.unittest/CMakeFiles/neural_net_unittest.dir/nnet_test.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/neural_net_unittest.dir/nnet_test.cpp.s"
+	cd /home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network.unittest && g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network.unittest/nnet_test.cpp -o CMakeFiles/neural_net_unittest.dir/nnet_test.cpp.s
+
+neural_network.unittest/CMakeFiles/neural_net_unittest.dir/nnet_test.cpp.o.requires:
+.PHONY : neural_network.unittest/CMakeFiles/neural_net_unittest.dir/nnet_test.cpp.o.requires
+
+neural_network.unittest/CMakeFiles/neural_net_unittest.dir/nnet_test.cpp.o.provides: neural_network.unittest/CMakeFiles/neural_net_unittest.dir/nnet_test.cpp.o.requires
+	$(MAKE) -f neural_network.unittest/CMakeFiles/neural_net_unittest.dir/build.make neural_network.unittest/CMakeFiles/neural_net_unittest.dir/nnet_test.cpp.o.provides.build
+.PHONY : neural_network.unittest/CMakeFiles/neural_net_unittest.dir/nnet_test.cpp.o.provides
+
+neural_network.unittest/CMakeFiles/neural_net_unittest.dir/nnet_test.cpp.o.provides.build: neural_network.unittest/CMakeFiles/neural_net_unittest.dir/nnet_test.cpp.o
+.PHONY : neural_network.unittest/CMakeFiles/neural_net_unittest.dir/nnet_test.cpp.o.provides.build
+
 # Object files for target neural_net_unittest
 neural_net_unittest_OBJECTS = \
 "CMakeFiles/neural_net_unittest.dir/main.cpp.o" \
 "CMakeFiles/neural_net_unittest.dir/neuron_test.cpp.o" \
-"CMakeFiles/neural_net_unittest.dir/layer_test.cpp.o"
+"CMakeFiles/neural_net_unittest.dir/layer_test.cpp.o" \
+"CMakeFiles/neural_net_unittest.dir/nnet_test.cpp.o"
 
 # External object files for target neural_net_unittest
 neural_net_unittest_EXTERNAL_OBJECTS =
 
-/home/jiguangshen/HPC_MachineLearning/bin/neural_net_unittest: neural_network.unittest/CMakeFiles/neural_net_unittest.dir/main.cpp.o
-/home/jiguangshen/HPC_MachineLearning/bin/neural_net_unittest: neural_network.unittest/CMakeFiles/neural_net_unittest.dir/neuron_test.cpp.o
-/home/jiguangshen/HPC_MachineLearning/bin/neural_net_unittest: neural_network.unittest/CMakeFiles/neural_net_unittest.dir/layer_test.cpp.o
-/home/jiguangshen/HPC_MachineLearning/bin/neural_net_unittest: ../lib/libneural_net.a
-/home/jiguangshen/HPC_MachineLearning/bin/neural_net_unittest: /home/jiguangshen/opt/thirdparty/googletest/1.8.0/lib/libgtest_main.a
-/home/jiguangshen/HPC_MachineLearning/bin/neural_net_unittest: /home/jiguangshen/opt/thirdparty/googletest/1.8.0/lib/libgtest.a
-/home/jiguangshen/HPC_MachineLearning/bin/neural_net_unittest: neural_network.unittest/CMakeFiles/neural_net_unittest.dir/build.make
-/home/jiguangshen/HPC_MachineLearning/bin/neural_net_unittest: neural_network.unittest/CMakeFiles/neural_net_unittest.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable /home/jiguangshen/HPC_MachineLearning/bin/neural_net_unittest"
-	cd /home/jiguangshen/HPC_MachineLearning/src/neural_network.unittest && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/neural_net_unittest.dir/link.txt --verbose=$(VERBOSE)
+/home/jiguangshen/HPC_MachineLearning/MLcpp/bin/neural_net_unittest: neural_network.unittest/CMakeFiles/neural_net_unittest.dir/main.cpp.o
+/home/jiguangshen/HPC_MachineLearning/MLcpp/bin/neural_net_unittest: neural_network.unittest/CMakeFiles/neural_net_unittest.dir/neuron_test.cpp.o
+/home/jiguangshen/HPC_MachineLearning/MLcpp/bin/neural_net_unittest: neural_network.unittest/CMakeFiles/neural_net_unittest.dir/layer_test.cpp.o
+/home/jiguangshen/HPC_MachineLearning/MLcpp/bin/neural_net_unittest: neural_network.unittest/CMakeFiles/neural_net_unittest.dir/nnet_test.cpp.o
+/home/jiguangshen/HPC_MachineLearning/MLcpp/bin/neural_net_unittest: ../lib/libneural_net.a
+/home/jiguangshen/HPC_MachineLearning/MLcpp/bin/neural_net_unittest: /home/jiguangshen/opt/thirdparty/googletest/1.8.0/lib/libgtest_main.a
+/home/jiguangshen/HPC_MachineLearning/MLcpp/bin/neural_net_unittest: /home/jiguangshen/opt/thirdparty/googletest/1.8.0/lib/libgtest.a
+/home/jiguangshen/HPC_MachineLearning/MLcpp/bin/neural_net_unittest: neural_network.unittest/CMakeFiles/neural_net_unittest.dir/build.make
+/home/jiguangshen/HPC_MachineLearning/MLcpp/bin/neural_net_unittest: neural_network.unittest/CMakeFiles/neural_net_unittest.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable /home/jiguangshen/HPC_MachineLearning/MLcpp/bin/neural_net_unittest"
+	cd /home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network.unittest && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/neural_net_unittest.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-neural_network.unittest/CMakeFiles/neural_net_unittest.dir/build: /home/jiguangshen/HPC_MachineLearning/bin/neural_net_unittest
+neural_network.unittest/CMakeFiles/neural_net_unittest.dir/build: /home/jiguangshen/HPC_MachineLearning/MLcpp/bin/neural_net_unittest
 .PHONY : neural_network.unittest/CMakeFiles/neural_net_unittest.dir/build
 
 neural_network.unittest/CMakeFiles/neural_net_unittest.dir/requires: neural_network.unittest/CMakeFiles/neural_net_unittest.dir/main.cpp.o.requires
 neural_network.unittest/CMakeFiles/neural_net_unittest.dir/requires: neural_network.unittest/CMakeFiles/neural_net_unittest.dir/neuron_test.cpp.o.requires
 neural_network.unittest/CMakeFiles/neural_net_unittest.dir/requires: neural_network.unittest/CMakeFiles/neural_net_unittest.dir/layer_test.cpp.o.requires
+neural_network.unittest/CMakeFiles/neural_net_unittest.dir/requires: neural_network.unittest/CMakeFiles/neural_net_unittest.dir/nnet_test.cpp.o.requires
 .PHONY : neural_network.unittest/CMakeFiles/neural_net_unittest.dir/requires
 
 neural_network.unittest/CMakeFiles/neural_net_unittest.dir/clean:
-	cd /home/jiguangshen/HPC_MachineLearning/src/neural_network.unittest && $(CMAKE_COMMAND) -P CMakeFiles/neural_net_unittest.dir/cmake_clean.cmake
+	cd /home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network.unittest && $(CMAKE_COMMAND) -P CMakeFiles/neural_net_unittest.dir/cmake_clean.cmake
 .PHONY : neural_network.unittest/CMakeFiles/neural_net_unittest.dir/clean
 
 neural_network.unittest/CMakeFiles/neural_net_unittest.dir/depend:
-	cd /home/jiguangshen/HPC_MachineLearning/src && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jiguangshen/HPC_MachineLearning/src /home/jiguangshen/HPC_MachineLearning/src/neural_network.unittest /home/jiguangshen/HPC_MachineLearning/src /home/jiguangshen/HPC_MachineLearning/src/neural_network.unittest /home/jiguangshen/HPC_MachineLearning/src/neural_network.unittest/CMakeFiles/neural_net_unittest.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/jiguangshen/HPC_MachineLearning/MLcpp/src && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jiguangshen/HPC_MachineLearning/MLcpp/src /home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network.unittest /home/jiguangshen/HPC_MachineLearning/MLcpp/src /home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network.unittest /home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network.unittest/CMakeFiles/neural_net_unittest.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : neural_network.unittest/CMakeFiles/neural_net_unittest.dir/depend
 

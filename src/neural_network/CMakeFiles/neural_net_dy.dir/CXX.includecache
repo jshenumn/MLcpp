@@ -6,49 +6,49 @@
 
 #IncludeRegexTransform: 
 
-/home/jiguangshen/HPC_MachineLearning/src/neural_network/layer.cpp
+/home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network/layer.cpp
 pch.h
-/home/jiguangshen/HPC_MachineLearning/src/neural_network/pch.h
+/home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network/pch.h
 math.h
-/home/jiguangshen/HPC_MachineLearning/src/neural_network/math.h
+/home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network/math.h
 layer.h
-/home/jiguangshen/HPC_MachineLearning/src/neural_network/layer.h
+/home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network/layer.h
 iostream
 -
 
-/home/jiguangshen/HPC_MachineLearning/src/neural_network/layer.h
+/home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network/layer.h
 neuron.h
-/home/jiguangshen/HPC_MachineLearning/src/neural_network/neuron.h
+/home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network/neuron.h
 
-/home/jiguangshen/HPC_MachineLearning/src/neural_network/neuron.cpp
+/home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network/neuron.cpp
 pch.h
-/home/jiguangshen/HPC_MachineLearning/src/neural_network/pch.h
+/home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network/pch.h
 neuron.h
-/home/jiguangshen/HPC_MachineLearning/src/neural_network/neuron.h
+/home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network/neuron.h
 boost/random.hpp
-/home/jiguangshen/HPC_MachineLearning/src/neural_network/boost/random.hpp
+/home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network/boost/random.hpp
 boost/random/uniform_real.hpp
-/home/jiguangshen/HPC_MachineLearning/src/neural_network/boost/random/uniform_real.hpp
+/home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network/boost/random/uniform_real.hpp
 boost/random/variate_generator.hpp
-/home/jiguangshen/HPC_MachineLearning/src/neural_network/boost/random/variate_generator.hpp
+/home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network/boost/random/variate_generator.hpp
 
-/home/jiguangshen/HPC_MachineLearning/src/neural_network/neuron.h
+/home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network/neuron.h
 
-/home/jiguangshen/HPC_MachineLearning/src/neural_network/nnet.cpp
+/home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network/nnet.cpp
 pch.h
-/home/jiguangshen/HPC_MachineLearning/src/neural_network/pch.h
+/home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network/pch.h
 nnet.h
-/home/jiguangshen/HPC_MachineLearning/src/neural_network/nnet.h
+/home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network/nnet.h
 
-/home/jiguangshen/HPC_MachineLearning/src/neural_network/nnet.h
+/home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network/nnet.h
 layer.h
-/home/jiguangshen/HPC_MachineLearning/src/neural_network/layer.h
+/home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network/layer.h
 
-/home/jiguangshen/HPC_MachineLearning/src/neural_network/pch.cpp
+/home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network/pch.cpp
 pch.h
-/home/jiguangshen/HPC_MachineLearning/src/neural_network/pch.h
+/home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network/pch.h
 
-/home/jiguangshen/HPC_MachineLearning/src/neural_network/pch.h
+/home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network/pch.h
 vector
 -
 algorithm

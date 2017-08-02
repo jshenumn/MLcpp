@@ -1,4 +1,4 @@
-# Install script for directory: /home/jiguangshen/HPC_MachineLearning/src/neural_network.unittest
+# Install script for directory: /home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network.unittest
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)

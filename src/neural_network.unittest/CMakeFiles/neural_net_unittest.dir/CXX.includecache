@@ -6,31 +6,41 @@
 
 #IncludeRegexTransform: 
 
-/home/jiguangshen/HPC_MachineLearning/src/neural_network.unittest/../neural_network/layer.h
+/home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network.unittest/../neural_network/layer.h
 neuron.h
-/home/jiguangshen/HPC_MachineLearning/src/neural_network.unittest/../neural_network/neuron.h
+/home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network.unittest/../neural_network/neuron.h
 
-/home/jiguangshen/HPC_MachineLearning/src/neural_network.unittest/../neural_network/neuron.h
+/home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network.unittest/../neural_network/neuron.h
 
-/home/jiguangshen/HPC_MachineLearning/src/neural_network.unittest/layer_test.cpp
+/home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network.unittest/../neural_network/nnet.h
+layer.h
+/home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network.unittest/../neural_network/layer.h
+
+/home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network.unittest/layer_test.cpp
 pch.h
-/home/jiguangshen/HPC_MachineLearning/src/neural_network.unittest/pch.h
+/home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network.unittest/pch.h
 ../neural_network/layer.h
-/home/jiguangshen/HPC_MachineLearning/src/neural_network.unittest/../neural_network/layer.h
+/home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network.unittest/../neural_network/layer.h
 
-/home/jiguangshen/HPC_MachineLearning/src/neural_network.unittest/main.cpp
+/home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network.unittest/main.cpp
 pch.h
-/home/jiguangshen/HPC_MachineLearning/src/neural_network.unittest/pch.h
+/home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network.unittest/pch.h
 
-/home/jiguangshen/HPC_MachineLearning/src/neural_network.unittest/neuron_test.cpp
+/home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network.unittest/neuron_test.cpp
 pch.h
-/home/jiguangshen/HPC_MachineLearning/src/neural_network.unittest/pch.h
+/home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network.unittest/pch.h
 ../neural_network/neuron.h
-/home/jiguangshen/HPC_MachineLearning/src/neural_network.unittest/../neural_network/neuron.h
+/home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network.unittest/../neural_network/neuron.h
 
-/home/jiguangshen/HPC_MachineLearning/src/neural_network.unittest/pch.h
+/home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network.unittest/nnet_test.cpp
+pch.h
+/home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network.unittest/pch.h
+../neural_network/nnet.h
+/home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network.unittest/../neural_network/nnet.h
+
+/home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network.unittest/pch.h
 gtest/gtest.h
-/home/jiguangshen/HPC_MachineLearning/src/neural_network.unittest/gtest/gtest.h
+/home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network.unittest/gtest/gtest.h
 algorithm
 -
 

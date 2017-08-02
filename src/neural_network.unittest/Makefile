@@ -36,10 +36,10 @@ CMAKE_COMMAND = /usr/local/bin/cmake
 RM = /usr/local/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/jiguangshen/HPC_MachineLearning/src
+CMAKE_SOURCE_DIR = /home/jiguangshen/HPC_MachineLearning/MLcpp/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/jiguangshen/HPC_MachineLearning/src
+CMAKE_BINARY_DIR = /home/jiguangshen/HPC_MachineLearning/MLcpp/src
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -76,14 +76,14 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/jiguangshen/HPC_MachineLearning/src && $(CMAKE_COMMAND) -E cmake_progress_start /home/jiguangshen/HPC_MachineLearning/src/CMakeFiles /home/jiguangshen/HPC_MachineLearning/src/neural_network.unittest/CMakeFiles/progress.marks
-	cd /home/jiguangshen/HPC_MachineLearning/src && $(MAKE) -f CMakeFiles/Makefile2 neural_network.unittest/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jiguangshen/HPC_MachineLearning/src/CMakeFiles 0
+	cd /home/jiguangshen/HPC_MachineLearning/MLcpp/src && $(CMAKE_COMMAND) -E cmake_progress_start /home/jiguangshen/HPC_MachineLearning/MLcpp/src/CMakeFiles /home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network.unittest/CMakeFiles/progress.marks
+	cd /home/jiguangshen/HPC_MachineLearning/MLcpp/src && $(MAKE) -f CMakeFiles/Makefile2 neural_network.unittest/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jiguangshen/HPC_MachineLearning/MLcpp/src/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/jiguangshen/HPC_MachineLearning/src && $(MAKE) -f CMakeFiles/Makefile2 neural_network.unittest/clean
+	cd /home/jiguangshen/HPC_MachineLearning/MLcpp/src && $(MAKE) -f CMakeFiles/Makefile2 neural_network.unittest/clean
 .PHONY : clean
 
 # The main clean target
@@ -92,22 +92,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/jiguangshen/HPC_MachineLearning/src && $(MAKE) -f CMakeFiles/Makefile2 neural_network.unittest/preinstall
+	cd /home/jiguangshen/HPC_MachineLearning/MLcpp/src && $(MAKE) -f CMakeFiles/Makefile2 neural_network.unittest/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/jiguangshen/HPC_MachineLearning/src && $(MAKE) -f CMakeFiles/Makefile2 neural_network.unittest/preinstall
+	cd /home/jiguangshen/HPC_MachineLearning/MLcpp/src && $(MAKE) -f CMakeFiles/Makefile2 neural_network.unittest/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/jiguangshen/HPC_MachineLearning/src && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/jiguangshen/HPC_MachineLearning/MLcpp/src && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 neural_network.unittest/CMakeFiles/neural_net_unittest.dir/rule:
-	cd /home/jiguangshen/HPC_MachineLearning/src && $(MAKE) -f CMakeFiles/Makefile2 neural_network.unittest/CMakeFiles/neural_net_unittest.dir/rule
+	cd /home/jiguangshen/HPC_MachineLearning/MLcpp/src && $(MAKE) -f CMakeFiles/Makefile2 neural_network.unittest/CMakeFiles/neural_net_unittest.dir/rule
 .PHONY : neural_network.unittest/CMakeFiles/neural_net_unittest.dir/rule
 
 # Convenience name for target.
@@ -116,7 +116,7 @@ neural_net_unittest: neural_network.unittest/CMakeFiles/neural_net_unittest.dir/
 
 # fast build rule for target.
 neural_net_unittest/fast:
-	cd /home/jiguangshen/HPC_MachineLearning/src && $(MAKE) -f neural_network.unittest/CMakeFiles/neural_net_unittest.dir/build.make neural_network.unittest/CMakeFiles/neural_net_unittest.dir/build
+	cd /home/jiguangshen/HPC_MachineLearning/MLcpp/src && $(MAKE) -f neural_network.unittest/CMakeFiles/neural_net_unittest.dir/build.make neural_network.unittest/CMakeFiles/neural_net_unittest.dir/build
 .PHONY : neural_net_unittest/fast
 
 layer_test.o: layer_test.cpp.o
@@ -124,7 +124,7 @@ layer_test.o: layer_test.cpp.o
 
 # target to build an object file
 layer_test.cpp.o:
-	cd /home/jiguangshen/HPC_MachineLearning/src && $(MAKE) -f neural_network.unittest/CMakeFiles/neural_net_unittest.dir/build.make neural_network.unittest/CMakeFiles/neural_net_unittest.dir/layer_test.cpp.o
+	cd /home/jiguangshen/HPC_MachineLearning/MLcpp/src && $(MAKE) -f neural_network.unittest/CMakeFiles/neural_net_unittest.dir/build.make neural_network.unittest/CMakeFiles/neural_net_unittest.dir/layer_test.cpp.o
 .PHONY : layer_test.cpp.o
 
 layer_test.i: layer_test.cpp.i
@@ -132,7 +132,7 @@ layer_test.i: layer_test.cpp.i
 
 # target to preprocess a source file
 layer_test.cpp.i:
-	cd /home/jiguangshen/HPC_MachineLearning/src && $(MAKE) -f neural_network.unittest/CMakeFiles/neural_net_unittest.dir/build.make neural_network.unittest/CMakeFiles/neural_net_unittest.dir/layer_test.cpp.i
+	cd /home/jiguangshen/HPC_MachineLearning/MLcpp/src && $(MAKE) -f neural_network.unittest/CMakeFiles/neural_net_unittest.dir/build.make neural_network.unittest/CMakeFiles/neural_net_unittest.dir/layer_test.cpp.i
 .PHONY : layer_test.cpp.i
 
 layer_test.s: layer_test.cpp.s
@@ -140,7 +140,7 @@ layer_test.s: layer_test.cpp.s
 
 # target to generate assembly for a file
 layer_test.cpp.s:
-	cd /home/jiguangshen/HPC_MachineLearning/src && $(MAKE) -f neural_network.unittest/CMakeFiles/neural_net_unittest.dir/build.make neural_network.unittest/CMakeFiles/neural_net_unittest.dir/layer_test.cpp.s
+	cd /home/jiguangshen/HPC_MachineLearning/MLcpp/src && $(MAKE) -f neural_network.unittest/CMakeFiles/neural_net_unittest.dir/build.make neural_network.unittest/CMakeFiles/neural_net_unittest.dir/layer_test.cpp.s
 .PHONY : layer_test.cpp.s
 
 main.o: main.cpp.o
@@ -148,7 +148,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	cd /home/jiguangshen/HPC_MachineLearning/src && $(MAKE) -f neural_network.unittest/CMakeFiles/neural_net_unittest.dir/build.make neural_network.unittest/CMakeFiles/neural_net_unittest.dir/main.cpp.o
+	cd /home/jiguangshen/HPC_MachineLearning/MLcpp/src && $(MAKE) -f neural_network.unittest/CMakeFiles/neural_net_unittest.dir/build.make neural_network.unittest/CMakeFiles/neural_net_unittest.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -156,7 +156,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	cd /home/jiguangshen/HPC_MachineLearning/src && $(MAKE) -f neural_network.unittest/CMakeFiles/neural_net_unittest.dir/build.make neural_network.unittest/CMakeFiles/neural_net_unittest.dir/main.cpp.i
+	cd /home/jiguangshen/HPC_MachineLearning/MLcpp/src && $(MAKE) -f neural_network.unittest/CMakeFiles/neural_net_unittest.dir/build.make neural_network.unittest/CMakeFiles/neural_net_unittest.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -164,7 +164,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	cd /home/jiguangshen/HPC_MachineLearning/src && $(MAKE) -f neural_network.unittest/CMakeFiles/neural_net_unittest.dir/build.make neural_network.unittest/CMakeFiles/neural_net_unittest.dir/main.cpp.s
+	cd /home/jiguangshen/HPC_MachineLearning/MLcpp/src && $(MAKE) -f neural_network.unittest/CMakeFiles/neural_net_unittest.dir/build.make neural_network.unittest/CMakeFiles/neural_net_unittest.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 neuron_test.o: neuron_test.cpp.o
@@ -172,7 +172,7 @@ neuron_test.o: neuron_test.cpp.o
 
 # target to build an object file
 neuron_test.cpp.o:
-	cd /home/jiguangshen/HPC_MachineLearning/src && $(MAKE) -f neural_network.unittest/CMakeFiles/neural_net_unittest.dir/build.make neural_network.unittest/CMakeFiles/neural_net_unittest.dir/neuron_test.cpp.o
+	cd /home/jiguangshen/HPC_MachineLearning/MLcpp/src && $(MAKE) -f neural_network.unittest/CMakeFiles/neural_net_unittest.dir/build.make neural_network.unittest/CMakeFiles/neural_net_unittest.dir/neuron_test.cpp.o
 .PHONY : neuron_test.cpp.o
 
 neuron_test.i: neuron_test.cpp.i
@@ -180,7 +180,7 @@ neuron_test.i: neuron_test.cpp.i
 
 # target to preprocess a source file
 neuron_test.cpp.i:
-	cd /home/jiguangshen/HPC_MachineLearning/src && $(MAKE) -f neural_network.unittest/CMakeFiles/neural_net_unittest.dir/build.make neural_network.unittest/CMakeFiles/neural_net_unittest.dir/neuron_test.cpp.i
+	cd /home/jiguangshen/HPC_MachineLearning/MLcpp/src && $(MAKE) -f neural_network.unittest/CMakeFiles/neural_net_unittest.dir/build.make neural_network.unittest/CMakeFiles/neural_net_unittest.dir/neuron_test.cpp.i
 .PHONY : neuron_test.cpp.i
 
 neuron_test.s: neuron_test.cpp.s
@@ -188,8 +188,32 @@ neuron_test.s: neuron_test.cpp.s
 
 # target to generate assembly for a file
 neuron_test.cpp.s:
-	cd /home/jiguangshen/HPC_MachineLearning/src && $(MAKE) -f neural_network.unittest/CMakeFiles/neural_net_unittest.dir/build.make neural_network.unittest/CMakeFiles/neural_net_unittest.dir/neuron_test.cpp.s
+	cd /home/jiguangshen/HPC_MachineLearning/MLcpp/src && $(MAKE) -f neural_network.unittest/CMakeFiles/neural_net_unittest.dir/build.make neural_network.unittest/CMakeFiles/neural_net_unittest.dir/neuron_test.cpp.s
 .PHONY : neuron_test.cpp.s
+
+nnet_test.o: nnet_test.cpp.o
+.PHONY : nnet_test.o
+
+# target to build an object file
+nnet_test.cpp.o:
+	cd /home/jiguangshen/HPC_MachineLearning/MLcpp/src && $(MAKE) -f neural_network.unittest/CMakeFiles/neural_net_unittest.dir/build.make neural_network.unittest/CMakeFiles/neural_net_unittest.dir/nnet_test.cpp.o
+.PHONY : nnet_test.cpp.o
+
+nnet_test.i: nnet_test.cpp.i
+.PHONY : nnet_test.i
+
+# target to preprocess a source file
+nnet_test.cpp.i:
+	cd /home/jiguangshen/HPC_MachineLearning/MLcpp/src && $(MAKE) -f neural_network.unittest/CMakeFiles/neural_net_unittest.dir/build.make neural_network.unittest/CMakeFiles/neural_net_unittest.dir/nnet_test.cpp.i
+.PHONY : nnet_test.cpp.i
+
+nnet_test.s: nnet_test.cpp.s
+.PHONY : nnet_test.s
+
+# target to generate assembly for a file
+nnet_test.cpp.s:
+	cd /home/jiguangshen/HPC_MachineLearning/MLcpp/src && $(MAKE) -f neural_network.unittest/CMakeFiles/neural_net_unittest.dir/build.make neural_network.unittest/CMakeFiles/neural_net_unittest.dir/nnet_test.cpp.s
+.PHONY : nnet_test.cpp.s
 
 # Help Target
 help:
@@ -210,6 +234,9 @@ help:
 	@echo "... neuron_test.o"
 	@echo "... neuron_test.i"
 	@echo "... neuron_test.s"
+	@echo "... nnet_test.o"
+	@echo "... nnet_test.i"
+	@echo "... nnet_test.s"
 .PHONY : help
 
 
@@ -221,6 +248,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/jiguangshen/HPC_MachineLearning/src && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/jiguangshen/HPC_MachineLearning/MLcpp/src && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
