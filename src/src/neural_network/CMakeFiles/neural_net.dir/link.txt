@@ -1,2 +1,0 @@
-/usr/bin/ar cr /home/jiguangshen/HPC_MachineLearning/lib/libneural_net.a  CMakeFiles/neural_net.dir/pch.cpp.o CMakeFiles/neural_net.dir/neuron.cpp.o CMakeFiles/neural_net.dir/layer.cpp.o CMakeFiles/neural_net.dir/nnet.cpp.o
-/usr/bin/ranlib /home/jiguangshen/HPC_MachineLearning/lib/libneural_net.a
