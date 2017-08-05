@@ -137,6 +137,10 @@ void bpnet::getOutput(std::vector<double>& input,std::vector<double>& opt)
     }
 }
 
+
+
+
+
 // =========   SST loss function =========//
 void bpnet_sst::propagate(const std::vector<double>& input)
 {
@@ -244,8 +248,6 @@ double bpnet_sst::train(const std::vector<double>& train_data, const std::vector
 
     return loss/2.0;
 }
-
-
 
 void bpnet_sst::getOutput(std::vector<double>& input,std::vector<double>& opt)
 {
