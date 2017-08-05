@@ -1,11 +1,11 @@
-nn_test 9 3.78091e+37
-nn_test 9 3.78091e+37
-nn_test 9 3.78091e+37
-nn_test 9 3.78091e+37
-nn_test 9 3.78091e+37
-nn_test 9 3.78091e+37
-nn_test 9 3.78091e+37
-nn_test 9 3.78091e+37
-nn_test 9 3.78091e+37
-nn_test 9 3.78091e+37
+nn_test 13 2.61756e+38
+nn_test 13 2.61756e+38
+nn_test 13 2.61756e+38
+nn_test 13 2.61756e+38
+nn_test 13 2.61756e+38
+nn_test 13 2.61756e+38
+nn_test 13 2.61756e+38
+nn_test 13 2.61756e+38
+nn_test 13 2.61756e+38
+nn_test 13 2.61756e+38
 ---

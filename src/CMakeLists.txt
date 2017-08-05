@@ -17,8 +17,8 @@ include_directories(${Boost_INCLUDE_DIRS} ${GTEST_INCLUDE_DIRS})
 
 link_directories(${BOOST_LIBRARY_DIRS} ${GTEST_LIBRARY_DIRS})
 
-set(CMAKE_CXX_COMPILER g++)
-set(CMAKE_CXX_FLAGS "-std=c++11 -lstdc++ -pthread")
+set(CMAKE_CXX_COMPILER g++-4.9)
+set(CMAKE_CXX_FLAGS "-std=c++14 -lstdc++ -pthread")
 set(CMAKE_CXX_FLAGS_DEBUG "-Wall -g")
 set(CMAKE_CXX_FLAGS_RELEASE "-O3")
 

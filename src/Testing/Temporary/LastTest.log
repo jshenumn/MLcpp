@@ -1,20 +1,20 @@
-Start testing: Aug 01 23:29 CDT
+Start testing: Aug 04 17:43 CDT
 ----------------------------------------------------------
 1/1 Testing: nn_test
 1/1 Test: nn_test
 Command: "/home/jiguangshen/HPC_MachineLearning/MLcpp/bin/neural_net_unittest" "WORKING_DIRECTORY" "/home/jiguangshen/HPC_MachineLearning/MLcpp/src/../bin"
 Directory: /home/jiguangshen/HPC_MachineLearning/MLcpp/src
-"nn_test" start time: Aug 01 23:29 CDT
+"nn_test" start time: Aug 04 17:43 CDT
 Output:
 ----------------------------------------------------------
-[==========] Running 5 tests from 3 test cases.
+[==========] Running 7 tests from 3 test cases.
 [----------] Global test environment set-up.
 [----------] 2 tests from neuron
 [ RUN      ] neuron.neuron_ctr
-[       OK ] neuron.neuron_ctr (1 ms)
+[       OK ] neuron.neuron_ctr (0 ms)
 [ RUN      ] neuron.neuron_rand
 [       OK ] neuron.neuron_rand (0 ms)
-[----------] 2 tests from neuron (1 ms total)
+[----------] 2 tests from neuron (0 ms total)
 
 [----------] 2 tests from layer
 [ RUN      ] layer.layer_ctr
@@ -23,20 +23,24 @@ Output:
 [       OK ] layer.layer_cal (0 ms)
 [----------] 2 tests from layer (0 ms total)
 
-[----------] 1 test from nnet
+[----------] 3 tests from nnet
 [ RUN      ] nnet.nnet_ctr
 [       OK ] nnet.nnet_ctr (0 ms)
-[----------] 1 test from nnet (0 ms total)
+[ RUN      ] nnet.nnet_train_XOR
+[       OK ] nnet.nnet_train_XOR (6 ms)
+[ RUN      ] nnet.nnet_train_XOR_MLP
+[       OK ] nnet.nnet_train_XOR_MLP (9 ms)
+[----------] 3 tests from nnet (15 ms total)
 
 [----------] Global test environment tear-down
-[==========] 5 tests from 3 test cases ran. (1 ms total)
-[  PASSED  ] 5 tests.
+[==========] 7 tests from 3 test cases ran. (15 ms total)
+[  PASSED  ] 7 tests.
 <end of output>
-Test time =   0.00 sec
+Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"nn_test" end time: Aug 01 23:29 CDT
+"nn_test" end time: Aug 04 17:43 CDT
 "nn_test" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Aug 01 23:29 CDT
+End testing: Aug 04 17:43 CDT

@@ -50,15 +50,15 @@ neural_network/CMakeFiles/neural_net.dir/pch.cpp.o: neural_network/CMakeFiles/ne
 neural_network/CMakeFiles/neural_net.dir/pch.cpp.o: neural_network/pch.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/jiguangshen/HPC_MachineLearning/MLcpp/src/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object neural_network/CMakeFiles/neural_net.dir/pch.cpp.o"
-	cd /home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network && g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/neural_net.dir/pch.cpp.o -c /home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network/pch.cpp
+	cd /home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network && g++-4.9   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/neural_net.dir/pch.cpp.o -c /home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network/pch.cpp
 
 neural_network/CMakeFiles/neural_net.dir/pch.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/neural_net.dir/pch.cpp.i"
-	cd /home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network && g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network/pch.cpp > CMakeFiles/neural_net.dir/pch.cpp.i
+	cd /home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network && g++-4.9  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network/pch.cpp > CMakeFiles/neural_net.dir/pch.cpp.i
 
 neural_network/CMakeFiles/neural_net.dir/pch.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/neural_net.dir/pch.cpp.s"
-	cd /home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network && g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network/pch.cpp -o CMakeFiles/neural_net.dir/pch.cpp.s
+	cd /home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network && g++-4.9  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network/pch.cpp -o CMakeFiles/neural_net.dir/pch.cpp.s
 
 neural_network/CMakeFiles/neural_net.dir/pch.cpp.o.requires:
 .PHONY : neural_network/CMakeFiles/neural_net.dir/pch.cpp.o.requires
@@ -74,15 +74,15 @@ neural_network/CMakeFiles/neural_net.dir/neuron.cpp.o: neural_network/CMakeFiles
 neural_network/CMakeFiles/neural_net.dir/neuron.cpp.o: neural_network/neuron.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/jiguangshen/HPC_MachineLearning/MLcpp/src/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object neural_network/CMakeFiles/neural_net.dir/neuron.cpp.o"
-	cd /home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network && g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/neural_net.dir/neuron.cpp.o -c /home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network/neuron.cpp
+	cd /home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network && g++-4.9   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/neural_net.dir/neuron.cpp.o -c /home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network/neuron.cpp
 
 neural_network/CMakeFiles/neural_net.dir/neuron.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/neural_net.dir/neuron.cpp.i"
-	cd /home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network && g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network/neuron.cpp > CMakeFiles/neural_net.dir/neuron.cpp.i
+	cd /home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network && g++-4.9  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network/neuron.cpp > CMakeFiles/neural_net.dir/neuron.cpp.i
 
 neural_network/CMakeFiles/neural_net.dir/neuron.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/neural_net.dir/neuron.cpp.s"
-	cd /home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network && g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network/neuron.cpp -o CMakeFiles/neural_net.dir/neuron.cpp.s
+	cd /home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network && g++-4.9  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network/neuron.cpp -o CMakeFiles/neural_net.dir/neuron.cpp.s
 
 neural_network/CMakeFiles/neural_net.dir/neuron.cpp.o.requires:
 .PHONY : neural_network/CMakeFiles/neural_net.dir/neuron.cpp.o.requires
@@ -98,15 +98,15 @@ neural_network/CMakeFiles/neural_net.dir/layer.cpp.o: neural_network/CMakeFiles/
 neural_network/CMakeFiles/neural_net.dir/layer.cpp.o: neural_network/layer.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/jiguangshen/HPC_MachineLearning/MLcpp/src/CMakeFiles $(CMAKE_PROGRESS_3)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object neural_network/CMakeFiles/neural_net.dir/layer.cpp.o"
-	cd /home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network && g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/neural_net.dir/layer.cpp.o -c /home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network/layer.cpp
+	cd /home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network && g++-4.9   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/neural_net.dir/layer.cpp.o -c /home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network/layer.cpp
 
 neural_network/CMakeFiles/neural_net.dir/layer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/neural_net.dir/layer.cpp.i"
-	cd /home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network && g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network/layer.cpp > CMakeFiles/neural_net.dir/layer.cpp.i
+	cd /home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network && g++-4.9  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network/layer.cpp > CMakeFiles/neural_net.dir/layer.cpp.i
 
 neural_network/CMakeFiles/neural_net.dir/layer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/neural_net.dir/layer.cpp.s"
-	cd /home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network && g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network/layer.cpp -o CMakeFiles/neural_net.dir/layer.cpp.s
+	cd /home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network && g++-4.9  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network/layer.cpp -o CMakeFiles/neural_net.dir/layer.cpp.s
 
 neural_network/CMakeFiles/neural_net.dir/layer.cpp.o.requires:
 .PHONY : neural_network/CMakeFiles/neural_net.dir/layer.cpp.o.requires
@@ -122,15 +122,15 @@ neural_network/CMakeFiles/neural_net.dir/nnet.cpp.o: neural_network/CMakeFiles/n
 neural_network/CMakeFiles/neural_net.dir/nnet.cpp.o: neural_network/nnet.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/jiguangshen/HPC_MachineLearning/MLcpp/src/CMakeFiles $(CMAKE_PROGRESS_4)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object neural_network/CMakeFiles/neural_net.dir/nnet.cpp.o"
-	cd /home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network && g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/neural_net.dir/nnet.cpp.o -c /home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network/nnet.cpp
+	cd /home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network && g++-4.9   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/neural_net.dir/nnet.cpp.o -c /home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network/nnet.cpp
 
 neural_network/CMakeFiles/neural_net.dir/nnet.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/neural_net.dir/nnet.cpp.i"
-	cd /home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network && g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network/nnet.cpp > CMakeFiles/neural_net.dir/nnet.cpp.i
+	cd /home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network && g++-4.9  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network/nnet.cpp > CMakeFiles/neural_net.dir/nnet.cpp.i
 
 neural_network/CMakeFiles/neural_net.dir/nnet.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/neural_net.dir/nnet.cpp.s"
-	cd /home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network && g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network/nnet.cpp -o CMakeFiles/neural_net.dir/nnet.cpp.s
+	cd /home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network && g++-4.9  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network/nnet.cpp -o CMakeFiles/neural_net.dir/nnet.cpp.s
 
 neural_network/CMakeFiles/neural_net.dir/nnet.cpp.o.requires:
 .PHONY : neural_network/CMakeFiles/neural_net.dir/nnet.cpp.o.requires
