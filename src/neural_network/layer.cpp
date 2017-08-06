@@ -32,8 +32,8 @@ void layer_sigmoid::calculate()
        {
           sum += neurons[i].weights[j] * layerinput[j];
        }
-       sum += neurons[i].bias * neurons[i].w_bias;  
-       
+       sum += neurons[i].bias * neurons[i].w_bias;
+
        //sigmoid activation
        neurons[i].output = 1.0/(1.0 + exp(-sum));
     }
@@ -50,10 +50,33 @@ void layer_tanh::calculate()
           sum += neurons[i].weights[j] * layerinput[j];
        }
        sum += neurons[i].bias * neurons[i].w_bias;
-    
+
        //tanh activation
        neurons[i].output = tanh(sum);
-    }  
+    }
 
+}
+
+void layer_softmax::calculate()
+{
+    double tot = 0.0;
+    for(int i = 0; i < n_neuron; ++i)
+    {
+       double sum = 0.0;
+       for(int j = 0; j < n_input; ++j)
+       {
+          sum += neurons[i].weights[j] * layerinput[j];
+       }
+       sum += neurons[i].bias * neurons[i].w_bias;
+
+       //sigmoid activation
+       neurons[i].output = exp(sum);
+       tot += exp(sum);
+    }
+
+    for(int i = 0; i < n_neuron; ++i)
+    {
+       neurons[i].output /= tot;
+    }
 }
 

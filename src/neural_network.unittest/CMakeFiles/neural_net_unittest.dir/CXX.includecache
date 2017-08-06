@@ -6,13 +6,23 @@
 
 #IncludeRegexTransform: 
 
+/home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network.unittest/../neural_network/layer.h
+neuron.h
+/home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network.unittest/../neural_network/neuron.h
+
+/home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network.unittest/../neural_network/neuron.h
+
+/home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network.unittest/../neural_network/nnet.h
+layer.h
+/home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network.unittest/../neural_network/layer.h
+
 /home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network.unittest/nnet_test.cpp
 pch.h
 /home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network.unittest/pch.h
 cmath
 -
-../neural_network/bpnet.h
-/home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network.unittest/../neural_network/bpnet.h
+../neural_network/nnet.h
+/home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network.unittest/../neural_network/nnet.h
 
 /home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network.unittest/pch.h
 gtest/gtest.h

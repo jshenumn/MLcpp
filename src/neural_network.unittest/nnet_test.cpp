@@ -7,7 +7,9 @@ TEST(bpnet, bpnet_ctr)
 {
     std::vector<int> hidden_layers(3,3);
 
-    std::unique_ptr<bpnet> nt = std::make_unique<bpnet_sst>(3,3,2,hidden_layers,3, SIGMOID);
+    std::unique_ptr<bpnet> nt = std::make_unique<bpnet_MSE_sigmoid>(3,3,2,hidden_layers,3);
+
+    nt->create();
 
     int num_hl = nt->get_n_hidden_layers();
 
@@ -41,7 +43,9 @@ TEST(bpnet, bpnet_train_XOR)
     double err;
     double err_old = 1.0;
 
-    std::unique_ptr<bpnet> nt = std::make_unique<bpnet_sst>(2,3,1,hidden_layers,0, SIGMOID);
+    std::unique_ptr<bpnet> nt = std::make_unique<bpnet_MSE_sigmoid>(2,3,1,hidden_layers,0);
+
+    nt->create();
 
     for(int ep = 0; ep < MAX_ITER; ep++)
     {
@@ -94,7 +98,9 @@ TEST(bpnet, bpnet_train_XOR_MLP)
     double err;
     double err_old = 1.0;
 
-    std::unique_ptr<bpnet> nt = std::make_unique<bpnet_sst>(2,2,1,hidden_layers,1, SIGMOID);
+    std::unique_ptr<bpnet> nt = std::make_unique<bpnet_MSE_sigmoid>(2,2,1,hidden_layers,1);
+
+    nt->create();
 
     for(int ep = 0; ep < MAX_ITER; ep++)
     {
@@ -121,8 +127,3 @@ TEST(bpnet, bpnet_train_XOR_MLP)
 
 }
 
-// TEST FOR BULL EYE DATA
-TEST(bpnet, bpnet_train_BULL_EYE)
-{
-
-}

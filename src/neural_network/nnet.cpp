@@ -1,71 +1,33 @@
 #include "pch.h"
 #include "nnet.h"
 
-bpnet::bpnet(int n_input, int n_neurons_in, int n_output, std::vector<int> _hidden_layers, int _n_hidden_layers, enum layer_type layT)
+
+
+//============ BASE CLASS METHODS =======================
+bpnet::bpnet(int _n_input, int _n_neurons_in, int _n_output, std::vector<int> _hidden_layers, int _n_hidden_layers)
 {
+    hidden_layer_layout = _hidden_layers;
 
-    hidden_layers.clear();
+    n_input = _n_input;
+    n_neurons_in = _n_neurons_in;
+    n_output = _n_output;
     n_hidden_layers = _n_hidden_layers;
-
-    switch(layT) //initialize different layer type
-    {
-    case SIGMOID:
-        input_layer  = std::make_unique<layer_sigmoid>();
-        output_layer = std::make_unique<layer_sigmoid>();
-        // hidden layer
-        if(!_hidden_layers.empty() && _n_hidden_layers > 0)
-        {
-            hidden_layers.resize(_n_hidden_layers);
-            for(int i = 0; i < n_hidden_layers; ++i)
-            {
-                hidden_layers[i] = std::make_unique<layer_sigmoid>();
-            }
-        }
-        break;
-    case HYPERTAN:
-        input_layer  = std::make_unique<layer_tanh>();
-        output_layer = std::make_unique<layer_tanh>();
-        // hidden layer
-        if(!_hidden_layers.empty()  && _n_hidden_layers > 0)
-        {
-            hidden_layers.resize(_n_hidden_layers);
-            for(int i = 0; i < n_hidden_layers; ++i)
-            {
-                hidden_layers[i] = std::make_unique<layer_tanh>();
-            }
-        }
-        break;
-    }
-
-
-    //input layer
-    input_layer->create(n_input, n_neurons_in);
-
-    // hidden layer
-    if(!_hidden_layers.empty() && _n_hidden_layers > 0)
-    {
-        for(int i = 0; i < n_hidden_layers; ++i)
-        {
-            if(i == 0)
-            {
-                //first hidden layer take inputs from input layer
-                hidden_layers[i]->create(n_neurons_in, _hidden_layers[i]);
-            }
-            else
-            {
-                hidden_layers[i]->create(_hidden_layers[i-1], _hidden_layers[i]);
-            }
-        }
-
-        //last hidden layer dumps outputs to the output layer
-        output_layer->create(_hidden_layers[n_hidden_layers-1], n_output);
-    }
-    else
-    {
-        output_layer->create(n_neurons_in,n_output);
-    }
-
 }
+
+void bpnet::getOutput(std::vector<double>& input,std::vector<double>& opt)
+{
+    opt.resize(output_layer->n_neuron);
+
+    propagate(input);
+
+    for(int i = 0; i < output_layer->n_neuron; i++)
+    {
+        opt[i] = output_layer->neurons[i].output;
+    }
+}
+
+
+
 
 void bpnet::propagate(const std::vector<double>& input)
 {
@@ -125,35 +87,72 @@ void bpnet::update(int layer_index)
     }
 }
 
-void bpnet::getOutput(std::vector<double>& input,std::vector<double>& opt)
+
+
+
+
+
+
+
+
+
+// =========   MSE loss function with sigmoid activation =========//
+void bpnet_MSE_sigmoid::create()
 {
-    opt.resize(output_layer->n_neuron);
+    input_layer  = std::make_unique<layer_sigmoid>();
+    output_layer = std::make_unique<layer_sigmoid>();
 
-    propagate(input);
-
-    for(int i = 0; i < output_layer->n_neuron; i++)
+    if(!hidden_layer_layout.empty() && n_hidden_layers > 0)
     {
-        opt[i] = output_layer->neurons[i].output;
+        hidden_layers.resize(n_hidden_layers);
+        for(int i = 0; i < n_hidden_layers; ++i)
+        {
+            hidden_layers[i] = std::make_unique<layer_sigmoid>();
+        }
     }
+
+    //input layer
+    input_layer->create(n_input, n_neurons_in);
+
+    // hidden layer
+    if(!hidden_layer_layout.empty() && n_hidden_layers > 0)
+    {
+        for(int i = 0; i < n_hidden_layers; ++i)
+        {
+            if(i == 0)
+            {
+                //first hidden layer take inputs from input layer
+                hidden_layers[i]->create(n_neurons_in, hidden_layer_layout[i]);
+            }
+            else
+            {
+                hidden_layers[i]->create(hidden_layer_layout[i-1], hidden_layer_layout[i]);
+            }
+        }
+
+        //last hidden layer dumps outputs to the output layer
+        output_layer->create(hidden_layer_layout[n_hidden_layers-1], n_output);
+    }
+    else
+    {
+        output_layer->create(n_neurons_in,n_output);
+    }
+
 }
 
 
-
-
-
-// =========   SST loss function =========//
-void bpnet_sst::propagate(const std::vector<double>& input)
+void bpnet_MSE_sigmoid::propagate(const std::vector<double>& input)
 {
     bpnet::propagate(input);
 }
 
 
-void bpnet_sst::update(int layer_index)
+void bpnet_MSE_sigmoid::update(int layer_index)
 {
     bpnet::update(layer_index);
 }
 
-double bpnet_sst::train(const std::vector<double>& train_data, const std::vector<double>& train_class, double learning_rate, double momentum)
+double bpnet_MSE_sigmoid::train(const std::vector<double>& train_data, const std::vector<double>& train_class, double learning_rate, double momentum)
 {
     double loss = 0.0;
     double loc_err = 0.0;
@@ -249,16 +248,167 @@ double bpnet_sst::train(const std::vector<double>& train_data, const std::vector
     return loss/2.0;
 }
 
-void bpnet_sst::getOutput(std::vector<double>& input,std::vector<double>& opt)
+void bpnet_MSE_sigmoid::getOutput(std::vector<double>& input,std::vector<double>& opt)
 {
     bpnet::getOutput(input, opt);
 }
 
 
+//==========  Cross entropy loss function with softmax activation ========//
+void bpnet_crossentropy_softmax::create()
+{
+
+    input_layer  = std::make_unique<layer_sigmoid>();
+    output_layer = std::make_unique<layer_softmax>();
+
+    if(!hidden_layer_layout.empty() && n_hidden_layers > 0)
+    {
+        hidden_layers.resize(n_hidden_layers);
+        for(int i = 0; i < n_hidden_layers; ++i)
+        {
+            hidden_layers[i] = std::make_unique<layer_sigmoid>();
+        }
+    }
+
+    //input layer
+    input_layer->create(n_input, n_neurons_in);
+
+    // hidden layer
+    if(!hidden_layer_layout.empty() && n_hidden_layers > 0)
+    {
+        for(int i = 0; i < n_hidden_layers; ++i)
+        {
+            if(i == 0)
+            {
+                //first hidden layer take inputs from input layer
+                hidden_layers[i]->create(n_neurons_in, hidden_layer_layout[i]);
+            }
+            else
+            {
+                hidden_layers[i]->create(hidden_layer_layout[i-1], hidden_layer_layout[i]);
+            }
+        }
+
+        //last hidden layer dumps outputs to the output layer
+        output_layer->create(hidden_layer_layout[n_hidden_layers-1], n_output);
+    }
+    else
+    {
+        output_layer->create(n_neurons_in,n_output);
+    }
+
+}
+
+void bpnet_crossentropy_softmax::propagate(const std::vector<double>& input)
+{
+    bpnet::propagate(input);
+}
+
+void bpnet_crossentropy_softmax::update(int layer_index)
+{
+    bpnet::update(layer_index);
+}
+
+double bpnet_crossentropy_softmax::train(const std::vector<double>& train_data, const std::vector<double>& train_class, double learning_rate, double momentum)
+{
+    double loss = 0.0;
+    double loc_err = 0.0;
+    double sum = 0.0, csum = 0.0;
+    double delta = 0.0, udelta = 0.0;
+    double output = 0.0;
+
+    // propagate forward the input data
+    propagate(train_data);
+
+    // back propagation from the output layer
+
+    for(int i = 0; i < output_layer->n_neuron; i++)
+    {
+        output = output_layer->neurons[i].output;
+
+        //local error terms w.r.t sst loss function
+        loc_err = (train_class[i] - output) * output * (1.0 - output); // not the update
+        //Cross entropy
+        loss -= (train_class[i] * log(output) + (1.0 - train_class[i]) * log(1.0 - output));
+
+        //update weights
+        for(int j = 0; j < output_layer->n_input; j++)
+        {
+            //get current delta value
+            delta = output_layer->neurons[i].deltas[j]; //d_ij    j-th neuron from previous layer to the i-th neuron of current layer
+            udelta = learning_rate * loc_err * output_layer->layerinput[j]
+                     + delta * momentum;  //update rule with momentum
+            //update weights
+            output_layer->neurons[i].weights[j] += udelta;
+            //record deltas
+            output_layer->neurons[i].deltas[j]  = udelta;
+
+            //also need to track sum of weights dot errors
+            sum += output_layer->neurons[i].weights[j] * loc_err;
+        }
+        // calculate the weight bias
+        output_layer->neurons[i].w_bias += learning_rate * loc_err * output_layer->neurons[i].bias;
+
+    }
+    // now proceed to the hidden layers
+    for(int i = n_hidden_layers - 1; i >= 0; i--)
+    {
+        for(int j = 0; j < hidden_layers[i]->n_neuron; j++ )
+        {
+            output  = hidden_layers[i]->neurons[j].output;
+            // local error by formula where sum is from the next layer
+            loc_err = output * (1.0 - output) * sum;
+            // update neuron weights
+            for(int k = 0; k < hidden_layers[i]->n_input; k++)
+            {
+                delta = hidden_layers[i]->neurons[j].deltas[k];
+                udelta = learning_rate * loc_err * hidden_layers[i]->layerinput[k] + delta * momentum;
+                hidden_layers[i]->neurons[j].weights[k] += udelta;
+                hidden_layers[i]->neurons[j].deltas[k]  =  udelta;
+
+                csum += hidden_layers[i]->neurons[j].weights[k] * loc_err;
+            }
+
+            hidden_layers[i]->neurons[j].w_bias += learning_rate * loc_err * hidden_layers[i]->neurons[j].bias;
+        }
+        sum = csum;
+        csum = 0.0;
+    }
+
+    // go to the first layer
+    for(int i = 0; i < input_layer->n_neuron; i++)
+    {
+        output = input_layer->neurons[i].output;
+
+        //local error terms w.r.t sst loss function
+        loc_err = sum * output * (1.0 - output);
 
 
+        //update weights
+        for(int j = 0; j < input_layer->n_input; j++)
+        {
+            //get current delta value
+            delta = input_layer->neurons[i].deltas[j]; //d_ij    j-th neuron from previous layer to the i-th neuron of current layer
+            udelta = learning_rate * loc_err * input_layer->layerinput[j]
+                     + delta * momentum;  //update rule with momentum
+            //update weights
+            input_layer->neurons[i].weights[j] += udelta;
+            //record deltas
+            input_layer->neurons[i].deltas[j]  = udelta;
 
+        }
+        // calculate the weight bias
+        input_layer->neurons[i].w_bias += learning_rate * loc_err * input_layer->neurons[i].bias;
 
+    }
+
+    return loss/2.0;
+}
+
+void bpnet_crossentropy_softmax::getOutput(std::vector<double>& input,std::vector<double>& opt)
+{
+    bpnet::getOutput(input, opt);
+}
 
 
 

@@ -79,6 +79,9 @@ neural_network.unittest/CMakeFiles/neural_net_unittest.dir/neuron_test.cpp.o: /h
 neural_network.unittest/CMakeFiles/neural_net_unittest.dir/neuron_test.cpp.o: /home/jiguangshen/opt/thirdparty/googletest/1.8.0/include/gtest/internal/gtest-tuple.h
 neural_network.unittest/CMakeFiles/neural_net_unittest.dir/neuron_test.cpp.o: /home/jiguangshen/opt/thirdparty/googletest/1.8.0/include/gtest/internal/gtest-type-util.h
 
+neural_network.unittest/CMakeFiles/neural_net_unittest.dir/nnet_test.cpp.o: neural_network.unittest/../neural_network/layer.h
+neural_network.unittest/CMakeFiles/neural_net_unittest.dir/nnet_test.cpp.o: neural_network.unittest/../neural_network/neuron.h
+neural_network.unittest/CMakeFiles/neural_net_unittest.dir/nnet_test.cpp.o: neural_network.unittest/../neural_network/nnet.h
 neural_network.unittest/CMakeFiles/neural_net_unittest.dir/nnet_test.cpp.o: neural_network.unittest/nnet_test.cpp
 neural_network.unittest/CMakeFiles/neural_net_unittest.dir/nnet_test.cpp.o: neural_network.unittest/pch.h
 neural_network.unittest/CMakeFiles/neural_net_unittest.dir/nnet_test.cpp.o: /home/jiguangshen/opt/thirdparty/googletest/1.8.0/include/gtest/gtest-death-test.h
