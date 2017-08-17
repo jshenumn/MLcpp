@@ -16,11 +16,25 @@ neuron.h
 layer.h
 /home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network.unittest/../neural_network/layer.h
 
+/home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network.unittest/layer_test.cpp
+pch.h
+/home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network.unittest/pch.h
+../neural_network/layer.h
+/home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network.unittest/../neural_network/layer.h
+
+/home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network.unittest/main.cpp
+pch.h
+/home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network.unittest/pch.h
+
+/home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network.unittest/neuron_test.cpp
+pch.h
+/home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network.unittest/pch.h
+../neural_network/neuron.h
+/home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network.unittest/../neural_network/neuron.h
+
 /home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network.unittest/nnet_test.cpp
 pch.h
 /home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network.unittest/pch.h
-cmath
--
 ../neural_network/nnet.h
 /home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network.unittest/../neural_network/nnet.h
 
@@ -31,6 +45,22 @@ algorithm
 -
 memory
 -
+vector
+-
+iostream
+-
+fstream
+-
+sstream
+-
+cmath
+-
+boost/random.hpp
+/home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network.unittest/boost/random.hpp
+boost/random/uniform_real.hpp
+/home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network.unittest/boost/random/uniform_real.hpp
+boost/random/variate_generator.hpp
+/home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network.unittest/boost/random/variate_generator.hpp
 
 /home/jiguangshen/opt/thirdparty/googletest/1.8.0/include/gtest/gtest-death-test.h
 gtest/internal/gtest-death-test-internal.h

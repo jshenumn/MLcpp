@@ -25,7 +25,7 @@ CMAKE_BUILD_TYPE:STRING=
 CMAKE_COLOR_MAKEFILE:BOOL=ON
 
 //CXX compiler.
-CMAKE_CXX_COMPILER:FILEPATH=/usr/bin/c++
+CMAKE_CXX_COMPILER:FILEPATH=/usr/bin/g++-5
 
 //Flags used by the compiler during all build types.
 CMAKE_CXX_FLAGS:STRING=
@@ -154,6 +154,15 @@ GTLIB:FILEPATH=/home/jiguangshen/opt/thirdparty/googletest/1.8.0/lib/libgtest.a
 //Path to a library.
 GTLIBMAIN:FILEPATH=/home/jiguangshen/opt/thirdparty/googletest/1.8.0/lib/libgtest_main.a
 
+//C++ compiler flags for OpenMP parallization
+OpenMP_CXX_FLAGS:STRING=-fopenmp
+
+//C compiler flags for OpenMP parallization
+OpenMP_C_FLAGS:STRING=-fopenmp
+
+//Path to a library.
+PYTHON:FILEPATH=/home/jiguangshen/opt/thirdparty/boost/1.54/lib/libboost_python.so
+
 //Value Computed by CMake
 Project_BINARY_DIR:STATIC=/home/jiguangshen/HPC_MachineLearning/MLcpp/src
 
@@ -168,6 +177,9 @@ neural_net_LIB_DEPENDS:STATIC=general;/home/jiguangshen/opt/thirdparty/boost/1.5
 
 //Dependencies for the target
 neural_net_dy_LIB_DEPENDS:STATIC=general;/home/jiguangshen/opt/thirdparty/boost/1.54/lib/libboost_random.so;
+
+//Dependencies for the target
+pyhello_LIB_DEPENDS:STATIC=general;/home/jiguangshen/opt/thirdparty/boost/1.54/lib/libboost_python.so;
 
 
 ########################
@@ -262,7 +274,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_LOCAL_GENERATORS:INTERNAL=3
+CMAKE_NUMBER_OF_LOCAL_GENERATORS:INTERNAL=4
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -291,4 +303,12 @@ CMAKE_UNAME:INTERNAL=/bin/uname
 CMAKE_USE_RELATIVE_PATHS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
+//Details about finding OpenMP
+FIND_PACKAGE_MESSAGE_DETAILS_OpenMP:INTERNAL=[-fopenmp][-fopenmp][v()]
+//ADVANCED property for variable: OpenMP_CXX_FLAGS
+OpenMP_CXX_FLAGS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: OpenMP_C_FLAGS
+OpenMP_C_FLAGS-ADVANCED:INTERNAL=1
+//Test OpenMP_FLAG_DETECTED
+OpenMP_FLAG_DETECTED:INTERNAL=1
 

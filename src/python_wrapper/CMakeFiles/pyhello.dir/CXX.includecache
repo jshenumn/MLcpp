@@ -1,0 +1,12 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/jiguangshen/HPC_MachineLearning/MLcpp/src/python_wrapper/hello_boost_python.cpp
+boost/python.hpp
+-
+

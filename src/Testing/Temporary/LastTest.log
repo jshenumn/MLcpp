@@ -1,46 +1,76 @@
-Start testing: Aug 04 17:43 CDT
+Start testing: Aug 17 00:30 CDT
 ----------------------------------------------------------
-1/1 Testing: nn_test
-1/1 Test: nn_test
+1/1 Testing: neuron_network_tests
+1/1 Test: neuron_network_tests
 Command: "/home/jiguangshen/HPC_MachineLearning/MLcpp/bin/neural_net_unittest" "WORKING_DIRECTORY" "/home/jiguangshen/HPC_MachineLearning/MLcpp/src/../bin"
 Directory: /home/jiguangshen/HPC_MachineLearning/MLcpp/src
-"nn_test" start time: Aug 04 17:43 CDT
+"neuron_network_tests" start time: Aug 17 00:30 CDT
 Output:
 ----------------------------------------------------------
-[==========] Running 7 tests from 3 test cases.
+[==========] Running 8 tests from 3 test cases.
 [----------] Global test environment set-up.
 [----------] 2 tests from neuron
 [ RUN      ] neuron.neuron_ctr
-[       OK ] neuron.neuron_ctr (0 ms)
+[       OK ] neuron.neuron_ctr (3 ms)
 [ RUN      ] neuron.neuron_rand
-[       OK ] neuron.neuron_rand (0 ms)
-[----------] 2 tests from neuron (0 ms total)
+[       OK ] neuron.neuron_rand (2 ms)
+[----------] 2 tests from neuron (5 ms total)
 
 [----------] 2 tests from layer
 [ RUN      ] layer.layer_ctr
-[       OK ] layer.layer_ctr (0 ms)
+[       OK ] layer.layer_ctr (14 ms)
 [ RUN      ] layer.layer_cal
-[       OK ] layer.layer_cal (0 ms)
-[----------] 2 tests from layer (0 ms total)
+[       OK ] layer.layer_cal (7 ms)
+[----------] 2 tests from layer (22 ms total)
 
-[----------] 3 tests from nnet
-[ RUN      ] nnet.nnet_ctr
-[       OK ] nnet.nnet_ctr (0 ms)
-[ RUN      ] nnet.nnet_train_XOR
-[       OK ] nnet.nnet_train_XOR (6 ms)
-[ RUN      ] nnet.nnet_train_XOR_MLP
-[       OK ] nnet.nnet_train_XOR_MLP (9 ms)
-[----------] 3 tests from nnet (15 ms total)
+[----------] 4 tests from bpnet
+[ RUN      ] bpnet.bpnet_ctr
+================= The architecture for the network =================
+Input  layer size:3
+Hidden layer size:3
+Output layer size:2
+================= The architecture for the network =================
+Input  layer size:3
+Hidden layer size:3
+Output layer size:2
+[       OK ] bpnet.bpnet_ctr (27 ms)
+[ RUN      ] bpnet.bpnet_train_XOR
+================= The architecture for the network =================
+Input  layer size:3
+Hidden layer size:0
+Output layer size:1
+[       OK ] bpnet.bpnet_train_XOR (16 ms)
+[ RUN      ] bpnet.bpnet_train_XOR_MLP
+================= The architecture for the network =================
+Input  layer size:2
+Hidden layer size:1
+Output layer size:1
+[       OK ] bpnet.bpnet_train_XOR_MLP (520 ms)
+[ RUN      ] bpnet.bpnet_train_ABALONE
+Loading the Abalone data....
+  Data loading done, data size is 4177
+  Feature number is 8
+  Training set and testing set split....
+  Training data is: 2767
+  Test data is: 1410
+Training Start....
+================= The architecture for the network =================
+Input  layer size:8
+Hidden layer size:1
+Output layer size:3
+Training done!  Accuracy is 54 % 
+[       OK ] bpnet.bpnet_train_ABALONE (30648 ms)
+[----------] 4 tests from bpnet (31211 ms total)
 
 [----------] Global test environment tear-down
-[==========] 7 tests from 3 test cases ran. (15 ms total)
-[  PASSED  ] 7 tests.
+[==========] 8 tests from 3 test cases ran. (31239 ms total)
+[  PASSED  ] 8 tests.
 <end of output>
-Test time =   0.02 sec
+Test time =  31.24 sec
 ----------------------------------------------------------
 Test Passed.
-"nn_test" end time: Aug 04 17:43 CDT
-"nn_test" time elapsed: 00:00:00
+"neuron_network_tests" end time: Aug 17 00:30 CDT
+"neuron_network_tests" time elapsed: 00:00:31
 ----------------------------------------------------------
 
-End testing: Aug 04 17:43 CDT
+End testing: Aug 17 00:30 CDT

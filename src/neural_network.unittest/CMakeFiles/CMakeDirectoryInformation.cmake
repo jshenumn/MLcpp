@@ -11,6 +11,7 @@ SET(CMAKE_FORCE_UNIX_PATHS 1)
 # The C and CXX include file search paths:
 SET(CMAKE_C_INCLUDE_PATH
   "/home/jiguangshen/opt/thirdparty/googletest/1.8.0/include"
+  "/usr/include/python2.7"
   "neural_network.unittest/../neural_network"
   )
 SET(CMAKE_CXX_INCLUDE_PATH ${CMAKE_C_INCLUDE_PATH})

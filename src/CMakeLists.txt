@@ -13,22 +13,33 @@ set(BOOST_INCLUDE_DIRS "${BOOST_ROOT}/include")
 set(GTEST_INCLUDE_DIRS "${GOOGLE_TEST_ROOT}/include")
 set(GTEST_LIBRARY_DIRS "${GOOGLE_TEST_ROOT}/lib")
 
-include_directories(${Boost_INCLUDE_DIRS} ${GTEST_INCLUDE_DIRS})
+set(PYTHON_INCLUDE_DIRS "/usr/include/python2.7")
+
+include_directories(${Boost_INCLUDE_DIRS} ${GTEST_INCLUDE_DIRS} ${PYTHON_INCLUDE_DIRS})
 
 link_directories(${BOOST_LIBRARY_DIRS} ${GTEST_LIBRARY_DIRS})
 
-set(CMAKE_CXX_COMPILER g++-4.9)
+set(CMAKE_CXX_COMPILER g++-5)
 set(CMAKE_CXX_FLAGS "-std=c++14 -lstdc++ -pthread")
 set(CMAKE_CXX_FLAGS_DEBUG "-Wall -g")
-set(CMAKE_CXX_FLAGS_RELEASE "-O3")
+set(CMAKE_CXX_FLAGS_RELEASE "-Ofast")
+
+find_package(OpenMP)
+if (OPENMP_FOUND)
+    set (CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${OpenMP_C_FLAGS}")
+    set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${OpenMP_CXX_FLAGS}")
+endif()
+
 
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/../bin")
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/../lib")
 set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/../lib")
 
 add_subdirectory(neural_network)
+add_subdirectory(python_wrapper)
+
 add_subdirectory(neural_network.unittest)
 
 enable_testing()
-add_test(NAME nn_test COMMAND neural_net_unittest WORKING_DIRECTORY "${CMAKE_RUNTIME_OUTPUT_DIRECTORY}")
+add_test(NAME neuron_network_tests COMMAND neural_net_unittest WORKING_DIRECTORY "${CMAKE_RUNTIME_OUTPUT_DIRECTORY}")
 

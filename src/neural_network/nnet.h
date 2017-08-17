@@ -57,13 +57,13 @@ public:
 };
 
 // child class, backpropagation foward feed nerual net
-class bpnet_crossentropy_softmax : public bpnet
+class bpnet_CrossEntropy_softmax : public bpnet
 {
 public:
-    bpnet_crossentropy_softmax(int n_input, int n_neurons_in, int n_output, std::vector<int> _hidden_layers, int _n_hidden_layers):bpnet(n_input, n_neurons_in, n_output,
+    bpnet_CrossEntropy_softmax(int n_input, int n_neurons_in, int n_output, std::vector<int> _hidden_layers, int _n_hidden_layers):bpnet(n_input, n_neurons_in, n_output,
                                _hidden_layers, _n_hidden_layers){}
 
-   ~bpnet_crossentropy_softmax(){}
+   ~bpnet_CrossEntropy_softmax(){}
 
     void create();
     void propagate(const std::vector<double>& input);
@@ -78,7 +78,6 @@ public:
     void getOutput(std::vector<double>& input, std::vector<double>& output);
 
 };
-
 
 
 

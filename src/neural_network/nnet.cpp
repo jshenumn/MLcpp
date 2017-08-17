@@ -99,6 +99,11 @@ void bpnet::update(int layer_index)
 // =========   MSE loss function with sigmoid activation =========//
 void bpnet_MSE_sigmoid::create()
 {
+    std::cout << "================= The architecture for the network =================\n";
+    std::cout << "Input  layer size:" <<  n_neurons_in << "\n";
+    std::cout << "Hidden layer size:" <<  n_hidden_layers << "\n";
+    std::cout << "Output layer size:" <<  n_output << "\n";
+
     input_layer  = std::make_unique<layer_sigmoid>();
     output_layer = std::make_unique<layer_sigmoid>();
 
@@ -255,8 +260,12 @@ void bpnet_MSE_sigmoid::getOutput(std::vector<double>& input,std::vector<double>
 
 
 //==========  Cross entropy loss function with softmax activation ========//
-void bpnet_crossentropy_softmax::create()
+void bpnet_CrossEntropy_softmax::create()
 {
+    std::cout << "================= The architecture for the network =================\n";
+    std::cout << "Input  layer size:" <<  n_neurons_in << "\n";
+    std::cout << "Hidden layer size:" <<  n_hidden_layers << "\n";
+    std::cout << "Output layer size:" <<  n_output << "\n";
 
     input_layer  = std::make_unique<layer_sigmoid>();
     output_layer = std::make_unique<layer_softmax>();
@@ -299,17 +308,17 @@ void bpnet_crossentropy_softmax::create()
 
 }
 
-void bpnet_crossentropy_softmax::propagate(const std::vector<double>& input)
+void bpnet_CrossEntropy_softmax::propagate(const std::vector<double>& input)
 {
     bpnet::propagate(input);
 }
 
-void bpnet_crossentropy_softmax::update(int layer_index)
+void bpnet_CrossEntropy_softmax::update(int layer_index)
 {
     bpnet::update(layer_index);
 }
 
-double bpnet_crossentropy_softmax::train(const std::vector<double>& train_data, const std::vector<double>& train_class, double learning_rate, double momentum)
+double bpnet_CrossEntropy_softmax::train(const std::vector<double>& train_data, const std::vector<double>& train_class, double learning_rate, double momentum)
 {
     double loss = 0.0;
     double loc_err = 0.0;
@@ -321,33 +330,31 @@ double bpnet_crossentropy_softmax::train(const std::vector<double>& train_data, 
     propagate(train_data);
 
     // back propagation from the output layer
-
     for(int i = 0; i < output_layer->n_neuron; i++)
     {
         output = output_layer->neurons[i].output;
 
-        //local error terms w.r.t sst loss function
-        loc_err = (train_class[i] - output) * output * (1.0 - output); // not the update
+        //local error terms w.r.t cross entropy loss function
+        loc_err = (output - train_class[i]); // not the update
+        //std::cout << i << "-th neuron" << output << "," << train_class[i] << std::endl;
         //Cross entropy
-        loss -= (train_class[i] * log(output) + (1.0 - train_class[i]) * log(1.0 - output));
+        loss -= train_class[i] * log(output);
 
         //update weights
         for(int j = 0; j < output_layer->n_input; j++)
         {
             //get current delta value
             delta = output_layer->neurons[i].deltas[j]; //d_ij    j-th neuron from previous layer to the i-th neuron of current layer
-            udelta = learning_rate * loc_err * output_layer->layerinput[j]
-                     + delta * momentum;  //update rule with momentum
+            udelta = learning_rate * loc_err * output_layer->layerinput[j] + delta * momentum;  //update rule with momentum
             //update weights
-            output_layer->neurons[i].weights[j] += udelta;
+            output_layer->neurons[i].weights[j] -= udelta;
             //record deltas
             output_layer->neurons[i].deltas[j]  = udelta;
-
             //also need to track sum of weights dot errors
             sum += output_layer->neurons[i].weights[j] * loc_err;
         }
         // calculate the weight bias
-        output_layer->neurons[i].w_bias += learning_rate * loc_err * output_layer->neurons[i].bias;
+        output_layer->neurons[i].w_bias -= learning_rate * loc_err * output_layer->neurons[i].bias;
 
     }
     // now proceed to the hidden layers
@@ -363,13 +370,13 @@ double bpnet_crossentropy_softmax::train(const std::vector<double>& train_data, 
             {
                 delta = hidden_layers[i]->neurons[j].deltas[k];
                 udelta = learning_rate * loc_err * hidden_layers[i]->layerinput[k] + delta * momentum;
-                hidden_layers[i]->neurons[j].weights[k] += udelta;
+                hidden_layers[i]->neurons[j].weights[k] -= udelta;
                 hidden_layers[i]->neurons[j].deltas[k]  =  udelta;
 
                 csum += hidden_layers[i]->neurons[j].weights[k] * loc_err;
             }
 
-            hidden_layers[i]->neurons[j].w_bias += learning_rate * loc_err * hidden_layers[i]->neurons[j].bias;
+            hidden_layers[i]->neurons[j].w_bias -= learning_rate * loc_err * hidden_layers[i]->neurons[j].bias;
         }
         sum = csum;
         csum = 0.0;
@@ -383,29 +390,27 @@ double bpnet_crossentropy_softmax::train(const std::vector<double>& train_data, 
         //local error terms w.r.t sst loss function
         loc_err = sum * output * (1.0 - output);
 
-
         //update weights
         for(int j = 0; j < input_layer->n_input; j++)
         {
             //get current delta value
             delta = input_layer->neurons[i].deltas[j]; //d_ij    j-th neuron from previous layer to the i-th neuron of current layer
-            udelta = learning_rate * loc_err * input_layer->layerinput[j]
-                     + delta * momentum;  //update rule with momentum
+            udelta = learning_rate * loc_err * input_layer->layerinput[j] + delta * momentum;  //update rule with momentum
             //update weights
-            input_layer->neurons[i].weights[j] += udelta;
+            input_layer->neurons[i].weights[j] -= udelta;
             //record deltas
             input_layer->neurons[i].deltas[j]  = udelta;
 
         }
         // calculate the weight bias
-        input_layer->neurons[i].w_bias += learning_rate * loc_err * input_layer->neurons[i].bias;
+        input_layer->neurons[i].w_bias -= learning_rate * loc_err * input_layer->neurons[i].bias;
 
     }
 
-    return loss/2.0;
+    return loss;
 }
 
-void bpnet_crossentropy_softmax::getOutput(std::vector<double>& input,std::vector<double>& opt)
+void bpnet_CrossEntropy_softmax::getOutput(std::vector<double>& input,std::vector<double>& opt)
 {
     bpnet::getOutput(input, opt);
 }

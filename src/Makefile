@@ -132,6 +132,19 @@ neural_net_dy/fast:
 .PHONY : neural_net_dy/fast
 
 #=============================================================================
+# Target rules for targets named pyhello
+
+# Build rule for target.
+pyhello: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pyhello
+.PHONY : pyhello
+
+# fast build rule for target.
+pyhello/fast:
+	$(MAKE) -f python_wrapper/CMakeFiles/pyhello.dir/build.make python_wrapper/CMakeFiles/pyhello.dir/build
+.PHONY : pyhello/fast
+
+#=============================================================================
 # Target rules for targets named neural_net_unittest
 
 # Build rule for target.
@@ -155,6 +168,7 @@ help:
 	@echo "... test"
 	@echo "... neural_net"
 	@echo "... neural_net_dy"
+	@echo "... pyhello"
 	@echo "... neural_net_unittest"
 .PHONY : help
 

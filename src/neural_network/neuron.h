@@ -10,12 +10,12 @@ struct neuron
    double bias;
    double w_bias;
    bool active;
-   
+
    neuron();
-   neuron(int n_input);
   ~neuron(){};
+   void create(int n_input);
    void activate();
    void deactivate();
-}; 
+};
 
 #endif
