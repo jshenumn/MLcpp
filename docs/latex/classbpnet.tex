@@ -1,0 +1,216 @@
+\hypertarget{classbpnet}{\section{bpnet Class Reference}
+\label{classbpnet}\index{bpnet@{bpnet}}
+}
+
+
+A backpropagation neural network class The back-\/propagation network has the architecture of three components propagate, update and train.  
+
+
+
+
+{\ttfamily \#include $<$nnet.\-h$>$}
+
+Inheritance diagram for bpnet\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classbpnet}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classbpnet_adfeeece0abde65630da85276488cc0b2}{bpnet} (int \-\_\-n\-\_\-input, int \-\_\-n\-\_\-neurons\-\_\-in, int \-\_\-n\-\_\-output, std\-::vector$<$ int $>$ \-\_\-hidden\-\_\-layers, int \-\_\-n\-\_\-hidden\-\_\-layers)
+\item 
+virtual \hyperlink{classbpnet_a7189286dfd5cfdd648bcc8c78a177891}{$\sim$bpnet} ()
+\item 
+virtual void \hyperlink{classbpnet_a3731e200c3191fc77be85f1db2c2d4f9}{create} ()
+\item 
+virtual int \hyperlink{classbpnet_aa35c06d999256c9aebeed4f38bca9d0f}{get\-\_\-n\-\_\-hidden\-\_\-layers} ()
+\item 
+void \hyperlink{classbpnet_a77cd3c63e9948e4b6cc9e3a0412e25ea}{propagate} (const std\-::vector$<$ double $>$ \&input)
+\item 
+void \hyperlink{classbpnet_a87beae9040de4815cbcada7420f0df2a}{update} (int layer\-\_\-index)
+\item 
+virtual double \hyperlink{classbpnet_a653eae04b7dcfb4271421fd079849f89}{train} (const std\-::vector$<$ double $>$ \&train\-\_\-data, const std\-::vector$<$ double $>$ \&train\-\_\-class, double learning\-\_\-rate, double momentum)
+\item 
+virtual void \hyperlink{classbpnet_a9da604c278a2d583511071fdc754c9c6}{get\-\_\-output} (std\-::vector$<$ double $>$ \&input, std\-::vector$<$ double $>$ \&output)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\-::unique\-\_\-ptr$<$ \hyperlink{structlayer}{layer} $>$ \hyperlink{classbpnet_aeb161ecafe664d9f6e0d188b94c778f4}{input\-\_\-layer}
+\item 
+std\-::unique\-\_\-ptr$<$ \hyperlink{structlayer}{layer} $>$ \hyperlink{classbpnet_afc882a791c00244a5b5f0ff8badcbc1e}{output\-\_\-layer}
+\item 
+std\-::vector$<$ std\-::unique\-\_\-ptr\\*
+$<$ \hyperlink{structlayer}{layer} $>$ $>$ \hyperlink{classbpnet_a9f1d31d7cdb034587768016a799c36f6}{hidden\-\_\-layers}
+\item 
+\hypertarget{classbpnet_aa4e55fef61fe2886ea6d860a1e4d63f4}{int {\bfseries n\-\_\-hidden\-\_\-layers}}\label{classbpnet_aa4e55fef61fe2886ea6d860a1e4d63f4}
+
+\item 
+\hypertarget{classbpnet_afa95293a45b21300a96d762f69232e2d}{int {\bfseries n\-\_\-input}}\label{classbpnet_afa95293a45b21300a96d762f69232e2d}
+
+\item 
+\hypertarget{classbpnet_a30a2996bef81fa705499d4f0d13574a7}{int {\bfseries n\-\_\-neurons\-\_\-in}}\label{classbpnet_a30a2996bef81fa705499d4f0d13574a7}
+
+\item 
+\hypertarget{classbpnet_a946bc26b407b7c75dc2b3ce58ed99e21}{int {\bfseries n\-\_\-output}}\label{classbpnet_a946bc26b407b7c75dc2b3ce58ed99e21}
+
+\item 
+\hypertarget{classbpnet_a9bb6a37050d988b4dda40d903c573ab0}{std\-::vector$<$ int $>$ {\bfseries hidden\-\_\-layer\-\_\-layout}}\label{classbpnet_a9bb6a37050d988b4dda40d903c573ab0}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A backpropagation neural network class The back-\/propagation network has the architecture of three components propagate, update and train. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classbpnet_adfeeece0abde65630da85276488cc0b2}{\index{bpnet@{bpnet}!bpnet@{bpnet}}
+\index{bpnet@{bpnet}!bpnet@{bpnet}}
+\subsubsection[{bpnet}]{\setlength{\rightskip}{0pt plus 5cm}bpnet\-::bpnet (
+\begin{DoxyParamCaption}
+\item[{int}]{\-\_\-n\-\_\-input, }
+\item[{int}]{\-\_\-n\-\_\-neurons\-\_\-in, }
+\item[{int}]{\-\_\-n\-\_\-output, }
+\item[{std\-::vector$<$ int $>$}]{\-\_\-hidden\-\_\-layers, }
+\item[{int}]{\-\_\-n\-\_\-hidden\-\_\-layers}
+\end{DoxyParamCaption}
+)}}\label{classbpnet_adfeeece0abde65630da85276488cc0b2}
+bpnet constructor 
+\begin{DoxyParams}{Parameters}
+{\em \-\_\-n\-\_\-input} & number of input variables. \\
+\hline
+{\em \-\_\-n\-\_\-neurons\-\_\-in} & number of neurons in input layer. \\
+\hline
+{\em \-\_\-n\-\_\-ouput} & number of output \\
+\hline
+{\em \-\_\-hidden\-\_\-layers} & hidden\-\_\-layers size vector \\
+\hline
+{\em \-\_\-n\-\_\-hidden\-\_\-layers} & number of hidden layers \\
+\hline
+\end{DoxyParams}
+\hypertarget{classbpnet_a7189286dfd5cfdd648bcc8c78a177891}{\index{bpnet@{bpnet}!$\sim$bpnet@{$\sim$bpnet}}
+\index{$\sim$bpnet@{$\sim$bpnet}!bpnet@{bpnet}}
+\subsubsection[{$\sim$bpnet}]{\setlength{\rightskip}{0pt plus 5cm}virtual bpnet\-::$\sim$bpnet (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classbpnet_a7189286dfd5cfdd648bcc8c78a177891}
+bpnet destructor 
+
+\subsection{Member Function Documentation}
+\hypertarget{classbpnet_a3731e200c3191fc77be85f1db2c2d4f9}{\index{bpnet@{bpnet}!create@{create}}
+\index{create@{create}!bpnet@{bpnet}}
+\subsubsection[{create}]{\setlength{\rightskip}{0pt plus 5cm}virtual void bpnet\-::create (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classbpnet_a3731e200c3191fc77be85f1db2c2d4f9}
+a virtual function to create neural network 
+
+Reimplemented in \hyperlink{classbpnet__CrossEntropy__softmax_a220ba65a1d29b86e4d200416d38c931d}{bpnet\-\_\-\-Cross\-Entropy\-\_\-softmax}, and \hyperlink{classbpnet__MSE__sigmoid_a1e80df296941ce0751c8106998db05ed}{bpnet\-\_\-\-M\-S\-E\-\_\-sigmoid}.
+
+\hypertarget{classbpnet_aa35c06d999256c9aebeed4f38bca9d0f}{\index{bpnet@{bpnet}!get\-\_\-n\-\_\-hidden\-\_\-layers@{get\-\_\-n\-\_\-hidden\-\_\-layers}}
+\index{get\-\_\-n\-\_\-hidden\-\_\-layers@{get\-\_\-n\-\_\-hidden\-\_\-layers}!bpnet@{bpnet}}
+\subsubsection[{get\-\_\-n\-\_\-hidden\-\_\-layers}]{\setlength{\rightskip}{0pt plus 5cm}virtual int bpnet\-::get\-\_\-n\-\_\-hidden\-\_\-layers (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classbpnet_aa35c06d999256c9aebeed4f38bca9d0f}
+a function to get number of hidden layers \begin{DoxyReturn}{Returns}
+number of hidden layers 
+\end{DoxyReturn}
+
+
+Reimplemented in \hyperlink{classbpnet__CrossEntropy__softmax_a9a4d4c77b996c83b0e881ae22868512b}{bpnet\-\_\-\-Cross\-Entropy\-\_\-softmax}, and \hyperlink{classbpnet__MSE__sigmoid_a1aab79a52a004260011a68bf50eabd28}{bpnet\-\_\-\-M\-S\-E\-\_\-sigmoid}.
+
+\hypertarget{classbpnet_a9da604c278a2d583511071fdc754c9c6}{\index{bpnet@{bpnet}!get\-\_\-output@{get\-\_\-output}}
+\index{get\-\_\-output@{get\-\_\-output}!bpnet@{bpnet}}
+\subsubsection[{get\-\_\-output}]{\setlength{\rightskip}{0pt plus 5cm}void bpnet\-::get\-\_\-output (
+\begin{DoxyParamCaption}
+\item[{std\-::vector$<$ double $>$ \&}]{input, }
+\item[{std\-::vector$<$ double $>$ \&}]{output}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classbpnet_a9da604c278a2d583511071fdc754c9c6}
+a virtual function to get output class labels 
+\begin{DoxyParams}{Parameters}
+{\em input} & input data \\
+\hline
+{\em output} & output class label \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \hyperlink{classbpnet__CrossEntropy__softmax_aef5c2eb0db95b6bdca4cab71248f544c}{bpnet\-\_\-\-Cross\-Entropy\-\_\-softmax}, and \hyperlink{classbpnet__MSE__sigmoid_ab4bf4f79ba1625fd155e7de251b57609}{bpnet\-\_\-\-M\-S\-E\-\_\-sigmoid}.
+
+\hypertarget{classbpnet_a77cd3c63e9948e4b6cc9e3a0412e25ea}{\index{bpnet@{bpnet}!propagate@{propagate}}
+\index{propagate@{propagate}!bpnet@{bpnet}}
+\subsubsection[{propagate}]{\setlength{\rightskip}{0pt plus 5cm}void bpnet\-::propagate (
+\begin{DoxyParamCaption}
+\item[{const std\-::vector$<$ double $>$ \&}]{input}
+\end{DoxyParamCaption}
+)}}\label{classbpnet_a77cd3c63e9948e4b6cc9e3a0412e25ea}
+a function to perform forward feeding of data 
+\begin{DoxyParams}{Parameters}
+{\em input} & the input data vector \\
+\hline
+\end{DoxyParams}
+\hypertarget{classbpnet_a653eae04b7dcfb4271421fd079849f89}{\index{bpnet@{bpnet}!train@{train}}
+\index{train@{train}!bpnet@{bpnet}}
+\subsubsection[{train}]{\setlength{\rightskip}{0pt plus 5cm}virtual double bpnet\-::train (
+\begin{DoxyParamCaption}
+\item[{const std\-::vector$<$ double $>$ \&}]{train\-\_\-data, }
+\item[{const std\-::vector$<$ double $>$ \&}]{train\-\_\-class, }
+\item[{double}]{learning\-\_\-rate, }
+\item[{double}]{momentum}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classbpnet_a653eae04b7dcfb4271421fd079849f89}
+a virtual function to train data 
+\begin{DoxyParams}{Parameters}
+{\em train\-\_\-data} & training data \\
+\hline
+{\em train\-\_\-class} & training data class label \\
+\hline
+{\em learning\-\_\-rate} & learning rate \\
+\hline
+{\em momentum} & momentum or damping factor \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+loss value 
+\end{DoxyReturn}
+
+
+Reimplemented in \hyperlink{classbpnet__CrossEntropy__softmax_ad5945e5fb0ba6311a06833aa53023841}{bpnet\-\_\-\-Cross\-Entropy\-\_\-softmax}, and \hyperlink{classbpnet__MSE__sigmoid_a8d69e64434b2aa992744746e5b687984}{bpnet\-\_\-\-M\-S\-E\-\_\-sigmoid}.
+
+\hypertarget{classbpnet_a87beae9040de4815cbcada7420f0df2a}{\index{bpnet@{bpnet}!update@{update}}
+\index{update@{update}!bpnet@{bpnet}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}void bpnet\-::update (
+\begin{DoxyParamCaption}
+\item[{int}]{layer\-\_\-index}
+\end{DoxyParamCaption}
+)}}\label{classbpnet_a87beae9040de4815cbcada7420f0df2a}
+a function to update 
+\begin{DoxyParams}{Parameters}
+{\em layer\-\_\-index} & the layer index \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classbpnet_a9f1d31d7cdb034587768016a799c36f6}{\index{bpnet@{bpnet}!hidden\-\_\-layers@{hidden\-\_\-layers}}
+\index{hidden\-\_\-layers@{hidden\-\_\-layers}!bpnet@{bpnet}}
+\subsubsection[{hidden\-\_\-layers}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$std\-::unique\-\_\-ptr$<${\bf layer}$>$ $>$ bpnet\-::hidden\-\_\-layers\hspace{0.3cm}{\ttfamily [protected]}}}\label{classbpnet_a9f1d31d7cdb034587768016a799c36f6}
+hidden layers holder \hypertarget{classbpnet_aeb161ecafe664d9f6e0d188b94c778f4}{\index{bpnet@{bpnet}!input\-\_\-layer@{input\-\_\-layer}}
+\index{input\-\_\-layer@{input\-\_\-layer}!bpnet@{bpnet}}
+\subsubsection[{input\-\_\-layer}]{\setlength{\rightskip}{0pt plus 5cm}std\-::unique\-\_\-ptr$<${\bf layer}$>$ bpnet\-::input\-\_\-layer\hspace{0.3cm}{\ttfamily [protected]}}}\label{classbpnet_aeb161ecafe664d9f6e0d188b94c778f4}
+input layer \hypertarget{classbpnet_afc882a791c00244a5b5f0ff8badcbc1e}{\index{bpnet@{bpnet}!output\-\_\-layer@{output\-\_\-layer}}
+\index{output\-\_\-layer@{output\-\_\-layer}!bpnet@{bpnet}}
+\subsubsection[{output\-\_\-layer}]{\setlength{\rightskip}{0pt plus 5cm}std\-::unique\-\_\-ptr$<${\bf layer}$>$ bpnet\-::output\-\_\-layer\hspace{0.3cm}{\ttfamily [protected]}}}\label{classbpnet_afc882a791c00244a5b5f0ff8badcbc1e}
+output layer 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/home/jiguangshen/\-H\-P\-C\-\_\-\-Machine\-Learning/\-M\-Lcpp/src/neural\-\_\-network/nnet.\-h\item 
+/home/jiguangshen/\-H\-P\-C\-\_\-\-Machine\-Learning/\-M\-Lcpp/src/neural\-\_\-network/nnet.\-cpp\end{DoxyCompactItemize}

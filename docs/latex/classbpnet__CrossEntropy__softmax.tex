@@ -1,0 +1,180 @@
+\hypertarget{classbpnet__CrossEntropy__softmax}{\section{bpnet\-\_\-\-Cross\-Entropy\-\_\-softmax Class Reference}
+\label{classbpnet__CrossEntropy__softmax}\index{bpnet\-\_\-\-Cross\-Entropy\-\_\-softmax@{bpnet\-\_\-\-Cross\-Entropy\-\_\-softmax}}
+}
+
+
+child class, backpropagation foward feed nerual net using croos entropy loss and softmax activation. Usually a good choice for multi-\/classification problems.  
+
+
+
+
+{\ttfamily \#include $<$nnet.\-h$>$}
+
+Inheritance diagram for bpnet\-\_\-\-Cross\-Entropy\-\_\-softmax\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classbpnet__CrossEntropy__softmax}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classbpnet__CrossEntropy__softmax_af27dfc3aa73d018c4c5d9f27ae7057f1}{bpnet\-\_\-\-Cross\-Entropy\-\_\-softmax} (int n\-\_\-input, int n\-\_\-neurons\-\_\-in, int n\-\_\-output, std\-::vector$<$ int $>$ \-\_\-hidden\-\_\-layers, int \-\_\-n\-\_\-hidden\-\_\-layers)
+\item 
+\hyperlink{classbpnet__CrossEntropy__softmax_a369e61d402dde2a069fdc7cd7126c63e}{$\sim$bpnet\-\_\-\-Cross\-Entropy\-\_\-softmax} ()
+\item 
+void \hyperlink{classbpnet__CrossEntropy__softmax_a220ba65a1d29b86e4d200416d38c931d}{create} ()
+\item 
+void \hyperlink{classbpnet__CrossEntropy__softmax_a5bc91db68cdcb204fb1e46101cc731cd}{propagate} (const std\-::vector$<$ double $>$ \&input)
+\item 
+void \hyperlink{classbpnet__CrossEntropy__softmax_ab14df99bdcaa05a7b9c1a3b631a1662a}{update} (int layer\-\_\-index)
+\item 
+double \hyperlink{classbpnet__CrossEntropy__softmax_ad5945e5fb0ba6311a06833aa53023841}{train} (const std\-::vector$<$ double $>$ \&train\-\_\-data, const std\-::vector$<$ double $>$ \&train\-\_\-class, double learning\-\_\-rate, double momentum)
+\item 
+int \hyperlink{classbpnet__CrossEntropy__softmax_a9a4d4c77b996c83b0e881ae22868512b}{get\-\_\-n\-\_\-hidden\-\_\-layers} ()
+\item 
+void \hyperlink{classbpnet__CrossEntropy__softmax_aef5c2eb0db95b6bdca4cab71248f544c}{get\-\_\-output} (std\-::vector$<$ double $>$ \&input, std\-::vector$<$ double $>$ \&output)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+child class, backpropagation foward feed nerual net using croos entropy loss and softmax activation. Usually a good choice for multi-\/classification problems. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classbpnet__CrossEntropy__softmax_af27dfc3aa73d018c4c5d9f27ae7057f1}{\index{bpnet\-\_\-\-Cross\-Entropy\-\_\-softmax@{bpnet\-\_\-\-Cross\-Entropy\-\_\-softmax}!bpnet\-\_\-\-Cross\-Entropy\-\_\-softmax@{bpnet\-\_\-\-Cross\-Entropy\-\_\-softmax}}
+\index{bpnet\-\_\-\-Cross\-Entropy\-\_\-softmax@{bpnet\-\_\-\-Cross\-Entropy\-\_\-softmax}!bpnet_CrossEntropy_softmax@{bpnet\-\_\-\-Cross\-Entropy\-\_\-softmax}}
+\subsubsection[{bpnet\-\_\-\-Cross\-Entropy\-\_\-softmax}]{\setlength{\rightskip}{0pt plus 5cm}bpnet\-\_\-\-Cross\-Entropy\-\_\-softmax\-::bpnet\-\_\-\-Cross\-Entropy\-\_\-softmax (
+\begin{DoxyParamCaption}
+\item[{int}]{n\-\_\-input, }
+\item[{int}]{n\-\_\-neurons\-\_\-in, }
+\item[{int}]{n\-\_\-output, }
+\item[{std\-::vector$<$ int $>$}]{\-\_\-hidden\-\_\-layers, }
+\item[{int}]{\-\_\-n\-\_\-hidden\-\_\-layers}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classbpnet__CrossEntropy__softmax_af27dfc3aa73d018c4c5d9f27ae7057f1}
+constructor initialize from base class 
+\begin{DoxyParams}{Parameters}
+{\em \-\_\-n\-\_\-input} & number of input variables. \\
+\hline
+{\em \-\_\-n\-\_\-neurons\-\_\-in} & number of neurons in input layer. \\
+\hline
+{\em \-\_\-n\-\_\-ouput} & number of output \\
+\hline
+{\em \-\_\-hidden\-\_\-layers} & hidden\-\_\-layers size vector \\
+\hline
+{\em \-\_\-n\-\_\-hidden\-\_\-layers} & number of hidden layers \\
+\hline
+\end{DoxyParams}
+\hypertarget{classbpnet__CrossEntropy__softmax_a369e61d402dde2a069fdc7cd7126c63e}{\index{bpnet\-\_\-\-Cross\-Entropy\-\_\-softmax@{bpnet\-\_\-\-Cross\-Entropy\-\_\-softmax}!$\sim$bpnet\-\_\-\-Cross\-Entropy\-\_\-softmax@{$\sim$bpnet\-\_\-\-Cross\-Entropy\-\_\-softmax}}
+\index{$\sim$bpnet\-\_\-\-Cross\-Entropy\-\_\-softmax@{$\sim$bpnet\-\_\-\-Cross\-Entropy\-\_\-softmax}!bpnet_CrossEntropy_softmax@{bpnet\-\_\-\-Cross\-Entropy\-\_\-softmax}}
+\subsubsection[{$\sim$bpnet\-\_\-\-Cross\-Entropy\-\_\-softmax}]{\setlength{\rightskip}{0pt plus 5cm}bpnet\-\_\-\-Cross\-Entropy\-\_\-softmax\-::$\sim$bpnet\-\_\-\-Cross\-Entropy\-\_\-softmax (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classbpnet__CrossEntropy__softmax_a369e61d402dde2a069fdc7cd7126c63e}
+default destructor 
+
+\subsection{Member Function Documentation}
+\hypertarget{classbpnet__CrossEntropy__softmax_a220ba65a1d29b86e4d200416d38c931d}{\index{bpnet\-\_\-\-Cross\-Entropy\-\_\-softmax@{bpnet\-\_\-\-Cross\-Entropy\-\_\-softmax}!create@{create}}
+\index{create@{create}!bpnet_CrossEntropy_softmax@{bpnet\-\_\-\-Cross\-Entropy\-\_\-softmax}}
+\subsubsection[{create}]{\setlength{\rightskip}{0pt plus 5cm}void bpnet\-\_\-\-Cross\-Entropy\-\_\-softmax\-::create (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classbpnet__CrossEntropy__softmax_a220ba65a1d29b86e4d200416d38c931d}
+create network 
+
+Reimplemented from \hyperlink{classbpnet_a3731e200c3191fc77be85f1db2c2d4f9}{bpnet}.
+
+\hypertarget{classbpnet__CrossEntropy__softmax_a9a4d4c77b996c83b0e881ae22868512b}{\index{bpnet\-\_\-\-Cross\-Entropy\-\_\-softmax@{bpnet\-\_\-\-Cross\-Entropy\-\_\-softmax}!get\-\_\-n\-\_\-hidden\-\_\-layers@{get\-\_\-n\-\_\-hidden\-\_\-layers}}
+\index{get\-\_\-n\-\_\-hidden\-\_\-layers@{get\-\_\-n\-\_\-hidden\-\_\-layers}!bpnet_CrossEntropy_softmax@{bpnet\-\_\-\-Cross\-Entropy\-\_\-softmax}}
+\subsubsection[{get\-\_\-n\-\_\-hidden\-\_\-layers}]{\setlength{\rightskip}{0pt plus 5cm}int bpnet\-\_\-\-Cross\-Entropy\-\_\-softmax\-::get\-\_\-n\-\_\-hidden\-\_\-layers (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classbpnet__CrossEntropy__softmax_a9a4d4c77b996c83b0e881ae22868512b}
+get number of hidden layers \begin{DoxyReturn}{Returns}
+number of hidden layers 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classbpnet_aa35c06d999256c9aebeed4f38bca9d0f}{bpnet}.
+
+\hypertarget{classbpnet__CrossEntropy__softmax_aef5c2eb0db95b6bdca4cab71248f544c}{\index{bpnet\-\_\-\-Cross\-Entropy\-\_\-softmax@{bpnet\-\_\-\-Cross\-Entropy\-\_\-softmax}!get\-\_\-output@{get\-\_\-output}}
+\index{get\-\_\-output@{get\-\_\-output}!bpnet_CrossEntropy_softmax@{bpnet\-\_\-\-Cross\-Entropy\-\_\-softmax}}
+\subsubsection[{get\-\_\-output}]{\setlength{\rightskip}{0pt plus 5cm}void bpnet\-\_\-\-Cross\-Entropy\-\_\-softmax\-::get\-\_\-output (
+\begin{DoxyParamCaption}
+\item[{std\-::vector$<$ double $>$ \&}]{input, }
+\item[{std\-::vector$<$ double $>$ \&}]{output}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classbpnet__CrossEntropy__softmax_aef5c2eb0db95b6bdca4cab71248f544c}
+get output class labels 
+\begin{DoxyParams}{Parameters}
+{\em input} & input data \\
+\hline
+{\em output} & output class label \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classbpnet_a9da604c278a2d583511071fdc754c9c6}{bpnet}.
+
+\hypertarget{classbpnet__CrossEntropy__softmax_a5bc91db68cdcb204fb1e46101cc731cd}{\index{bpnet\-\_\-\-Cross\-Entropy\-\_\-softmax@{bpnet\-\_\-\-Cross\-Entropy\-\_\-softmax}!propagate@{propagate}}
+\index{propagate@{propagate}!bpnet_CrossEntropy_softmax@{bpnet\-\_\-\-Cross\-Entropy\-\_\-softmax}}
+\subsubsection[{propagate}]{\setlength{\rightskip}{0pt plus 5cm}void bpnet\-\_\-\-Cross\-Entropy\-\_\-softmax\-::propagate (
+\begin{DoxyParamCaption}
+\item[{const std\-::vector$<$ double $>$ \&}]{input}
+\end{DoxyParamCaption}
+)}}\label{classbpnet__CrossEntropy__softmax_a5bc91db68cdcb204fb1e46101cc731cd}
+forward feeding of data 
+\begin{DoxyParams}{Parameters}
+{\em input} & the input data vector \\
+\hline
+\end{DoxyParams}
+\hypertarget{classbpnet__CrossEntropy__softmax_ad5945e5fb0ba6311a06833aa53023841}{\index{bpnet\-\_\-\-Cross\-Entropy\-\_\-softmax@{bpnet\-\_\-\-Cross\-Entropy\-\_\-softmax}!train@{train}}
+\index{train@{train}!bpnet_CrossEntropy_softmax@{bpnet\-\_\-\-Cross\-Entropy\-\_\-softmax}}
+\subsubsection[{train}]{\setlength{\rightskip}{0pt plus 5cm}double bpnet\-\_\-\-Cross\-Entropy\-\_\-softmax\-::train (
+\begin{DoxyParamCaption}
+\item[{const std\-::vector$<$ double $>$ \&}]{train\-\_\-data, }
+\item[{const std\-::vector$<$ double $>$ \&}]{train\-\_\-class, }
+\item[{double}]{learning\-\_\-rate, }
+\item[{double}]{momentum}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classbpnet__CrossEntropy__softmax_ad5945e5fb0ba6311a06833aa53023841}
+training function 
+\begin{DoxyParams}{Parameters}
+{\em train\-\_\-data} & training data \\
+\hline
+{\em train\-\_\-class} & training data class label \\
+\hline
+{\em learning\-\_\-rate} & learning rate \\
+\hline
+{\em momentum} & momentum or damping factor \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+loss value 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classbpnet_a653eae04b7dcfb4271421fd079849f89}{bpnet}.
+
+\hypertarget{classbpnet__CrossEntropy__softmax_ab14df99bdcaa05a7b9c1a3b631a1662a}{\index{bpnet\-\_\-\-Cross\-Entropy\-\_\-softmax@{bpnet\-\_\-\-Cross\-Entropy\-\_\-softmax}!update@{update}}
+\index{update@{update}!bpnet_CrossEntropy_softmax@{bpnet\-\_\-\-Cross\-Entropy\-\_\-softmax}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}void bpnet\-\_\-\-Cross\-Entropy\-\_\-softmax\-::update (
+\begin{DoxyParamCaption}
+\item[{int}]{layer\-\_\-index}
+\end{DoxyParamCaption}
+)}}\label{classbpnet__CrossEntropy__softmax_ab14df99bdcaa05a7b9c1a3b631a1662a}
+update a layer 
+\begin{DoxyParams}{Parameters}
+{\em layer\-\_\-index} & the layer index \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/home/jiguangshen/\-H\-P\-C\-\_\-\-Machine\-Learning/\-M\-Lcpp/src/neural\-\_\-network/nnet.\-h\item 
+/home/jiguangshen/\-H\-P\-C\-\_\-\-Machine\-Learning/\-M\-Lcpp/src/neural\-\_\-network/nnet.\-cpp\end{DoxyCompactItemize}

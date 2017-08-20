@@ -1,0 +1,108 @@
+\hypertarget{structdataframe}{\section{dataframe Struct Reference}
+\label{structdataframe}\index{dataframe@{dataframe}}
+}
+
+
+The data framework for classification problems. It defines the way to load data and handle categorical class variables and display data info.  
+
+
+
+
+{\ttfamily \#include $<$dataframe.\-h$>$}
+
+Inheritance diagram for dataframe\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{structdataframe}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structdataframe_a4ddfcbd8b4c6a38a5439811e9a8621e8}{dataframe} ()
+\item 
+virtual \hyperlink{structdataframe_a3e5a7cfc9408d92321f6ba8ea7635178}{$\sim$dataframe} ()
+\item 
+virtual void \hyperlink{structdataframe_ae108c949f6f3f89c7ed000e90c3a2e64}{load} (std\-::string \&path)
+\item 
+virtual void \hyperlink{structdataframe_ac71cab6be91e8cb90d8efa88e6866b83}{data\-\_\-info} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{structdataframe_ad3f184a47c59346533a0194b6c06e52c}{int {\bfseries n\-\_\-instance}}\label{structdataframe_ad3f184a47c59346533a0194b6c06e52c}
+
+\item 
+\hypertarget{structdataframe_a5a79b2e10c24de75717c87c2f74f6809}{int {\bfseries n\-\_\-attributes}}\label{structdataframe_a5a79b2e10c24de75717c87c2f74f6809}
+
+\item 
+std\-::vector$<$ std\-::vector\\*
+$<$ double $>$ $>$ \hyperlink{structdataframe_af6f4f8d2ada43ba75b9b2a726d8dbf91}{all\-\_\-label}
+\item 
+std\-::vector$<$ std\-::vector\\*
+$<$ double $>$ $>$ \hyperlink{structdataframe_a8d76966d6bccec17ca513628319c8527}{all\-\_\-feature}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The data framework for classification problems. It defines the way to load data and handle categorical class variables and display data info. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{structdataframe_a4ddfcbd8b4c6a38a5439811e9a8621e8}{\index{dataframe@{dataframe}!dataframe@{dataframe}}
+\index{dataframe@{dataframe}!dataframe@{dataframe}}
+\subsubsection[{dataframe}]{\setlength{\rightskip}{0pt plus 5cm}dataframe\-::dataframe (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structdataframe_a4ddfcbd8b4c6a38a5439811e9a8621e8}
+constructor \hypertarget{structdataframe_a3e5a7cfc9408d92321f6ba8ea7635178}{\index{dataframe@{dataframe}!$\sim$dataframe@{$\sim$dataframe}}
+\index{$\sim$dataframe@{$\sim$dataframe}!dataframe@{dataframe}}
+\subsubsection[{$\sim$dataframe}]{\setlength{\rightskip}{0pt plus 5cm}virtual dataframe\-::$\sim$dataframe (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{structdataframe_a3e5a7cfc9408d92321f6ba8ea7635178}
+destructor 
+
+\subsection{Member Function Documentation}
+\hypertarget{structdataframe_ac71cab6be91e8cb90d8efa88e6866b83}{\index{dataframe@{dataframe}!data\-\_\-info@{data\-\_\-info}}
+\index{data\-\_\-info@{data\-\_\-info}!dataframe@{dataframe}}
+\subsubsection[{data\-\_\-info}]{\setlength{\rightskip}{0pt plus 5cm}virtual void dataframe\-::data\-\_\-info (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{structdataframe_ac71cab6be91e8cb90d8efa88e6866b83}
+print data info 
+
+Reimplemented in \hyperlink{structabalone__data_aff9641cf77f835161642a8a37e6ddc39}{abalone\-\_\-data}.
+
+\hypertarget{structdataframe_ae108c949f6f3f89c7ed000e90c3a2e64}{\index{dataframe@{dataframe}!load@{load}}
+\index{load@{load}!dataframe@{dataframe}}
+\subsubsection[{load}]{\setlength{\rightskip}{0pt plus 5cm}virtual void dataframe\-::load (
+\begin{DoxyParamCaption}
+\item[{std\-::string \&}]{path}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{structdataframe_ae108c949f6f3f89c7ed000e90c3a2e64}
+load data from file 
+\begin{DoxyParams}{Parameters}
+{\em path} & string path to file \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \hyperlink{structabalone__data_a2a4ddb71a6bd1126467bf3c9645f6591}{abalone\-\_\-data}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{structdataframe_a8d76966d6bccec17ca513628319c8527}{\index{dataframe@{dataframe}!all\-\_\-feature@{all\-\_\-feature}}
+\index{all\-\_\-feature@{all\-\_\-feature}!dataframe@{dataframe}}
+\subsubsection[{all\-\_\-feature}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$std\-::vector$<$double$>$ $>$ dataframe\-::all\-\_\-feature}}\label{structdataframe_a8d76966d6bccec17ca513628319c8527}
+feature sets \hypertarget{structdataframe_af6f4f8d2ada43ba75b9b2a726d8dbf91}{\index{dataframe@{dataframe}!all\-\_\-label@{all\-\_\-label}}
+\index{all\-\_\-label@{all\-\_\-label}!dataframe@{dataframe}}
+\subsubsection[{all\-\_\-label}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$std\-::vector$<$double$>$ $>$ dataframe\-::all\-\_\-label}}\label{structdataframe_af6f4f8d2ada43ba75b9b2a726d8dbf91}
+all class label which is transformed into numerical values 
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/home/jiguangshen/\-H\-P\-C\-\_\-\-Machine\-Learning/\-M\-Lcpp/src/examples/dataframe.\-h\end{DoxyCompactItemize}
