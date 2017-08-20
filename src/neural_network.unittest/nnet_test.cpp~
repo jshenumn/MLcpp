@@ -193,7 +193,7 @@ TEST(bpnet, bpnet_train_ABALONE)
         err = 0.0;
         for(int j = 0; j < N_T; j++)
         {
-            err += nt->train(abdat->all_feature[train_index[j]], abdat->all_label[train_index[j]], 0.002, 0.001);
+            err += nt->train(abdat->all_data[train_index[j]], abdat->all_label[train_index[j]], 0.002, 0.001);
         }
         if(fabs(err - err_old)  < 1e-8)
             break;
@@ -212,7 +212,7 @@ TEST(bpnet, bpnet_train_ABALONE)
     int corr = 0;
     for(int i=0; i<N_T; i++)
     {
-        nt->get_output(abdat->all_feature[test_index[i]], output_class[i]);
+        nt->get_output(abdat->all_data[test_index[i]], output_class[i]);
         double temp,a,b,c;
         temp = (output_class[i][0] > output_class[i][1])? output_class[i][0]:output_class[i][1];
         temp = (output_class[i][2] > temp)? output_class[i][2]:temp;

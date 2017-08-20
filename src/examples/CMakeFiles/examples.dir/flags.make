@@ -4,5 +4,5 @@
 # compile CXX with g++-5
 CXX_FLAGS = -std=c++14 -lstdc++ -pthread -DBOOST_LOG_DYN_LINK -fPIC -I/home/jiguangshen/opt/thirdparty/googletest/1.8.0/include -I/usr/include/python2.7  
 
-CXX_DEFINES = -Dpyhello_EXPORTS
+CXX_DEFINES = -Dexamples_EXPORTS
 

@@ -31,9 +31,7 @@ Abalone data is relatively small, we could do read and store
 
 #include "dataframe.h"
 #include "pch.h"
-/*!
-  \brief  The UCI data abalone data set
-*/
+
 struct abalone_data : public dataframe
 {
       abalone_data():dataframe(){}

@@ -1,55 +1,65 @@
-Start testing: Aug 17 00:30 CDT
+Start testing: Aug 19 23:08 CDT
 ----------------------------------------------------------
 1/1 Testing: neuron_network_tests
 1/1 Test: neuron_network_tests
 Command: "/home/jiguangshen/HPC_MachineLearning/MLcpp/bin/neural_net_unittest" "WORKING_DIRECTORY" "/home/jiguangshen/HPC_MachineLearning/MLcpp/src/../bin"
 Directory: /home/jiguangshen/HPC_MachineLearning/MLcpp/src
-"neuron_network_tests" start time: Aug 17 00:30 CDT
+"neuron_network_tests" start time: Aug 19 23:08 CDT
 Output:
 ----------------------------------------------------------
 [==========] Running 8 tests from 3 test cases.
 [----------] Global test environment set-up.
 [----------] 2 tests from neuron
 [ RUN      ] neuron.neuron_ctr
-[       OK ] neuron.neuron_ctr (3 ms)
+[       OK ] neuron.neuron_ctr (1 ms)
 [ RUN      ] neuron.neuron_rand
-[       OK ] neuron.neuron_rand (2 ms)
-[----------] 2 tests from neuron (5 ms total)
+[       OK ] neuron.neuron_rand (1 ms)
+[----------] 2 tests from neuron (2 ms total)
 
 [----------] 2 tests from layer
 [ RUN      ] layer.layer_ctr
-[       OK ] layer.layer_ctr (14 ms)
+[       OK ] layer.layer_ctr (5 ms)
 [ RUN      ] layer.layer_cal
-[       OK ] layer.layer_cal (7 ms)
-[----------] 2 tests from layer (22 ms total)
+[       OK ] layer.layer_cal (5 ms)
+[----------] 2 tests from layer (11 ms total)
 
 [----------] 4 tests from bpnet
 [ RUN      ] bpnet.bpnet_ctr
+[2017-08-19 23:08:54.355091] [0x9b0eed40] [info]    ================= The architecture for the network =================
+
+[2017-08-19 23:08:54.355139] [0x9b0eed40] [info]    Input  layer size:3
+
+[2017-08-19 23:08:54.355142] [0x9b0eed40] [info]    Hidden layer size:3
+
+[2017-08-19 23:08:54.355144] [0x9b0eed40] [info]    Output layer size:2
+
 ================= The architecture for the network =================
 Input  layer size:3
 Hidden layer size:3
 Output layer size:2
-================= The architecture for the network =================
-Input  layer size:3
-Hidden layer size:3
-Output layer size:2
-[       OK ] bpnet.bpnet_ctr (27 ms)
+[       OK ] bpnet.bpnet_ctr (18 ms)
 [ RUN      ] bpnet.bpnet_train_XOR
-================= The architecture for the network =================
-Input  layer size:3
-Hidden layer size:0
-Output layer size:1
-[       OK ] bpnet.bpnet_train_XOR (16 ms)
+[2017-08-19 23:08:54.372626] [0x9b0eed40] [info]    ================= The architecture for the network =================
+
+[2017-08-19 23:08:54.372632] [0x9b0eed40] [info]    Input  layer size:3
+
+[2017-08-19 23:08:54.372635] [0x9b0eed40] [info]    Hidden layer size:0
+
+[2017-08-19 23:08:54.372638] [0x9b0eed40] [info]    Output layer size:1
+
+[       OK ] bpnet.bpnet_train_XOR (17 ms)
 [ RUN      ] bpnet.bpnet_train_XOR_MLP
-================= The architecture for the network =================
-Input  layer size:2
-Hidden layer size:1
-Output layer size:1
-[       OK ] bpnet.bpnet_train_XOR_MLP (520 ms)
+[2017-08-19 23:08:54.390015] [0x9b0eed40] [info]    ================= The architecture for the network =================
+
+[2017-08-19 23:08:54.390026] [0x9b0eed40] [info]    Input  layer size:2
+
+[2017-08-19 23:08:54.390029] [0x9b0eed40] [info]    Hidden layer size:1
+
+[2017-08-19 23:08:54.390033] [0x9b0eed40] [info]    Output layer size:1
+
+[       OK ] bpnet.bpnet_train_XOR_MLP (501 ms)
 [ RUN      ] bpnet.bpnet_train_ABALONE
 Loading the Abalone data....
-  Data loading done, data size is 4177
-  Feature number is 8
   Training set and testing set split....
   Training data is: 2767
   Test data is: 1410
@@ -58,19 +68,19 @@ Training Start....
 Input  layer size:8
 Hidden layer size:1
 Output layer size:3
-Training done!  Accuracy is 54 % 
-[       OK ] bpnet.bpnet_train_ABALONE (30648 ms)
-[----------] 4 tests from bpnet (31211 ms total)
+Training done!  Accuracy is 50 % 
+[       OK ] bpnet.bpnet_train_ABALONE (29576 ms)
+[----------] 4 tests from bpnet (30112 ms total)
 
 [----------] Global test environment tear-down
-[==========] 8 tests from 3 test cases ran. (31239 ms total)
+[==========] 8 tests from 3 test cases ran. (30125 ms total)
 [  PASSED  ] 8 tests.
 <end of output>
-Test time =  31.24 sec
+Test time =  30.13 sec
 ----------------------------------------------------------
 Test Passed.
-"neuron_network_tests" end time: Aug 17 00:30 CDT
-"neuron_network_tests" time elapsed: 00:00:31
+"neuron_network_tests" end time: Aug 19 23:09 CDT
+"neuron_network_tests" time elapsed: 00:00:30
 ----------------------------------------------------------
 
-End testing: Aug 17 00:30 CDT
+End testing: Aug 19 23:09 CDT

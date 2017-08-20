@@ -1,0 +1,44 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/jiguangshen/HPC_MachineLearning/MLcpp/src/examples/abalone.cpp
+pch.h
+/home/jiguangshen/HPC_MachineLearning/MLcpp/src/examples/pch.h
+abalone.h
+/home/jiguangshen/HPC_MachineLearning/MLcpp/src/examples/abalone.h
+
+/home/jiguangshen/HPC_MachineLearning/MLcpp/src/examples/abalone.h
+dataframe.h
+/home/jiguangshen/HPC_MachineLearning/MLcpp/src/examples/dataframe.h
+pch.h
+/home/jiguangshen/HPC_MachineLearning/MLcpp/src/examples/pch.h
+
+/home/jiguangshen/HPC_MachineLearning/MLcpp/src/examples/dataframe.h
+pch.h
+/home/jiguangshen/HPC_MachineLearning/MLcpp/src/examples/pch.h
+
+/home/jiguangshen/HPC_MachineLearning/MLcpp/src/examples/pch.h
+iostream
+-
+fstream
+-
+sstream
+-
+vector
+-
+string
+-
+cmath
+-
+boost/random.hpp
+/home/jiguangshen/HPC_MachineLearning/MLcpp/src/examples/boost/random.hpp
+boost/random/uniform_real.hpp
+/home/jiguangshen/HPC_MachineLearning/MLcpp/src/examples/boost/random/uniform_real.hpp
+boost/random/variate_generator.hpp
+/home/jiguangshen/HPC_MachineLearning/MLcpp/src/examples/boost/random/variate_generator.hpp
+

@@ -160,6 +160,8 @@ neural_net_unittest_EXTERNAL_OBJECTS =
 /home/jiguangshen/HPC_MachineLearning/MLcpp/bin/neural_net_unittest: /home/jiguangshen/opt/thirdparty/googletest/1.8.0/lib/libgtest_main.a
 /home/jiguangshen/HPC_MachineLearning/MLcpp/bin/neural_net_unittest: /home/jiguangshen/opt/thirdparty/googletest/1.8.0/lib/libgtest.a
 /home/jiguangshen/HPC_MachineLearning/MLcpp/bin/neural_net_unittest: /home/jiguangshen/opt/thirdparty/boost/1.54/lib/libboost_random.so
+/home/jiguangshen/HPC_MachineLearning/MLcpp/bin/neural_net_unittest: /home/jiguangshen/opt/thirdparty/boost/1.54/lib/libboost_log.so
+/home/jiguangshen/HPC_MachineLearning/MLcpp/bin/neural_net_unittest: ../lib/libexamples.so
 /home/jiguangshen/HPC_MachineLearning/MLcpp/bin/neural_net_unittest: neural_network.unittest/CMakeFiles/neural_net_unittest.dir/build.make
 /home/jiguangshen/HPC_MachineLearning/MLcpp/bin/neural_net_unittest: neural_network.unittest/CMakeFiles/neural_net_unittest.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable /home/jiguangshen/HPC_MachineLearning/MLcpp/bin/neural_net_unittest"

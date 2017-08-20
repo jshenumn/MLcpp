@@ -8,5 +8,5 @@ nn_test 14 2.43059e+38
 nn_test 14 2.43059e+38
 nn_test 14 2.43059e+38
 nn_test 14 2.43059e+38
-neuron_network_tests 5 2.72226e+38
+neuron_network_tests 7 2.43059e+38
 ---

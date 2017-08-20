@@ -157,6 +157,7 @@ neural_net_dy_EXTERNAL_OBJECTS =
 /home/jiguangshen/HPC_MachineLearning/MLcpp/lib/libneural_net_dy.so: neural_network/CMakeFiles/neural_net_dy.dir/layer.cpp.o
 /home/jiguangshen/HPC_MachineLearning/MLcpp/lib/libneural_net_dy.so: neural_network/CMakeFiles/neural_net_dy.dir/nnet.cpp.o
 /home/jiguangshen/HPC_MachineLearning/MLcpp/lib/libneural_net_dy.so: /home/jiguangshen/opt/thirdparty/boost/1.54/lib/libboost_random.so
+/home/jiguangshen/HPC_MachineLearning/MLcpp/lib/libneural_net_dy.so: /home/jiguangshen/opt/thirdparty/boost/1.54/lib/libboost_log.so
 /home/jiguangshen/HPC_MachineLearning/MLcpp/lib/libneural_net_dy.so: neural_network/CMakeFiles/neural_net_dy.dir/build.make
 /home/jiguangshen/HPC_MachineLearning/MLcpp/lib/libneural_net_dy.so: neural_network/CMakeFiles/neural_net_dy.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX shared library /home/jiguangshen/HPC_MachineLearning/MLcpp/lib/libneural_net_dy.so"
