@@ -80,8 +80,9 @@ neural_network.unittest/CMakeFiles/neural_net_unittest.dir/neuron_test.cpp.o
  /home/jiguangshen/opt/thirdparty/googletest/1.8.0/include/gtest/internal/gtest-tuple.h
  /home/jiguangshen/opt/thirdparty/googletest/1.8.0/include/gtest/internal/gtest-type-util.h
 neural_network.unittest/CMakeFiles/neural_net_unittest.dir/nnet_test.cpp.o
- /home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network.unittest/../examples/abalone.h
+ /home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network.unittest/../examples/banknote.h
  /home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network.unittest/../examples/dataframe.h
+ /home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network.unittest/../examples/iris.h
  /home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network.unittest/../neural_network/layer.h
  /home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network.unittest/../neural_network/neuron.h
  /home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network.unittest/../neural_network/nnet.h

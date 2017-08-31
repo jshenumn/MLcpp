@@ -106,6 +106,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named doc_doxygen
+
+# Build rule for target.
+doc_doxygen: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 doc_doxygen
+.PHONY : doc_doxygen
+
+# fast build rule for target.
+doc_doxygen/fast:
+	$(MAKE) -f CMakeFiles/doc_doxygen.dir/build.make CMakeFiles/doc_doxygen.dir/build
+.PHONY : doc_doxygen/fast
+
+#=============================================================================
 # Target rules for targets named neural_net
 
 # Build rule for target.
@@ -130,6 +143,19 @@ neural_net_dy: cmake_check_build_system
 neural_net_dy/fast:
 	$(MAKE) -f neural_network/CMakeFiles/neural_net_dy.dir/build.make neural_network/CMakeFiles/neural_net_dy.dir/build
 .PHONY : neural_net_dy/fast
+
+#=============================================================================
+# Target rules for targets named examples
+
+# Build rule for target.
+examples: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 examples
+.PHONY : examples
+
+# fast build rule for target.
+examples/fast:
+	$(MAKE) -f examples/CMakeFiles/examples.dir/build.make examples/CMakeFiles/examples.dir/build
+.PHONY : examples/fast
 
 #=============================================================================
 # Target rules for targets named pyhello
@@ -163,11 +189,13 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... doc_doxygen"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... neural_net"
 	@echo "... neural_net_dy"
+	@echo "... examples"
 	@echo "... pyhello"
 	@echo "... neural_net_unittest"
 .PHONY : help

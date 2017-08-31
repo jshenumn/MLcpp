@@ -46,38 +46,64 @@ include examples/CMakeFiles/examples.dir/progress.make
 # Include the compile flags for this target's objects.
 include examples/CMakeFiles/examples.dir/flags.make
 
-examples/CMakeFiles/examples.dir/abalone.cpp.o: examples/CMakeFiles/examples.dir/flags.make
-examples/CMakeFiles/examples.dir/abalone.cpp.o: examples/abalone.cpp
+examples/CMakeFiles/examples.dir/iris.cpp.o: examples/CMakeFiles/examples.dir/flags.make
+examples/CMakeFiles/examples.dir/iris.cpp.o: examples/iris.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/jiguangshen/HPC_MachineLearning/MLcpp/src/CMakeFiles $(CMAKE_PROGRESS_1)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object examples/CMakeFiles/examples.dir/abalone.cpp.o"
-	cd /home/jiguangshen/HPC_MachineLearning/MLcpp/src/examples && g++-5   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/examples.dir/abalone.cpp.o -c /home/jiguangshen/HPC_MachineLearning/MLcpp/src/examples/abalone.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object examples/CMakeFiles/examples.dir/iris.cpp.o"
+	cd /home/jiguangshen/HPC_MachineLearning/MLcpp/src/examples && g++-5   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/examples.dir/iris.cpp.o -c /home/jiguangshen/HPC_MachineLearning/MLcpp/src/examples/iris.cpp
 
-examples/CMakeFiles/examples.dir/abalone.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/examples.dir/abalone.cpp.i"
-	cd /home/jiguangshen/HPC_MachineLearning/MLcpp/src/examples && g++-5  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/jiguangshen/HPC_MachineLearning/MLcpp/src/examples/abalone.cpp > CMakeFiles/examples.dir/abalone.cpp.i
+examples/CMakeFiles/examples.dir/iris.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/examples.dir/iris.cpp.i"
+	cd /home/jiguangshen/HPC_MachineLearning/MLcpp/src/examples && g++-5  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/jiguangshen/HPC_MachineLearning/MLcpp/src/examples/iris.cpp > CMakeFiles/examples.dir/iris.cpp.i
 
-examples/CMakeFiles/examples.dir/abalone.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/examples.dir/abalone.cpp.s"
-	cd /home/jiguangshen/HPC_MachineLearning/MLcpp/src/examples && g++-5  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/jiguangshen/HPC_MachineLearning/MLcpp/src/examples/abalone.cpp -o CMakeFiles/examples.dir/abalone.cpp.s
+examples/CMakeFiles/examples.dir/iris.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/examples.dir/iris.cpp.s"
+	cd /home/jiguangshen/HPC_MachineLearning/MLcpp/src/examples && g++-5  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/jiguangshen/HPC_MachineLearning/MLcpp/src/examples/iris.cpp -o CMakeFiles/examples.dir/iris.cpp.s
 
-examples/CMakeFiles/examples.dir/abalone.cpp.o.requires:
-.PHONY : examples/CMakeFiles/examples.dir/abalone.cpp.o.requires
+examples/CMakeFiles/examples.dir/iris.cpp.o.requires:
+.PHONY : examples/CMakeFiles/examples.dir/iris.cpp.o.requires
 
-examples/CMakeFiles/examples.dir/abalone.cpp.o.provides: examples/CMakeFiles/examples.dir/abalone.cpp.o.requires
-	$(MAKE) -f examples/CMakeFiles/examples.dir/build.make examples/CMakeFiles/examples.dir/abalone.cpp.o.provides.build
-.PHONY : examples/CMakeFiles/examples.dir/abalone.cpp.o.provides
+examples/CMakeFiles/examples.dir/iris.cpp.o.provides: examples/CMakeFiles/examples.dir/iris.cpp.o.requires
+	$(MAKE) -f examples/CMakeFiles/examples.dir/build.make examples/CMakeFiles/examples.dir/iris.cpp.o.provides.build
+.PHONY : examples/CMakeFiles/examples.dir/iris.cpp.o.provides
 
-examples/CMakeFiles/examples.dir/abalone.cpp.o.provides.build: examples/CMakeFiles/examples.dir/abalone.cpp.o
-.PHONY : examples/CMakeFiles/examples.dir/abalone.cpp.o.provides.build
+examples/CMakeFiles/examples.dir/iris.cpp.o.provides.build: examples/CMakeFiles/examples.dir/iris.cpp.o
+.PHONY : examples/CMakeFiles/examples.dir/iris.cpp.o.provides.build
+
+examples/CMakeFiles/examples.dir/banknote.cpp.o: examples/CMakeFiles/examples.dir/flags.make
+examples/CMakeFiles/examples.dir/banknote.cpp.o: examples/banknote.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jiguangshen/HPC_MachineLearning/MLcpp/src/CMakeFiles $(CMAKE_PROGRESS_2)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object examples/CMakeFiles/examples.dir/banknote.cpp.o"
+	cd /home/jiguangshen/HPC_MachineLearning/MLcpp/src/examples && g++-5   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/examples.dir/banknote.cpp.o -c /home/jiguangshen/HPC_MachineLearning/MLcpp/src/examples/banknote.cpp
+
+examples/CMakeFiles/examples.dir/banknote.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/examples.dir/banknote.cpp.i"
+	cd /home/jiguangshen/HPC_MachineLearning/MLcpp/src/examples && g++-5  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/jiguangshen/HPC_MachineLearning/MLcpp/src/examples/banknote.cpp > CMakeFiles/examples.dir/banknote.cpp.i
+
+examples/CMakeFiles/examples.dir/banknote.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/examples.dir/banknote.cpp.s"
+	cd /home/jiguangshen/HPC_MachineLearning/MLcpp/src/examples && g++-5  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/jiguangshen/HPC_MachineLearning/MLcpp/src/examples/banknote.cpp -o CMakeFiles/examples.dir/banknote.cpp.s
+
+examples/CMakeFiles/examples.dir/banknote.cpp.o.requires:
+.PHONY : examples/CMakeFiles/examples.dir/banknote.cpp.o.requires
+
+examples/CMakeFiles/examples.dir/banknote.cpp.o.provides: examples/CMakeFiles/examples.dir/banknote.cpp.o.requires
+	$(MAKE) -f examples/CMakeFiles/examples.dir/build.make examples/CMakeFiles/examples.dir/banknote.cpp.o.provides.build
+.PHONY : examples/CMakeFiles/examples.dir/banknote.cpp.o.provides
+
+examples/CMakeFiles/examples.dir/banknote.cpp.o.provides.build: examples/CMakeFiles/examples.dir/banknote.cpp.o
+.PHONY : examples/CMakeFiles/examples.dir/banknote.cpp.o.provides.build
 
 # Object files for target examples
 examples_OBJECTS = \
-"CMakeFiles/examples.dir/abalone.cpp.o"
+"CMakeFiles/examples.dir/iris.cpp.o" \
+"CMakeFiles/examples.dir/banknote.cpp.o"
 
 # External object files for target examples
 examples_EXTERNAL_OBJECTS =
 
-/home/jiguangshen/HPC_MachineLearning/MLcpp/lib/libexamples.so: examples/CMakeFiles/examples.dir/abalone.cpp.o
+/home/jiguangshen/HPC_MachineLearning/MLcpp/lib/libexamples.so: examples/CMakeFiles/examples.dir/iris.cpp.o
+/home/jiguangshen/HPC_MachineLearning/MLcpp/lib/libexamples.so: examples/CMakeFiles/examples.dir/banknote.cpp.o
 /home/jiguangshen/HPC_MachineLearning/MLcpp/lib/libexamples.so: /home/jiguangshen/opt/thirdparty/boost/1.54/lib/libboost_random.so
 /home/jiguangshen/HPC_MachineLearning/MLcpp/lib/libexamples.so: /home/jiguangshen/opt/thirdparty/boost/1.54/lib/libboost_log.so
 /home/jiguangshen/HPC_MachineLearning/MLcpp/lib/libexamples.so: examples/CMakeFiles/examples.dir/build.make
@@ -89,7 +115,8 @@ examples_EXTERNAL_OBJECTS =
 examples/CMakeFiles/examples.dir/build: /home/jiguangshen/HPC_MachineLearning/MLcpp/lib/libexamples.so
 .PHONY : examples/CMakeFiles/examples.dir/build
 
-examples/CMakeFiles/examples.dir/requires: examples/CMakeFiles/examples.dir/abalone.cpp.o.requires
+examples/CMakeFiles/examples.dir/requires: examples/CMakeFiles/examples.dir/iris.cpp.o.requires
+examples/CMakeFiles/examples.dir/requires: examples/CMakeFiles/examples.dir/banknote.cpp.o.requires
 .PHONY : examples/CMakeFiles/examples.dir/requires
 
 examples/CMakeFiles/examples.dir/clean:

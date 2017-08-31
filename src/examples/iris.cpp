@@ -3,33 +3,20 @@
 
 */
 #include "pch.h"
-#include "abalone.h"
+#include "iris.h"
 
-void abalone_data::data_info()
+void iris_data::data_info()
 {
-    std::cout << "Abalone data is relatively small, we could do read and store\n";
-    std::cout << "Number of Instances: 4177\n";
-    std::cout << "Number of Attributes: 8 \n";
-    std::cout << "Attribute information: \n";
-    std::cout << "Given is the attribute name, attribute type, the measurement unit and a\n";
-    std::cout << "brief description.The number of rings is the value to predict: either \n";
-    std::cout << "as a continuous value or as a classification problem.\n";
-    std::cout << "Name		Data Type	Meas.	Description \n";
-    std::cout << "----		---------	-----	----------- \n";
-    std::cout << "Sex		nominal			M, F, and I (infant) \n";
-    std::cout << "Length		continuous	mm	Longest shell measurement \n";
-    std::cout << "Diameter	continuous	mm	perpendicular to length \n";
-    std::cout << "Height		continuous	mm	with meat in shell \n";
-    std::cout << "Whole weight	continuous	grams	whole abalone \n";
-    std::cout << "Shucked weight	continuous	grams	weight of meat \n";
-    std::cout << "Viscera weight	continuous	grams	gut weight (after bleeding) \n";
-    std::cout << "Shell weight	continuous	grams	after being dried \n";
-    std::cout << "Rings		integer			+1.5 gives the age in years \n";
+   std::cout << "1. sepal length in cm " << std::endl;
+   std::cout << "2. sepal width in cm " << std::endl;
+   std::cout << "3. petal length in cm " << std::endl;
+   std::cout << "4. petal width in cm " << std::endl;
+   std::cout << "5. class: -- Iris Setosa -- Iris Versicolour -- Iris Virginica " << std::endl;
 }
 
-void abalone_data::load(std::string& path)
+void iris_data::load(std::string& path)
 {
-    std::cout << "Loading the Abalone data....\n";
+    std::cout << "Loading the iris data....\n";
 //=============== Read data ==================
     std::ifstream file(path);
 
@@ -51,19 +38,19 @@ void abalone_data::load(std::string& path)
 
             while(getline(thisline, token, ','))
             {
-                if(token == "F")
+                if(token == "Iris-setosa")
                 {
                     label.push_back(1.0);
                     label.push_back(0.0);
                     label.push_back(0.0);
                 }
-                else if(token == "M")
+                else if(token == "Iris-versicolor")
                 {
                     label.push_back(0.0);
                     label.push_back(1.0);
                     label.push_back(0.0);
                 }
-                else if(token == "I")
+                else if(token == "Iris-virginica")
                 {
                     label.push_back(0.0);
                     label.push_back(0.0);

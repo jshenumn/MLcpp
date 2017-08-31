@@ -1,86 +1,86 @@
-Start testing: Aug 19 23:08 CDT
+Start testing: Aug 20 22:40 CDT
 ----------------------------------------------------------
 1/1 Testing: neuron_network_tests
 1/1 Test: neuron_network_tests
 Command: "/home/jiguangshen/HPC_MachineLearning/MLcpp/bin/neural_net_unittest" "WORKING_DIRECTORY" "/home/jiguangshen/HPC_MachineLearning/MLcpp/src/../bin"
 Directory: /home/jiguangshen/HPC_MachineLearning/MLcpp/src
-"neuron_network_tests" start time: Aug 19 23:08 CDT
+"neuron_network_tests" start time: Aug 20 22:40 CDT
 Output:
 ----------------------------------------------------------
 [==========] Running 8 tests from 3 test cases.
 [----------] Global test environment set-up.
 [----------] 2 tests from neuron
 [ RUN      ] neuron.neuron_ctr
-[       OK ] neuron.neuron_ctr (1 ms)
+[       OK ] neuron.neuron_ctr (2 ms)
 [ RUN      ] neuron.neuron_rand
 [       OK ] neuron.neuron_rand (1 ms)
-[----------] 2 tests from neuron (2 ms total)
+[----------] 2 tests from neuron (3 ms total)
 
 [----------] 2 tests from layer
 [ RUN      ] layer.layer_ctr
-[       OK ] layer.layer_ctr (5 ms)
+[       OK ] layer.layer_ctr (6 ms)
 [ RUN      ] layer.layer_cal
 [       OK ] layer.layer_cal (5 ms)
 [----------] 2 tests from layer (11 ms total)
 
 [----------] 4 tests from bpnet
 [ RUN      ] bpnet.bpnet_ctr
-[2017-08-19 23:08:54.355091] [0x9b0eed40] [info]    ================= The architecture for the network =================
+[2017-08-20 22:40:29.283589] [0xc3a5dd40] [info]    ================= The architecture for the network =================
 
-[2017-08-19 23:08:54.355139] [0x9b0eed40] [info]    Input  layer size:3
+[2017-08-20 22:40:29.283642] [0xc3a5dd40] [info]    Input  layer size:3
 
-[2017-08-19 23:08:54.355142] [0x9b0eed40] [info]    Hidden layer size:3
+[2017-08-20 22:40:29.283645] [0xc3a5dd40] [info]    Hidden layer size:3
 
-[2017-08-19 23:08:54.355144] [0x9b0eed40] [info]    Output layer size:2
+[2017-08-20 22:40:29.283648] [0xc3a5dd40] [info]    Output layer size:2
 
 ================= The architecture for the network =================
 Input  layer size:3
 Hidden layer size:3
 Output layer size:2
-[       OK ] bpnet.bpnet_ctr (18 ms)
+[       OK ] bpnet.bpnet_ctr (19 ms)
 [ RUN      ] bpnet.bpnet_train_XOR
-[2017-08-19 23:08:54.372626] [0x9b0eed40] [info]    ================= The architecture for the network =================
+[2017-08-20 22:40:29.302510] [0xc3a5dd40] [info]    ================= The architecture for the network =================
 
-[2017-08-19 23:08:54.372632] [0x9b0eed40] [info]    Input  layer size:3
+[2017-08-20 22:40:29.302520] [0xc3a5dd40] [info]    Input  layer size:3
 
-[2017-08-19 23:08:54.372635] [0x9b0eed40] [info]    Hidden layer size:0
+[2017-08-20 22:40:29.302524] [0xc3a5dd40] [info]    Hidden layer size:0
 
-[2017-08-19 23:08:54.372638] [0x9b0eed40] [info]    Output layer size:1
+[2017-08-20 22:40:29.302528] [0xc3a5dd40] [info]    Output layer size:1
 
-[       OK ] bpnet.bpnet_train_XOR (17 ms)
+[       OK ] bpnet.bpnet_train_XOR (16 ms)
 [ RUN      ] bpnet.bpnet_train_XOR_MLP
-[2017-08-19 23:08:54.390015] [0x9b0eed40] [info]    ================= The architecture for the network =================
+[2017-08-20 22:40:29.318868] [0xc3a5dd40] [info]    ================= The architecture for the network =================
 
-[2017-08-19 23:08:54.390026] [0x9b0eed40] [info]    Input  layer size:2
+[2017-08-20 22:40:29.318877] [0xc3a5dd40] [info]    Input  layer size:2
 
-[2017-08-19 23:08:54.390029] [0x9b0eed40] [info]    Hidden layer size:1
+[2017-08-20 22:40:29.318881] [0xc3a5dd40] [info]    Hidden layer size:1
 
-[2017-08-19 23:08:54.390033] [0x9b0eed40] [info]    Output layer size:1
+[2017-08-20 22:40:29.318884] [0xc3a5dd40] [info]    Output layer size:1
 
-[       OK ] bpnet.bpnet_train_XOR_MLP (501 ms)
-[ RUN      ] bpnet.bpnet_train_ABALONE
-Loading the Abalone data....
+[       OK ] bpnet.bpnet_train_XOR_MLP (494 ms)
+[ RUN      ] bpnet.bpnet_train_iris
+Loading the iris data....
   Training set and testing set split....
-  Training data is: 2767
-  Test data is: 1410
+  Training data is: 104
+  Test data is: 46
 Training Start....
 ================= The architecture for the network =================
-Input  layer size:8
+Input  layer size:4
 Hidden layer size:1
 Output layer size:3
-Training done!  Accuracy is 50 % 
-[       OK ] bpnet.bpnet_train_ABALONE (29576 ms)
-[----------] 4 tests from bpnet (30112 ms total)
+Training done!  Accuracy is 95.6522 % 
+[       OK ] bpnet.bpnet_train_iris (10733 ms)
+[----------] 4 tests from bpnet (11262 ms total)
 
 [----------] Global test environment tear-down
-[==========] 8 tests from 3 test cases ran. (30125 ms total)
+[==========] 8 tests from 3 test cases ran. (11276 ms total)
 [  PASSED  ] 8 tests.
 <end of output>
-Test time =  30.13 sec
+Test time =  11.28 sec
 ----------------------------------------------------------
 Test Passed.
-"neuron_network_tests" end time: Aug 19 23:09 CDT
-"neuron_network_tests" time elapsed: 00:00:30
+"neuron_network_tests" end time: Aug 20 22:40 CDT
+"neuron_network_tests" time elapsed: 00:00:11
 ----------------------------------------------------------
 
-End testing: Aug 19 23:09 CDT
+End testing: Aug 20 22:40 CDT

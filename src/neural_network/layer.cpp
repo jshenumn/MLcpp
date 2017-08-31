@@ -61,6 +61,7 @@ void layer_softmax::calculate()
 {
     double tot = 0.0;
     double mmax = -10000;
+    
     for(int i = 0; i < n_neuron; ++i)
     {
        double sum = 0.0;
@@ -87,7 +88,7 @@ void layer_softmax::calculate()
        neurons[i].output = exp(sum-mmax);
        tot += exp(sum-mmax);
     }
-
+    
     for(int i = 0; i < n_neuron; ++i)
     {
        neurons[i].output /= tot;

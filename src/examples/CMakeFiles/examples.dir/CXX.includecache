@@ -6,13 +6,13 @@
 
 #IncludeRegexTransform: 
 
-/home/jiguangshen/HPC_MachineLearning/MLcpp/src/examples/abalone.cpp
+/home/jiguangshen/HPC_MachineLearning/MLcpp/src/examples/banknote.cpp
 pch.h
 /home/jiguangshen/HPC_MachineLearning/MLcpp/src/examples/pch.h
-abalone.h
-/home/jiguangshen/HPC_MachineLearning/MLcpp/src/examples/abalone.h
+banknote.h
+/home/jiguangshen/HPC_MachineLearning/MLcpp/src/examples/banknote.h
 
-/home/jiguangshen/HPC_MachineLearning/MLcpp/src/examples/abalone.h
+/home/jiguangshen/HPC_MachineLearning/MLcpp/src/examples/banknote.h
 dataframe.h
 /home/jiguangshen/HPC_MachineLearning/MLcpp/src/examples/dataframe.h
 pch.h

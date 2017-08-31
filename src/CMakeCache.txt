@@ -14,6 +14,9 @@
 # EXTERNAL cache entries
 ########################
 
+//Build documentation
+BUILD_DOC:BOOL=ON
+
 //Path to a program.
 CMAKE_AR:FILEPATH=/usr/bin/ar
 
@@ -45,7 +48,7 @@ CMAKE_CXX_FLAGS_RELEASE:STRING=-O3 -DNDEBUG
 CMAKE_CXX_FLAGS_RELWITHDEBINFO:STRING=-O2 -g
 
 //C compiler.
-CMAKE_C_COMPILER:FILEPATH=/usr/bin/gcc
+CMAKE_C_COMPILER:FILEPATH=/usr/bin/gcc-5
 
 //Flags used by the compiler during all build types.
 CMAKE_C_FLAGS:STRING=
@@ -148,17 +151,22 @@ CMAKE_USE_RELATIVE_PATHS:BOOL=OFF
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
+//Graphviz Dot tool for using Doxygen
+DOXYGEN_DOT_EXECUTABLE:FILEPATH=/usr/bin/dot
+
+DOXYGEN_DOT_PATH:FILEPATH=/usr/bin
+
+//Doxygen documentation generation tool (http://www.doxygen.org)
+DOXYGEN_EXECUTABLE:FILEPATH=/usr/bin/doxygen
+
 //Path to a library.
 GTLIB:FILEPATH=/home/jiguangshen/opt/thirdparty/googletest/1.8.0/lib/libgtest.a
 
 //Path to a library.
 GTLIBMAIN:FILEPATH=/home/jiguangshen/opt/thirdparty/googletest/1.8.0/lib/libgtest_main.a
 
-//C++ compiler flags for OpenMP parallization
-OpenMP_CXX_FLAGS:STRING=-fopenmp
-
-//C compiler flags for OpenMP parallization
-OpenMP_C_FLAGS:STRING=-fopenmp
+//Path to a library.
+LOG:FILEPATH=/home/jiguangshen/opt/thirdparty/boost/1.54/lib/libboost_log.so
 
 //Path to a library.
 PYTHON:FILEPATH=/home/jiguangshen/opt/thirdparty/boost/1.54/lib/libboost_python.so
@@ -172,11 +180,17 @@ Project_SOURCE_DIR:STATIC=/home/jiguangshen/HPC_MachineLearning/MLcpp/src
 //Path to a library.
 RAND:FILEPATH=/home/jiguangshen/opt/thirdparty/boost/1.54/lib/libboost_random.so
 
-//Dependencies for the target
-neural_net_LIB_DEPENDS:STATIC=general;/home/jiguangshen/opt/thirdparty/boost/1.54/lib/libboost_random.so;
+//Use OpenMP
+USE_OPENMP:BOOL=OFF
 
 //Dependencies for the target
-neural_net_dy_LIB_DEPENDS:STATIC=general;/home/jiguangshen/opt/thirdparty/boost/1.54/lib/libboost_random.so;
+examples_LIB_DEPENDS:STATIC=general;/home/jiguangshen/opt/thirdparty/boost/1.54/lib/libboost_random.so;general;/home/jiguangshen/opt/thirdparty/boost/1.54/lib/libboost_log.so;
+
+//Dependencies for the target
+neural_net_LIB_DEPENDS:STATIC=general;/home/jiguangshen/opt/thirdparty/boost/1.54/lib/libboost_random.so;general;/home/jiguangshen/opt/thirdparty/boost/1.54/lib/libboost_log.so;
+
+//Dependencies for the target
+neural_net_dy_LIB_DEPENDS:STATIC=general;/home/jiguangshen/opt/thirdparty/boost/1.54/lib/libboost_random.so;general;/home/jiguangshen/opt/thirdparty/boost/1.54/lib/libboost_log.so;
 
 //Dependencies for the target
 pyhello_LIB_DEPENDS:STATIC=general;/home/jiguangshen/opt/thirdparty/boost/1.54/lib/libboost_python.so;
@@ -274,7 +288,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_LOCAL_GENERATORS:INTERNAL=4
+CMAKE_NUMBER_OF_LOCAL_GENERATORS:INTERNAL=5
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -303,12 +317,12 @@ CMAKE_UNAME:INTERNAL=/bin/uname
 CMAKE_USE_RELATIVE_PATHS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
-//Details about finding OpenMP
-FIND_PACKAGE_MESSAGE_DETAILS_OpenMP:INTERNAL=[-fopenmp][-fopenmp][v()]
-//ADVANCED property for variable: OpenMP_CXX_FLAGS
-OpenMP_CXX_FLAGS-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: OpenMP_C_FLAGS
-OpenMP_C_FLAGS-ADVANCED:INTERNAL=1
-//Test OpenMP_FLAG_DETECTED
-OpenMP_FLAG_DETECTED:INTERNAL=1
+//ADVANCED property for variable: DOXYGEN_DOT_EXECUTABLE
+DOXYGEN_DOT_EXECUTABLE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: DOXYGEN_DOT_PATH
+DOXYGEN_DOT_PATH-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: DOXYGEN_EXECUTABLE
+DOXYGEN_EXECUTABLE-ADVANCED:INTERNAL=1
+//Details about finding Doxygen
+FIND_PACKAGE_MESSAGE_DETAILS_Doxygen:INTERNAL=[/usr/bin/doxygen][v()]
 

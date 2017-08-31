@@ -1,6 +1,7 @@
 #include "pch.h"
 #include "../neural_network/nnet.h"
-#include "../examples/abalone.h"
+#include "../examples/iris.h"
+#include "../examples/banknote.h"
 
 #define MAX_ITER 50000
 
@@ -139,12 +140,12 @@ TEST(bpnet, bpnet_train_XOR_MLP)
 }
 
 
-TEST(bpnet, bpnet_train_ABALONE)
+TEST(bpnet, DISABLED_bpnet_train_iris)
 {
     //===============  Load and preprocessing data ===========
-    std::unique_ptr<dataframe> abdat = std::make_unique<abalone_data>();
-    std::string path = "../data/abalone.data";
-    abdat->load(path);     
+    std::unique_ptr<dataframe> iris = std::make_unique<iris_data>();
+    std::string path = "../data/iris.data";
+    iris->load(path);
 
     //===============  Train and test split ==================
     std::cout << "  Training set and testing set split....\n";
@@ -156,7 +157,7 @@ TEST(bpnet, bpnet_train_ABALONE)
     boost::uniform_real<> uni_dist(0.0,1.0);
     boost::variate_generator<base_gen_type&, boost::uniform_real<> > uni(generator, uni_dist);
 
-    for(unsigned int i=0; i < abdat->n_instance; i++)
+    for(unsigned int i=0; i < iris->n_instance; i++)
     {
         double num = uni();
         if (uni() > 0.67)
@@ -179,28 +180,24 @@ TEST(bpnet, bpnet_train_ABALONE)
     hidden_layers.push_back(6);
 
 
-    double err;
-    double err_old = 1.0;
 
-    std::unique_ptr<bpnet> nt = std::make_unique<bpnet_CrossEntropy_softmax>(8,8,3,hidden_layers,1);
+    double err;
+
+    std::unique_ptr<bpnet> nt = std::make_unique<bpnet_CrossEntropy_softmax>(4,4,3,hidden_layers,1);
 
     nt->create();
 
-    int N_T = 50;
+    int N_T = train_index.size();
 
-    for(int ep = 0; ep < 30000; ep++)
+    for(int ep = 0; ep < 10000; ep++)
     {
         err = 0.0;
         for(int j = 0; j < N_T; j++)
         {
-            err += nt->train(abdat->all_feature[train_index[j]], abdat->all_label[train_index[j]], 0.002, 0.001);
+            err += nt->train(iris->all_feature[train_index[j]], iris->all_label[train_index[j]], 0.005, 0.001);
         }
-        if(fabs(err - err_old)  < 1e-8)
-            break;
-        err_old = err;
-        //std::cout << "Epoch " << ep << " done, error is " << err/N_T << "\n";
+        //std::cout << "Training epoch " << ep << " done, error is " << err/N_T << "\n";
     }
-
 
     std::vector<std::vector<double> > output_class;
     for(int i=0; i<N_T; i++)
@@ -210,9 +207,9 @@ TEST(bpnet, bpnet_train_ABALONE)
     }
 
     int corr = 0;
-    for(int i=0; i<N_T; i++)
+    for(int i=0; i<test_index.size(); i++)
     {
-        nt->get_output(abdat->all_feature[test_index[i]], output_class[i]);
+        nt->get_output(iris->all_feature[test_index[i]], output_class[i]);
         double temp,a,b,c;
         temp = (output_class[i][0] > output_class[i][1])? output_class[i][0]:output_class[i][1];
         temp = (output_class[i][2] > temp)? output_class[i][2]:temp;
@@ -220,12 +217,98 @@ TEST(bpnet, bpnet_train_ABALONE)
         b =  (output_class[i][1] < temp)? 0.0:1.0;
         c =  (output_class[i][2] < temp)? 0.0:1.0;
 
-        double ter = abs(abdat->all_label[test_index[i]][0] - a)
-                                    + abs(abdat->all_label[test_index[i]][1] - b)
-                                    + abs(abdat->all_label[test_index[i]][2] - c) ;
+        double ter = abs(iris->all_label[test_index[i]][0] - a)
+                     + abs(iris->all_label[test_index[i]][1] - b)
+                     + abs(iris->all_label[test_index[i]][2] - c) ;
         if(ter < 0.1) corr++;
     }
-    std::cout << "Training done!  Accuracy is " << (double)corr/N_T * 100 << " % \n";
-    EXPECT_GE((double)corr/N_T, 0.50);
+    std::cout << "Training done!  Accuracy is " << (double)corr/test_index.size() * 100 << " % \n";
+    EXPECT_GE((double)corr/test_index.size(), 0.90);
+
+}
+
+TEST(bpnet, DISABLED_bpnet_train_banknote)
+{
+    //===============  Load and preprocessing data ===========
+    std::unique_ptr<dataframe> banknote = std::make_unique<banknote_data>();
+    std::string path = "../data/banknote.data";
+    banknote->load(path);
+
+    //===============  Train and test split ==================
+    std::cout << "  Training set and testing set split....\n";
+
+    std::vector<int> train_index;
+    std::vector<int> test_index;
+
+    base_gen_type generator(42u);
+    boost::uniform_real<> uni_dist(0.0,1.0);
+    boost::variate_generator<base_gen_type&, boost::uniform_real<> > uni(generator, uni_dist);
+
+    for(unsigned int i=0; i < banknote->n_instance; i++)
+    {
+        double num = uni();
+        if (uni() > 0.67)
+        {
+            test_index.push_back(int(i));
+        }
+        else
+        {
+            train_index.push_back(int(i));
+        }
+    }
+    std::cout << "  Training data is: " << train_index.size() << "\n";
+    std::cout << "  Test data is: " << test_index.size() << "\n";
+
+    //==============  Training ========================
+    std::cout << "Training Start....\n";
+
+    //neural architecture should be 3 layers, each layer with 4 neurons, 2 output layers
+    std::vector<int> hidden_layers;
+    hidden_layers.push_back(3);
+
+    double err;
+
+    std::unique_ptr<bpnet> nt = std::make_unique<bpnet_CrossEntropy_softmax>(4,4,2,hidden_layers,1);
+
+    nt->create();
+
+    int N_T = train_index.size();
+
+    for(int ep = 0; ep < 1000; ep++)
+    {
+        err = 0.0;
+        for(int j = 0; j < N_T; j++)
+        {
+            err += nt->train(banknote->all_feature[train_index[j]], banknote->all_label[train_index[j]], 0.002, 0.001);
+        }
+        //std::cout << "Training epoch " << ep << " done, error is " << err/N_T << "\n";
+    }
+
+    std::vector<std::vector<double> > output_class;
+    for(int i=0; i<N_T; i++)
+    {
+        std::vector<double> vec(3,0.0);
+        output_class.push_back(vec);
+    }
+
+    int corr = 0;
+    for(int i=0; i<test_index.size(); i++)
+    {
+        nt->get_output(banknote->all_feature[test_index[i]], output_class[i]);
+        double temp, ter;
+        temp = *max_element(output_class[i].begin(), output_class[i].end());
+
+
+        int a[2];
+        ter = 0.0;
+        for(int j=0; j < 2; j++){
+          a[j] =  (output_class[i][j] < temp)? 0.0:1.0;
+          ter += abs(banknote->all_label[test_index[i]][j] - a[j]);
+        }
+
+        if(ter < 0.1) corr++;
+    }
+    std::cout << "Training done!  Accuracy is " << (double)corr/test_index.size() * 100 << " % \n";
+    EXPECT_GE((double)corr/test_index.size(), 0.90);
 
 }

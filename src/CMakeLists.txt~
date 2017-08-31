@@ -1,7 +1,7 @@
 # cmake for nerual network project
 
 option(BUILD_DOC "Build documentation" ON)
-option(USE_OPENMP "Use OpenMP" OFF)
+option(USE_OPENMP "Use OpenMP" ON)
 
 cmake_minimum_required(VERSION 2.8)
 

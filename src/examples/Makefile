@@ -119,29 +119,53 @@ examples/fast:
 	cd /home/jiguangshen/HPC_MachineLearning/MLcpp/src && $(MAKE) -f examples/CMakeFiles/examples.dir/build.make examples/CMakeFiles/examples.dir/build
 .PHONY : examples/fast
 
-abalone.o: abalone.cpp.o
-.PHONY : abalone.o
+banknote.o: banknote.cpp.o
+.PHONY : banknote.o
 
 # target to build an object file
-abalone.cpp.o:
-	cd /home/jiguangshen/HPC_MachineLearning/MLcpp/src && $(MAKE) -f examples/CMakeFiles/examples.dir/build.make examples/CMakeFiles/examples.dir/abalone.cpp.o
-.PHONY : abalone.cpp.o
+banknote.cpp.o:
+	cd /home/jiguangshen/HPC_MachineLearning/MLcpp/src && $(MAKE) -f examples/CMakeFiles/examples.dir/build.make examples/CMakeFiles/examples.dir/banknote.cpp.o
+.PHONY : banknote.cpp.o
 
-abalone.i: abalone.cpp.i
-.PHONY : abalone.i
+banknote.i: banknote.cpp.i
+.PHONY : banknote.i
 
 # target to preprocess a source file
-abalone.cpp.i:
-	cd /home/jiguangshen/HPC_MachineLearning/MLcpp/src && $(MAKE) -f examples/CMakeFiles/examples.dir/build.make examples/CMakeFiles/examples.dir/abalone.cpp.i
-.PHONY : abalone.cpp.i
+banknote.cpp.i:
+	cd /home/jiguangshen/HPC_MachineLearning/MLcpp/src && $(MAKE) -f examples/CMakeFiles/examples.dir/build.make examples/CMakeFiles/examples.dir/banknote.cpp.i
+.PHONY : banknote.cpp.i
 
-abalone.s: abalone.cpp.s
-.PHONY : abalone.s
+banknote.s: banknote.cpp.s
+.PHONY : banknote.s
 
 # target to generate assembly for a file
-abalone.cpp.s:
-	cd /home/jiguangshen/HPC_MachineLearning/MLcpp/src && $(MAKE) -f examples/CMakeFiles/examples.dir/build.make examples/CMakeFiles/examples.dir/abalone.cpp.s
-.PHONY : abalone.cpp.s
+banknote.cpp.s:
+	cd /home/jiguangshen/HPC_MachineLearning/MLcpp/src && $(MAKE) -f examples/CMakeFiles/examples.dir/build.make examples/CMakeFiles/examples.dir/banknote.cpp.s
+.PHONY : banknote.cpp.s
+
+iris.o: iris.cpp.o
+.PHONY : iris.o
+
+# target to build an object file
+iris.cpp.o:
+	cd /home/jiguangshen/HPC_MachineLearning/MLcpp/src && $(MAKE) -f examples/CMakeFiles/examples.dir/build.make examples/CMakeFiles/examples.dir/iris.cpp.o
+.PHONY : iris.cpp.o
+
+iris.i: iris.cpp.i
+.PHONY : iris.i
+
+# target to preprocess a source file
+iris.cpp.i:
+	cd /home/jiguangshen/HPC_MachineLearning/MLcpp/src && $(MAKE) -f examples/CMakeFiles/examples.dir/build.make examples/CMakeFiles/examples.dir/iris.cpp.i
+.PHONY : iris.cpp.i
+
+iris.s: iris.cpp.s
+.PHONY : iris.s
+
+# target to generate assembly for a file
+iris.cpp.s:
+	cd /home/jiguangshen/HPC_MachineLearning/MLcpp/src && $(MAKE) -f examples/CMakeFiles/examples.dir/build.make examples/CMakeFiles/examples.dir/iris.cpp.s
+.PHONY : iris.cpp.s
 
 # Help Target
 help:
@@ -153,9 +177,12 @@ help:
 	@echo "... examples"
 	@echo "... rebuild_cache"
 	@echo "... test"
-	@echo "... abalone.o"
-	@echo "... abalone.i"
-	@echo "... abalone.s"
+	@echo "... banknote.o"
+	@echo "... banknote.i"
+	@echo "... banknote.s"
+	@echo "... iris.o"
+	@echo "... iris.i"
+	@echo "... iris.s"
 .PHONY : help
 
 

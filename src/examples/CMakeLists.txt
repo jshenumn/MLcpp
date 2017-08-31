@@ -7,7 +7,8 @@ find_library(LOG libboost_log.so PATHS "${BOOST_LIBRARY_DIRS}")
 
 
 set(SOURCES
-   abalone.cpp
+   iris.cpp
+   banknote.cpp
 )
 
 add_library(examples SHARED ${SOURCES})

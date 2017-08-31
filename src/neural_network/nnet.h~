@@ -7,7 +7,7 @@
 
 // Back propagation neural network
 /*!
-\brief A backpropagation neural network class
+\brief A backpropagation neural network class.
    The back-propagation network has the architecture of
    three components propagate, update and train
 */

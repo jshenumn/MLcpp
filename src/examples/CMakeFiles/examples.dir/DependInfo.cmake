@@ -4,7 +4,8 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_CXX
-  "/home/jiguangshen/HPC_MachineLearning/MLcpp/src/examples/abalone.cpp" "/home/jiguangshen/HPC_MachineLearning/MLcpp/src/examples/CMakeFiles/examples.dir/abalone.cpp.o"
+  "/home/jiguangshen/HPC_MachineLearning/MLcpp/src/examples/banknote.cpp" "/home/jiguangshen/HPC_MachineLearning/MLcpp/src/examples/CMakeFiles/examples.dir/banknote.cpp.o"
+  "/home/jiguangshen/HPC_MachineLearning/MLcpp/src/examples/iris.cpp" "/home/jiguangshen/HPC_MachineLearning/MLcpp/src/examples/CMakeFiles/examples.dir/iris.cpp.o"
   )
 SET(CMAKE_CXX_COMPILER_ID "GNU")
 

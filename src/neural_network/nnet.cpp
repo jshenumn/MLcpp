@@ -26,7 +26,6 @@ void bpnet::get_output(std::vector<double>& input,std::vector<double>& opt)
 
 
 
-
 void bpnet::propagate(const std::vector<double>& input)
 {
     input_layer->layerinput = input;
@@ -87,21 +86,9 @@ void bpnet::update(int layer_index)
 
 
 
-
-
-
-
-
-
-
 // =========   MSE loss function with sigmoid activation =========//
 void bpnet_MSE_sigmoid::create()
 {
-    BOOST_LOG_TRIVIAL(info) << "================= The architecture for the network =================\n";
-    BOOST_LOG_TRIVIAL(info) << "Input  layer size:" <<  n_neurons_in << "\n";
-    BOOST_LOG_TRIVIAL(info) << "Hidden layer size:" <<  n_hidden_layers << "\n";
-    BOOST_LOG_TRIVIAL(info) << "Output layer size:" <<  n_output << "\n";
-
     input_layer  = std::make_unique<layer_sigmoid>();
     output_layer = std::make_unique<layer_sigmoid>();
 
@@ -167,7 +154,6 @@ double bpnet_MSE_sigmoid::train(const std::vector<double>& train_data, const std
     propagate(train_data);
 
     // back propagation from the output layer
-
     for(int i = 0; i < output_layer->n_neuron; i++)
     {
         output = output_layer->neurons[i].output;
@@ -260,11 +246,6 @@ void bpnet_MSE_sigmoid::get_output(std::vector<double>& input,std::vector<double
 //==========  Cross entropy loss function with softmax activation ========//
 void bpnet_CrossEntropy_softmax::create()
 {
-    std::cout << "================= The architecture for the network =================\n";
-    std::cout << "Input  layer size:" <<  n_neurons_in << "\n";
-    std::cout << "Hidden layer size:" <<  n_hidden_layers << "\n";
-    std::cout << "Output layer size:" <<  n_output << "\n";
-
     input_layer  = std::make_unique<layer_sigmoid>();
     output_layer = std::make_unique<layer_softmax>();
 
@@ -412,6 +393,5 @@ void bpnet_CrossEntropy_softmax::get_output(std::vector<double>& input,std::vect
 {
     bpnet::get_output(input, opt);
 }
-
 
 

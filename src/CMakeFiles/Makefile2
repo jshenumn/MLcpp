@@ -50,6 +50,41 @@ CMAKE_SOURCE_DIR = /home/jiguangshen/HPC_MachineLearning/MLcpp/src
 CMAKE_BINARY_DIR = /home/jiguangshen/HPC_MachineLearning/MLcpp/src
 
 #=============================================================================
+# Target rules for target CMakeFiles/doc_doxygen.dir
+
+# All Build rule for target.
+CMakeFiles/doc_doxygen.dir/all:
+	$(MAKE) -f CMakeFiles/doc_doxygen.dir/build.make CMakeFiles/doc_doxygen.dir/depend
+	$(MAKE) -f CMakeFiles/doc_doxygen.dir/build.make CMakeFiles/doc_doxygen.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jiguangshen/HPC_MachineLearning/MLcpp/src/CMakeFiles  1
+	@echo "Built target doc_doxygen"
+.PHONY : CMakeFiles/doc_doxygen.dir/all
+
+# Include target in all.
+all: CMakeFiles/doc_doxygen.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/doc_doxygen.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jiguangshen/HPC_MachineLearning/MLcpp/src/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/doc_doxygen.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jiguangshen/HPC_MachineLearning/MLcpp/src/CMakeFiles 0
+.PHONY : CMakeFiles/doc_doxygen.dir/rule
+
+# Convenience name for target.
+doc_doxygen: CMakeFiles/doc_doxygen.dir/rule
+.PHONY : doc_doxygen
+
+# clean rule for target.
+CMakeFiles/doc_doxygen.dir/clean:
+	$(MAKE) -f CMakeFiles/doc_doxygen.dir/build.make CMakeFiles/doc_doxygen.dir/clean
+.PHONY : CMakeFiles/doc_doxygen.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/doc_doxygen.dir/clean
+.PHONY : clean
+
+#=============================================================================
 # Directory level rules for directory neural_network
 
 # Convenience name for "all" pass in the directory.
@@ -73,7 +108,7 @@ neural_network/preinstall:
 neural_network/CMakeFiles/neural_net.dir/all:
 	$(MAKE) -f neural_network/CMakeFiles/neural_net.dir/build.make neural_network/CMakeFiles/neural_net.dir/depend
 	$(MAKE) -f neural_network/CMakeFiles/neural_net.dir/build.make neural_network/CMakeFiles/neural_net.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/jiguangshen/HPC_MachineLearning/MLcpp/src/CMakeFiles  1 2 3 4
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jiguangshen/HPC_MachineLearning/MLcpp/src/CMakeFiles  4 5 6 7
 	@echo "Built target neural_net"
 .PHONY : neural_network/CMakeFiles/neural_net.dir/all
 
@@ -108,7 +143,7 @@ clean: neural_network/CMakeFiles/neural_net.dir/clean
 neural_network/CMakeFiles/neural_net_dy.dir/all:
 	$(MAKE) -f neural_network/CMakeFiles/neural_net_dy.dir/build.make neural_network/CMakeFiles/neural_net_dy.dir/depend
 	$(MAKE) -f neural_network/CMakeFiles/neural_net_dy.dir/build.make neural_network/CMakeFiles/neural_net_dy.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/jiguangshen/HPC_MachineLearning/MLcpp/src/CMakeFiles  5 6 7 8
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jiguangshen/HPC_MachineLearning/MLcpp/src/CMakeFiles  8 9 10 11
 	@echo "Built target neural_net_dy"
 .PHONY : neural_network/CMakeFiles/neural_net_dy.dir/all
 
@@ -137,6 +172,56 @@ clean: neural_network/CMakeFiles/neural_net_dy.dir/clean
 .PHONY : clean
 
 #=============================================================================
+# Directory level rules for directory examples
+
+# Convenience name for "all" pass in the directory.
+examples/all: examples/CMakeFiles/examples.dir/all
+.PHONY : examples/all
+
+# Convenience name for "clean" pass in the directory.
+examples/clean: examples/CMakeFiles/examples.dir/clean
+.PHONY : examples/clean
+
+# Convenience name for "preinstall" pass in the directory.
+examples/preinstall:
+.PHONY : examples/preinstall
+
+#=============================================================================
+# Target rules for target examples/CMakeFiles/examples.dir
+
+# All Build rule for target.
+examples/CMakeFiles/examples.dir/all:
+	$(MAKE) -f examples/CMakeFiles/examples.dir/build.make examples/CMakeFiles/examples.dir/depend
+	$(MAKE) -f examples/CMakeFiles/examples.dir/build.make examples/CMakeFiles/examples.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jiguangshen/HPC_MachineLearning/MLcpp/src/CMakeFiles  2 3
+	@echo "Built target examples"
+.PHONY : examples/CMakeFiles/examples.dir/all
+
+# Include target in all.
+all: examples/CMakeFiles/examples.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+examples/CMakeFiles/examples.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jiguangshen/HPC_MachineLearning/MLcpp/src/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 examples/CMakeFiles/examples.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jiguangshen/HPC_MachineLearning/MLcpp/src/CMakeFiles 0
+.PHONY : examples/CMakeFiles/examples.dir/rule
+
+# Convenience name for target.
+examples: examples/CMakeFiles/examples.dir/rule
+.PHONY : examples
+
+# clean rule for target.
+examples/CMakeFiles/examples.dir/clean:
+	$(MAKE) -f examples/CMakeFiles/examples.dir/build.make examples/CMakeFiles/examples.dir/clean
+.PHONY : examples/CMakeFiles/examples.dir/clean
+
+# clean rule for target.
+clean: examples/CMakeFiles/examples.dir/clean
+.PHONY : clean
+
+#=============================================================================
 # Directory level rules for directory python_wrapper
 
 # Convenience name for "all" pass in the directory.
@@ -158,7 +243,7 @@ python_wrapper/preinstall:
 python_wrapper/CMakeFiles/pyhello.dir/all:
 	$(MAKE) -f python_wrapper/CMakeFiles/pyhello.dir/build.make python_wrapper/CMakeFiles/pyhello.dir/depend
 	$(MAKE) -f python_wrapper/CMakeFiles/pyhello.dir/build.make python_wrapper/CMakeFiles/pyhello.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/jiguangshen/HPC_MachineLearning/MLcpp/src/CMakeFiles  13
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jiguangshen/HPC_MachineLearning/MLcpp/src/CMakeFiles  16
 	@echo "Built target pyhello"
 .PHONY : python_wrapper/CMakeFiles/pyhello.dir/all
 
@@ -208,7 +293,7 @@ neural_network.unittest/preinstall:
 neural_network.unittest/CMakeFiles/neural_net_unittest.dir/all: neural_network/CMakeFiles/neural_net.dir/all
 	$(MAKE) -f neural_network.unittest/CMakeFiles/neural_net_unittest.dir/build.make neural_network.unittest/CMakeFiles/neural_net_unittest.dir/depend
 	$(MAKE) -f neural_network.unittest/CMakeFiles/neural_net_unittest.dir/build.make neural_network.unittest/CMakeFiles/neural_net_unittest.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/jiguangshen/HPC_MachineLearning/MLcpp/src/CMakeFiles  9 10 11 12
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jiguangshen/HPC_MachineLearning/MLcpp/src/CMakeFiles  12 13 14 15
 	@echo "Built target neural_net_unittest"
 .PHONY : neural_network.unittest/CMakeFiles/neural_net_unittest.dir/all
 

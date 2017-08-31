@@ -1,0 +1,6 @@
+// When use MPI, we need neurons to be able to 
+// memorize updates for each weight and send them back to main 
+// process to take the average
+
+/*! Define a new neuron*/
+
