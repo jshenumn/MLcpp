@@ -74,6 +74,7 @@ set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/../lib")
 add_subdirectory(neural_network)
 add_subdirectory(examples)
 add_subdirectory(python_wrapper)
+add_subdirectory(neural_network.mpi)
 
 add_subdirectory(neural_network.unittest)
 

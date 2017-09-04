@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network.mpi/../neural_network/layer.h
+neuron.h
+/home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network.mpi/../neural_network/neuron.h
+
+/home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network.mpi/../neural_network/neuron.h
+
+/home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network.mpi/../neural_network/nnet.h
+layer.h
+/home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network.mpi/../neural_network/layer.h
+boost/log/trivial.hpp
+-
+
+/home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network.mpi/nnet.mpi.h
+../neural_network/neuron.h
+/home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network.mpi/../neural_network/neuron.h
+../neural_network/layer.h
+/home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network.mpi/../neural_network/layer.h
+../neural_network/nnet.h
+/home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network.mpi/../neural_network/nnet.h
+
+/home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network.mpi/nnet_mpi.cpp
+nnet.mpi.h
+/home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network.mpi/nnet.mpi.h
+

@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['create',['create',['../classbpnet.html#a3731e200c3191fc77be85f1db2c2d4f9',1,'bpnet::create()'],['../classbpnet__MSE__sigmoid.html#a1e80df296941ce0751c8106998db05ed',1,'bpnet_MSE_sigmoid::create()'],['../classbpnet__CrossEntropy__softmax.html#a220ba65a1d29b86e4d200416d38c931d',1,'bpnet_CrossEntropy_softmax::create()']]]
+  ['bpnet',['bpnet',['../classbpnet.html#adfeeece0abde65630da85276488cc0b2',1,'bpnet']]],
+  ['bpnet_5fcrossentropy_5fsoftmax',['bpnet_CrossEntropy_softmax',['../classbpnet__CrossEntropy__softmax.html#af27dfc3aa73d018c4c5d9f27ae7057f1',1,'bpnet_CrossEntropy_softmax']]],
+  ['bpnet_5fmse_5fsigmoid',['bpnet_MSE_sigmoid',['../classbpnet__MSE__sigmoid.html#ae9db37565d0e635570178896965a9d8c',1,'bpnet_MSE_sigmoid']]]
 ];

@@ -92,54 +92,56 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define LAYER_H</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;neuron.h&quot;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
-<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="structlayer.html">    6</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structlayer.html">layer</a></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;     std::vector&lt;neuron&gt; neurons;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;     std::vector&lt;double&gt; layerinput;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;     <span class="keywordtype">int</span> n_neuron;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;     <span class="keywordtype">int</span> n_input;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;     <a class="code" href="structlayer.html">layer</a>();</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;     <span class="keyword">virtual</span> ~<a class="code" href="structlayer.html">layer</a>(){};</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;     <span class="keywordtype">void</span> create(<span class="keywordtype">int</span> _n_input, <span class="keywordtype">int</span> _n_neuron);</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;     <span class="keyword">virtual</span> <span class="keywordtype">void</span> calculate() = 0;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;};</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
-<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="structlayer__sigmoid.html">   20</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structlayer__sigmoid.html">layer_sigmoid</a> : <span class="keyword">public</span> <a class="code" href="structlayer.html">layer</a></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;     <a class="code" href="structlayer__sigmoid.html">layer_sigmoid</a>():<a class="code" href="structlayer.html">layer</a>(){}</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    ~<a class="code" href="structlayer__sigmoid.html">layer_sigmoid</a>(){}</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;     <span class="keywordtype">void</span> calculate();</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;};</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
-<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="structlayer__tanh.html">   28</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structlayer__tanh.html">layer_tanh</a> : <span class="keyword">public</span> <a class="code" href="structlayer.html">layer</a></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;{</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;     <a class="code" href="structlayer__tanh.html">layer_tanh</a>():<a class="code" href="structlayer.html">layer</a>(){}</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    ~<a class="code" href="structlayer__tanh.html">layer_tanh</a>(){}</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;     <span class="keywordtype">void</span> calculate();</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;};</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
-<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="structlayer__softmax.html">   36</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structlayer__softmax.html">layer_softmax</a> : <span class="keyword">public</span> <a class="code" href="structlayer.html">layer</a></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;{</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;     <a class="code" href="structlayer__softmax.html">layer_softmax</a>() : <a class="code" href="structlayer.html">layer</a>(){}</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    ~<a class="code" href="structlayer__softmax.html">layer_softmax</a>(){}</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;     <span class="keywordtype">void</span> calculate();</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;};</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="structlayer__sigmoid_html"><div class="ttname"><a href="structlayer__sigmoid.html">layer_sigmoid</a></div><div class="ttdef"><b>Definition:</b> layer.h:20</div></div>
-<div class="ttc" id="structlayer__softmax_html"><div class="ttname"><a href="structlayer__softmax.html">layer_softmax</a></div><div class="ttdef"><b>Definition:</b> layer.h:36</div></div>
-<div class="ttc" id="structlayer__tanh_html"><div class="ttname"><a href="structlayer__tanh.html">layer_tanh</a></div><div class="ttdef"><b>Definition:</b> layer.h:28</div></div>
-<div class="ttc" id="structlayer_html"><div class="ttname"><a href="structlayer.html">layer</a></div><div class="ttdef"><b>Definition:</b> layer.h:6</div></div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="structlayer.html">    8</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structlayer.html">layer</a></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;{</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;     std::vector&lt;neuron&gt; neurons;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;     std::vector&lt;double&gt; layerinput;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;     <span class="keywordtype">int</span> n_neuron;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;     <span class="keywordtype">int</span> n_input;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;     <a class="code" href="structlayer.html#a95796de3b5f8aa07f49effa03a03f6f8">layer</a>();</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="structlayer.html#ae0781f14cd91478477526183951eb052">   20</a></span>&#160;     <span class="keyword">virtual</span> <a class="code" href="structlayer.html#ae0781f14cd91478477526183951eb052">~layer</a>(){};</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;     <span class="keywordtype">void</span> <a class="code" href="structlayer.html#a50ca540d57f99add95b7e92c96498810">create</a>(<span class="keywordtype">int</span> _n_input, <span class="keywordtype">int</span> _n_neuron);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;     <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="structlayer.html#aacf7297d77c1ea2933d5551636f7c9ad">calculate</a>() = 0;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;};</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="structlayer__sigmoid.html">   35</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structlayer__sigmoid.html">layer_sigmoid</a> : <span class="keyword">public</span> <a class="code" href="structlayer.html">layer</a></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;{</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;     <a class="code" href="structlayer__sigmoid.html">layer_sigmoid</a>():<a class="code" href="structlayer.html#a95796de3b5f8aa07f49effa03a03f6f8">layer</a>(){}</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    ~<a class="code" href="structlayer__sigmoid.html">layer_sigmoid</a>(){}</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;     <span class="keywordtype">void</span> <a class="code" href="structlayer__sigmoid.html#a04a54d415eb5412fcd78478b3e113f3f">calculate</a>();</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;};</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="structlayer__tanh.html">   45</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structlayer__tanh.html">layer_tanh</a> : <span class="keyword">public</span> <a class="code" href="structlayer.html">layer</a></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;{</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;     <a class="code" href="structlayer__tanh.html">layer_tanh</a>():<a class="code" href="structlayer.html#a95796de3b5f8aa07f49effa03a03f6f8">layer</a>(){}</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    ~<a class="code" href="structlayer__tanh.html">layer_tanh</a>(){}</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;     <span class="keywordtype">void</span> <a class="code" href="structlayer__tanh.html#aa06a41d4ddfa798cafd99cf1e22f1a48">calculate</a>();</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;};</div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="structlayer__softmax.html">   55</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structlayer__softmax.html">layer_softmax</a> : <span class="keyword">public</span> <a class="code" href="structlayer.html">layer</a></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;{</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;     <a class="code" href="structlayer__softmax.html">layer_softmax</a>() : <a class="code" href="structlayer.html#a95796de3b5f8aa07f49effa03a03f6f8">layer</a>(){}</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    ~<a class="code" href="structlayer__softmax.html">layer_softmax</a>(){}</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;     <span class="keywordtype">void</span> <a class="code" href="structlayer__softmax.html#addf2fcfd6b5c0131e2429f49835bf8e8">calculate</a>();</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;};</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="structlayer_html_a50ca540d57f99add95b7e92c96498810"><div class="ttname"><a href="structlayer.html#a50ca540d57f99add95b7e92c96498810">layer::create</a></div><div class="ttdeci">void create(int _n_input, int _n_neuron)</div><div class="ttdef"><b>Definition:</b> layer.cpp:12</div></div>
+<div class="ttc" id="structlayer_html_aacf7297d77c1ea2933d5551636f7c9ad"><div class="ttname"><a href="structlayer.html#aacf7297d77c1ea2933d5551636f7c9ad">layer::calculate</a></div><div class="ttdeci">virtual void calculate()=0</div></div>
+<div class="ttc" id="structlayer__sigmoid_html"><div class="ttname"><a href="structlayer__sigmoid.html">layer_sigmoid</a></div><div class="ttdoc">The layer with a sigmoid activation. </div><div class="ttdef"><b>Definition:</b> layer.h:35</div></div>
+<div class="ttc" id="structlayer__tanh_html_aa06a41d4ddfa798cafd99cf1e22f1a48"><div class="ttname"><a href="structlayer__tanh.html#aa06a41d4ddfa798cafd99cf1e22f1a48">layer_tanh::calculate</a></div><div class="ttdeci">void calculate()</div><div class="ttdef"><b>Definition:</b> layer.cpp:43</div></div>
+<div class="ttc" id="structlayer__softmax_html_addf2fcfd6b5c0131e2429f49835bf8e8"><div class="ttname"><a href="structlayer__softmax.html#addf2fcfd6b5c0131e2429f49835bf8e8">layer_softmax::calculate</a></div><div class="ttdeci">void calculate()</div><div class="ttdef"><b>Definition:</b> layer.cpp:60</div></div>
+<div class="ttc" id="structlayer_html_a95796de3b5f8aa07f49effa03a03f6f8"><div class="ttname"><a href="structlayer.html#a95796de3b5f8aa07f49effa03a03f6f8">layer::layer</a></div><div class="ttdeci">layer()</div><div class="ttdef"><b>Definition:</b> layer.cpp:7</div></div>
+<div class="ttc" id="structlayer__softmax_html"><div class="ttname"><a href="structlayer__softmax.html">layer_softmax</a></div><div class="ttdoc">The layer with a softmax activation, which is popular for multi-class cases. </div><div class="ttdef"><b>Definition:</b> layer.h:55</div></div>
+<div class="ttc" id="structlayer__sigmoid_html_a04a54d415eb5412fcd78478b3e113f3f"><div class="ttname"><a href="structlayer__sigmoid.html#a04a54d415eb5412fcd78478b3e113f3f">layer_sigmoid::calculate</a></div><div class="ttdeci">void calculate()</div><div class="ttdef"><b>Definition:</b> layer.cpp:26</div></div>
+<div class="ttc" id="structlayer_html_ae0781f14cd91478477526183951eb052"><div class="ttname"><a href="structlayer.html#ae0781f14cd91478477526183951eb052">layer::~layer</a></div><div class="ttdeci">virtual ~layer()</div><div class="ttdef"><b>Definition:</b> layer.h:20</div></div>
+<div class="ttc" id="structlayer__tanh_html"><div class="ttname"><a href="structlayer__tanh.html">layer_tanh</a></div><div class="ttdoc">The layer with a tanh activation. </div><div class="ttdef"><b>Definition:</b> layer.h:45</div></div>
+<div class="ttc" id="structlayer_html"><div class="ttname"><a href="structlayer.html">layer</a></div><div class="ttdoc">the layer structure which consists of neurons and an activation function. </div><div class="ttdef"><b>Definition:</b> layer.h:8</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Aug 19 2017 23:34:12 for Machine Learning C++ by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Sep 2 2017 00:14:28 for Machine Learning C++ by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['propagate',['propagate',['../classbpnet.html#a77cd3c63e9948e4b6cc9e3a0412e25ea',1,'bpnet::propagate()'],['../classbpnet__MSE__sigmoid.html#a1ddf105554e8b9471417f624d8142077',1,'bpnet_MSE_sigmoid::propagate()'],['../classbpnet__CrossEntropy__softmax.html#a5bc91db68cdcb204fb1e46101cc731cd',1,'bpnet_CrossEntropy_softmax::propagate()']]]
+  ['layer',['layer',['../structlayer.html#a95796de3b5f8aa07f49effa03a03f6f8',1,'layer']]],
+  ['load',['load',['../structbanknote__data.html#a2915563eeee2f721994ce9c5daaf4c93',1,'banknote_data::load()'],['../structdataframe.html#ae108c949f6f3f89c7ed000e90c3a2e64',1,'dataframe::load()'],['../structiris__data.html#a23c106db87bef4ab1ef81d99d78f07c7',1,'iris_data::load()']]]
 ];

@@ -90,24 +90,31 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">layer_sigmoid Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>The layer with a sigmoid activation.  
+ <a href="structlayer__sigmoid.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="layer_8h_source.html">layer.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for layer_sigmoid:</div>
 <div class="dyncontent">
  <div class="center">
   <img src="structlayer__sigmoid.png" usemap="#layer_sigmoid_map" alt=""/>
   <map id="layer_sigmoid_map" name="layer_sigmoid_map">
-<area href="structlayer.html" alt="layer" shape="rect" coords="0,0,90,24"/>
+<area href="structlayer.html" title="the layer structure which consists of neurons and an activation function. " alt="layer" shape="rect" coords="0,0,90,24"/>
 </map>
  </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a04a54d415eb5412fcd78478b3e113f3f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a04a54d415eb5412fcd78478b3e113f3f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>calculate</b> ()</td></tr>
+<tr class="memitem:a04a54d415eb5412fcd78478b3e113f3f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlayer__sigmoid.html#a04a54d415eb5412fcd78478b3e113f3f">calculate</a> ()</td></tr>
 <tr class="separator:a04a54d415eb5412fcd78478b3e113f3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_structlayer"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_structlayer')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="structlayer.html">layer</a></td></tr>
-<tr class="memitem:a50ca540d57f99add95b7e92c96498810 inherit pub_methods_structlayer"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a50ca540d57f99add95b7e92c96498810"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>create</b> (int _n_input, int _n_neuron)</td></tr>
+<tr class="memitem:a95796de3b5f8aa07f49effa03a03f6f8 inherit pub_methods_structlayer"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlayer.html#a95796de3b5f8aa07f49effa03a03f6f8">layer</a> ()</td></tr>
+<tr class="separator:a95796de3b5f8aa07f49effa03a03f6f8 inherit pub_methods_structlayer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0781f14cd91478477526183951eb052 inherit pub_methods_structlayer"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlayer.html#ae0781f14cd91478477526183951eb052">~layer</a> ()</td></tr>
+<tr class="separator:ae0781f14cd91478477526183951eb052 inherit pub_methods_structlayer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50ca540d57f99add95b7e92c96498810 inherit pub_methods_structlayer"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlayer.html#a50ca540d57f99add95b7e92c96498810">create</a> (int _n_input, int _n_neuron)</td></tr>
 <tr class="separator:a50ca540d57f99add95b7e92c96498810 inherit pub_methods_structlayer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
@@ -126,6 +133,35 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>n_neuron</b></td></tr>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>n_input</b></td></tr>
 <tr class="separator:a8323a6ef4cab8f81515ca964b79034fe inherit pub_attribs_structlayer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>The layer with a sigmoid activation. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a04a54d415eb5412fcd78478b3e113f3f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void layer_sigmoid::calculate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>pure virtual function to calculate layer output based on the activation function </p>
+
+<p>Implements <a class="el" href="structlayer.html#aacf7297d77c1ea2933d5551636f7c9ad">layer</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following files:<ul>
 <li>/home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network/<a class="el" href="layer_8h_source.html">layer.h</a></li>
 <li>/home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network/layer.cpp</li>
@@ -133,7 +169,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>n_input</b></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Aug 19 2017 23:34:13 for Machine Learning C++ by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Sep 2 2017 00:14:29 for Machine Learning C++ by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

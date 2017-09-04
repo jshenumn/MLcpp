@@ -1,0 +1,67 @@
+\contentsline {chapter}{\numberline {1}M\discretionary {-}{}{}Lcpp}{1}{chapter.1}
+\contentsline {chapter}{\numberline {2}Hierarchical Index}{3}{chapter.2}
+\contentsline {section}{\numberline {2.1}Class Hierarchy}{3}{section.2.1}
+\contentsline {chapter}{\numberline {3}Class Index}{5}{chapter.3}
+\contentsline {section}{\numberline {3.1}Class List}{5}{section.3.1}
+\contentsline {chapter}{\numberline {4}Class Documentation}{7}{chapter.4}
+\contentsline {section}{\numberline {4.1}abalone\discretionary {-}{}{}\_\discretionary {-}{}{}data Struct Reference}{7}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Detailed Description}{7}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Member Function Documentation}{7}{subsection.4.1.2}
+\contentsline {subsubsection}{\numberline {4.1.2.1}data\discretionary {-}{}{}\_\discretionary {-}{}{}info}{7}{subsubsection.4.1.2.1}
+\contentsline {subsubsection}{\numberline {4.1.2.2}load}{7}{subsubsection.4.1.2.2}
+\contentsline {section}{\numberline {4.2}bpnet Class Reference}{8}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Detailed Description}{8}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Constructor \& Destructor Documentation}{9}{subsection.4.2.2}
+\contentsline {subsubsection}{\numberline {4.2.2.1}bpnet}{9}{subsubsection.4.2.2.1}
+\contentsline {subsubsection}{\numberline {4.2.2.2}$\sim $bpnet}{9}{subsubsection.4.2.2.2}
+\contentsline {subsection}{\numberline {4.2.3}Member Function Documentation}{9}{subsection.4.2.3}
+\contentsline {subsubsection}{\numberline {4.2.3.1}create}{9}{subsubsection.4.2.3.1}
+\contentsline {subsubsection}{\numberline {4.2.3.2}get\discretionary {-}{}{}\_\discretionary {-}{}{}n\discretionary {-}{}{}\_\discretionary {-}{}{}hidden\discretionary {-}{}{}\_\discretionary {-}{}{}layers}{9}{subsubsection.4.2.3.2}
+\contentsline {subsubsection}{\numberline {4.2.3.3}get\discretionary {-}{}{}\_\discretionary {-}{}{}output}{9}{subsubsection.4.2.3.3}
+\contentsline {subsubsection}{\numberline {4.2.3.4}propagate}{9}{subsubsection.4.2.3.4}
+\contentsline {subsubsection}{\numberline {4.2.3.5}train}{10}{subsubsection.4.2.3.5}
+\contentsline {subsubsection}{\numberline {4.2.3.6}update}{10}{subsubsection.4.2.3.6}
+\contentsline {subsection}{\numberline {4.2.4}Member Data Documentation}{10}{subsection.4.2.4}
+\contentsline {subsubsection}{\numberline {4.2.4.1}hidden\discretionary {-}{}{}\_\discretionary {-}{}{}layers}{10}{subsubsection.4.2.4.1}
+\contentsline {subsubsection}{\numberline {4.2.4.2}input\discretionary {-}{}{}\_\discretionary {-}{}{}layer}{10}{subsubsection.4.2.4.2}
+\contentsline {subsubsection}{\numberline {4.2.4.3}output\discretionary {-}{}{}\_\discretionary {-}{}{}layer}{10}{subsubsection.4.2.4.3}
+\contentsline {section}{\numberline {4.3}bpnet\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Cross\discretionary {-}{}{}Entropy\discretionary {-}{}{}\_\discretionary {-}{}{}softmax Class Reference}{10}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Detailed Description}{11}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Constructor \& Destructor Documentation}{11}{subsection.4.3.2}
+\contentsline {subsubsection}{\numberline {4.3.2.1}bpnet\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Cross\discretionary {-}{}{}Entropy\discretionary {-}{}{}\_\discretionary {-}{}{}softmax}{11}{subsubsection.4.3.2.1}
+\contentsline {subsubsection}{\numberline {4.3.2.2}$\sim $bpnet\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Cross\discretionary {-}{}{}Entropy\discretionary {-}{}{}\_\discretionary {-}{}{}softmax}{11}{subsubsection.4.3.2.2}
+\contentsline {subsection}{\numberline {4.3.3}Member Function Documentation}{11}{subsection.4.3.3}
+\contentsline {subsubsection}{\numberline {4.3.3.1}create}{11}{subsubsection.4.3.3.1}
+\contentsline {subsubsection}{\numberline {4.3.3.2}get\discretionary {-}{}{}\_\discretionary {-}{}{}n\discretionary {-}{}{}\_\discretionary {-}{}{}hidden\discretionary {-}{}{}\_\discretionary {-}{}{}layers}{12}{subsubsection.4.3.3.2}
+\contentsline {subsubsection}{\numberline {4.3.3.3}get\discretionary {-}{}{}\_\discretionary {-}{}{}output}{12}{subsubsection.4.3.3.3}
+\contentsline {subsubsection}{\numberline {4.3.3.4}propagate}{12}{subsubsection.4.3.3.4}
+\contentsline {subsubsection}{\numberline {4.3.3.5}train}{12}{subsubsection.4.3.3.5}
+\contentsline {subsubsection}{\numberline {4.3.3.6}update}{12}{subsubsection.4.3.3.6}
+\contentsline {section}{\numberline {4.4}bpnet\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}M\discretionary {-}{}{}S\discretionary {-}{}{}E\discretionary {-}{}{}\_\discretionary {-}{}{}sigmoid Class Reference}{13}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Detailed Description}{13}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}Constructor \& Destructor Documentation}{13}{subsection.4.4.2}
+\contentsline {subsubsection}{\numberline {4.4.2.1}bpnet\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}M\discretionary {-}{}{}S\discretionary {-}{}{}E\discretionary {-}{}{}\_\discretionary {-}{}{}sigmoid}{13}{subsubsection.4.4.2.1}
+\contentsline {subsubsection}{\numberline {4.4.2.2}$\sim $bpnet\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}M\discretionary {-}{}{}S\discretionary {-}{}{}E\discretionary {-}{}{}\_\discretionary {-}{}{}sigmoid}{14}{subsubsection.4.4.2.2}
+\contentsline {subsection}{\numberline {4.4.3}Member Function Documentation}{14}{subsection.4.4.3}
+\contentsline {subsubsection}{\numberline {4.4.3.1}create}{14}{subsubsection.4.4.3.1}
+\contentsline {subsubsection}{\numberline {4.4.3.2}get\discretionary {-}{}{}\_\discretionary {-}{}{}n\discretionary {-}{}{}\_\discretionary {-}{}{}hidden\discretionary {-}{}{}\_\discretionary {-}{}{}layers}{14}{subsubsection.4.4.3.2}
+\contentsline {subsubsection}{\numberline {4.4.3.3}get\discretionary {-}{}{}\_\discretionary {-}{}{}output}{14}{subsubsection.4.4.3.3}
+\contentsline {subsubsection}{\numberline {4.4.3.4}propagate}{14}{subsubsection.4.4.3.4}
+\contentsline {subsubsection}{\numberline {4.4.3.5}train}{14}{subsubsection.4.4.3.5}
+\contentsline {subsubsection}{\numberline {4.4.3.6}update}{15}{subsubsection.4.4.3.6}
+\contentsline {section}{\numberline {4.5}dataframe Struct Reference}{15}{section.4.5}
+\contentsline {subsection}{\numberline {4.5.1}Detailed Description}{16}{subsection.4.5.1}
+\contentsline {subsection}{\numberline {4.5.2}Constructor \& Destructor Documentation}{16}{subsection.4.5.2}
+\contentsline {subsubsection}{\numberline {4.5.2.1}dataframe}{16}{subsubsection.4.5.2.1}
+\contentsline {subsubsection}{\numberline {4.5.2.2}$\sim $dataframe}{16}{subsubsection.4.5.2.2}
+\contentsline {subsection}{\numberline {4.5.3}Member Function Documentation}{16}{subsection.4.5.3}
+\contentsline {subsubsection}{\numberline {4.5.3.1}data\discretionary {-}{}{}\_\discretionary {-}{}{}info}{16}{subsubsection.4.5.3.1}
+\contentsline {subsubsection}{\numberline {4.5.3.2}load}{16}{subsubsection.4.5.3.2}
+\contentsline {subsection}{\numberline {4.5.4}Member Data Documentation}{16}{subsection.4.5.4}
+\contentsline {subsubsection}{\numberline {4.5.4.1}all\discretionary {-}{}{}\_\discretionary {-}{}{}feature}{16}{subsubsection.4.5.4.1}
+\contentsline {subsubsection}{\numberline {4.5.4.2}all\discretionary {-}{}{}\_\discretionary {-}{}{}label}{16}{subsubsection.4.5.4.2}
+\contentsline {section}{\numberline {4.6}layer Struct Reference}{16}{section.4.6}
+\contentsline {section}{\numberline {4.7}layer\discretionary {-}{}{}\_\discretionary {-}{}{}sigmoid Struct Reference}{17}{section.4.7}
+\contentsline {section}{\numberline {4.8}layer\discretionary {-}{}{}\_\discretionary {-}{}{}softmax Struct Reference}{17}{section.4.8}
+\contentsline {section}{\numberline {4.9}layer\discretionary {-}{}{}\_\discretionary {-}{}{}tanh Struct Reference}{18}{section.4.9}
+\contentsline {section}{\numberline {4.10}neuron Struct Reference}{18}{section.4.10}

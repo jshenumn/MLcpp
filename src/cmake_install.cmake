@@ -37,6 +37,7 @@ IF(NOT CMAKE_INSTALL_LOCAL_ONLY)
   INCLUDE("/home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network/cmake_install.cmake")
   INCLUDE("/home/jiguangshen/HPC_MachineLearning/MLcpp/src/examples/cmake_install.cmake")
   INCLUDE("/home/jiguangshen/HPC_MachineLearning/MLcpp/src/python_wrapper/cmake_install.cmake")
+  INCLUDE("/home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network.mpi/cmake_install.cmake")
   INCLUDE("/home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network.unittest/cmake_install.cmake")
 
 ENDIF(NOT CMAKE_INSTALL_LOCAL_ONLY)

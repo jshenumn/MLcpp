@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['get_5fn_5fhidden_5flayers',['get_n_hidden_layers',['../classbpnet.html#aa35c06d999256c9aebeed4f38bca9d0f',1,'bpnet::get_n_hidden_layers()'],['../classbpnet__MSE__sigmoid.html#a1aab79a52a004260011a68bf50eabd28',1,'bpnet_MSE_sigmoid::get_n_hidden_layers()'],['../classbpnet__CrossEntropy__softmax.html#a9a4d4c77b996c83b0e881ae22868512b',1,'bpnet_CrossEntropy_softmax::get_n_hidden_layers()']]],
-  ['get_5foutput',['get_output',['../classbpnet.html#a9da604c278a2d583511071fdc754c9c6',1,'bpnet::get_output()'],['../classbpnet__MSE__sigmoid.html#ab4bf4f79ba1625fd155e7de251b57609',1,'bpnet_MSE_sigmoid::get_output()'],['../classbpnet__CrossEntropy__softmax.html#aef5c2eb0db95b6bdca4cab71248f544c',1,'bpnet_CrossEntropy_softmax::get_output()']]]
+  ['data_5finfo',['data_info',['../structbanknote__data.html#afbe0c062a0fc69f8edd74dbe17571f4a',1,'banknote_data::data_info()'],['../structdataframe.html#ac71cab6be91e8cb90d8efa88e6866b83',1,'dataframe::data_info()'],['../structiris__data.html#a6e149a32e92f33cbeb1a1ccdb5bf75f1',1,'iris_data::data_info()']]],
+  ['dataframe',['dataframe',['../structdataframe.html#a4ddfcbd8b4c6a38a5439811e9a8621e8',1,'dataframe']]],
+  ['deactivate',['deactivate',['../structneuron.html#adbea299710f3a6402e83433b3c0cabf9',1,'neuron']]]
 ];

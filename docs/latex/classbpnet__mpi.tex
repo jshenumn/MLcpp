@@ -1,0 +1,144 @@
+\hypertarget{classbpnet__mpi}{\section{bpnet\-\_\-mpi Class Reference}
+\label{classbpnet__mpi}\index{bpnet\-\_\-mpi@{bpnet\-\_\-mpi}}
+}
+
+
+{\ttfamily \#include $<$nnet.\-mpi.\-h$>$}
+
+Inheritance diagram for bpnet\-\_\-mpi\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classbpnet__mpi}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classbpnet__mpi_a4b808fe251cffa351e0312ed0f523942}{bpnet\-\_\-mpi} (int i\-\_\-num\-\_\-input, int i\-\_\-num\-\_\-input\-\_\-neurons, int i\-\_\-num\-\_\-output, std\-::vector$<$ int $>$ i\-\_\-hidden\-\_\-layers, int i\-\_\-num\-\_\-hidden\-\_\-layers)
+\item 
+virtual \hyperlink{classbpnet__mpi_a98f24d482ceb4e5df576c8110fb4d8a4}{$\sim$bpnet\-\_\-mpi} ()
+\item 
+virtual void \hyperlink{classbpnet__mpi_a734df7a0c8e6f65ceb6613729cbfae31}{create} ()
+\item 
+void \hyperlink{classbpnet__mpi_af584e64c3a0ed4bd91436c50a1009ba4}{propagate} (const std\-::vector$<$ double $>$ \&input)
+\item 
+void \hyperlink{classbpnet__mpi_aada732a042e36b5cad8e7b14946c09df}{update} (int i\-\_\-layer\-\_\-index)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\-::unique\-\_\-ptr$<$ \hyperlink{structlayer}{layer} $>$ \hyperlink{classbpnet__mpi_a0aa75e3e05f2506f42772dde626749f9}{m\-\_\-input\-\_\-layer}
+\item 
+std\-::unique\-\_\-ptr$<$ \hyperlink{structlayer}{layer} $>$ \hyperlink{classbpnet__mpi_ad734a9a35fb6f3deeccf4bc94a9c1ca4}{m\-\_\-output\-\_\-layer}
+\item 
+std\-::vector$<$ std\-::unique\-\_\-ptr\\*
+$<$ \hyperlink{structlayer}{layer} $>$ $>$ \hyperlink{classbpnet__mpi_a590981e3b36b8c076fea1206a3d520ef}{m\-\_\-hidden\-\_\-layers}
+\item 
+\hypertarget{classbpnet__mpi_aeaa870547e30b4b055e3618434f23f4f}{int {\bfseries m\-\_\-num\-\_\-hidden\-\_\-layers}}\label{classbpnet__mpi_aeaa870547e30b4b055e3618434f23f4f}
+
+\item 
+\hypertarget{classbpnet__mpi_a77862b6e4d07f64a8c9d3cd3eef50fb5}{int {\bfseries m\-\_\-num\-\_\-input}}\label{classbpnet__mpi_a77862b6e4d07f64a8c9d3cd3eef50fb5}
+
+\item 
+\hypertarget{classbpnet__mpi_acdcfd12a7827130fb46bf08107356e1e}{int {\bfseries m\-\_\-num\-\_\-neurons\-\_\-in}}\label{classbpnet__mpi_acdcfd12a7827130fb46bf08107356e1e}
+
+\item 
+\hypertarget{classbpnet__mpi_adc3cc093064dbfb15aac26bfcccfcdc5}{int {\bfseries m\-\_\-num\-\_\-output}}\label{classbpnet__mpi_adc3cc093064dbfb15aac26bfcccfcdc5}
+
+\item 
+\hypertarget{classbpnet__mpi_aa033d39bb384cb2858c53201ca2991d9}{std\-::vector$<$ int $>$ {\bfseries m\-\_\-hidden\-\_\-layer\-\_\-layout}}\label{classbpnet__mpi_aa033d39bb384cb2858c53201ca2991d9}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+bpnet using mpi 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classbpnet__mpi_a4b808fe251cffa351e0312ed0f523942}{\index{bpnet\-\_\-mpi@{bpnet\-\_\-mpi}!bpnet\-\_\-mpi@{bpnet\-\_\-mpi}}
+\index{bpnet\-\_\-mpi@{bpnet\-\_\-mpi}!bpnet_mpi@{bpnet\-\_\-mpi}}
+\subsubsection[{bpnet\-\_\-mpi}]{\setlength{\rightskip}{0pt plus 5cm}bpnet\-\_\-mpi\-::bpnet\-\_\-mpi (
+\begin{DoxyParamCaption}
+\item[{int}]{i\-\_\-num\-\_\-input, }
+\item[{int}]{i\-\_\-num\-\_\-input\-\_\-neurons, }
+\item[{int}]{i\-\_\-num\-\_\-output, }
+\item[{std\-::vector$<$ int $>$}]{i\-\_\-hidden\-\_\-layers, }
+\item[{int}]{i\-\_\-num\-\_\-hidden\-\_\-layers}
+\end{DoxyParamCaption}
+)}}\label{classbpnet__mpi_a4b808fe251cffa351e0312ed0f523942}
+bpnet constructor 
+\begin{DoxyParams}{Parameters}
+{\em i\-\_\-num\-\_\-input} & number of input variables. \\
+\hline
+{\em i\-\_\-num\-\_\-input\-\_\-neurons} & number of neurons in input layer. \\
+\hline
+{\em i\-\_\-num\-\_\-output} & number of output \\
+\hline
+{\em i\-\_\-hidden\-\_\-layers} & hidden\-\_\-layers size vector \\
+\hline
+{\em i\-\_\-num\-\_\-hidden\-\_\-layers} & number of hidden layers \\
+\hline
+\end{DoxyParams}
+\hypertarget{classbpnet__mpi_a98f24d482ceb4e5df576c8110fb4d8a4}{\index{bpnet\-\_\-mpi@{bpnet\-\_\-mpi}!$\sim$bpnet\-\_\-mpi@{$\sim$bpnet\-\_\-mpi}}
+\index{$\sim$bpnet\-\_\-mpi@{$\sim$bpnet\-\_\-mpi}!bpnet_mpi@{bpnet\-\_\-mpi}}
+\subsubsection[{$\sim$bpnet\-\_\-mpi}]{\setlength{\rightskip}{0pt plus 5cm}virtual bpnet\-\_\-mpi\-::$\sim$bpnet\-\_\-mpi (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classbpnet__mpi_a98f24d482ceb4e5df576c8110fb4d8a4}
+\hyperlink{classbpnet__mpi}{bpnet\-\_\-mpi} destructor 
+
+\subsection{Member Function Documentation}
+\hypertarget{classbpnet__mpi_a734df7a0c8e6f65ceb6613729cbfae31}{\index{bpnet\-\_\-mpi@{bpnet\-\_\-mpi}!create@{create}}
+\index{create@{create}!bpnet_mpi@{bpnet\-\_\-mpi}}
+\subsubsection[{create}]{\setlength{\rightskip}{0pt plus 5cm}virtual void bpnet\-\_\-mpi\-::create (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classbpnet__mpi_a734df7a0c8e6f65ceb6613729cbfae31}
+a virtual function to create neural network 
+
+Reimplemented in \hyperlink{classbpnet__mpi__MSE__sigmoid_a93568732355150e72a91e597d8d1866f}{bpnet\-\_\-mpi\-\_\-\-M\-S\-E\-\_\-sigmoid}.
+
+\hypertarget{classbpnet__mpi_af584e64c3a0ed4bd91436c50a1009ba4}{\index{bpnet\-\_\-mpi@{bpnet\-\_\-mpi}!propagate@{propagate}}
+\index{propagate@{propagate}!bpnet_mpi@{bpnet\-\_\-mpi}}
+\subsubsection[{propagate}]{\setlength{\rightskip}{0pt plus 5cm}void bpnet\-\_\-mpi\-::propagate (
+\begin{DoxyParamCaption}
+\item[{const std\-::vector$<$ double $>$ \&}]{input}
+\end{DoxyParamCaption}
+)}}\label{classbpnet__mpi_af584e64c3a0ed4bd91436c50a1009ba4}
+a function to perform forward feeding of data 
+\begin{DoxyParams}{Parameters}
+{\em input} & the input data vector \\
+\hline
+\end{DoxyParams}
+\hypertarget{classbpnet__mpi_aada732a042e36b5cad8e7b14946c09df}{\index{bpnet\-\_\-mpi@{bpnet\-\_\-mpi}!update@{update}}
+\index{update@{update}!bpnet_mpi@{bpnet\-\_\-mpi}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}void bpnet\-\_\-mpi\-::update (
+\begin{DoxyParamCaption}
+\item[{int}]{i\-\_\-layer\-\_\-index}
+\end{DoxyParamCaption}
+)}}\label{classbpnet__mpi_aada732a042e36b5cad8e7b14946c09df}
+a function to update 
+\begin{DoxyParams}{Parameters}
+{\em layer\-\_\-index} & the layer index \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classbpnet__mpi_a590981e3b36b8c076fea1206a3d520ef}{\index{bpnet\-\_\-mpi@{bpnet\-\_\-mpi}!m\-\_\-hidden\-\_\-layers@{m\-\_\-hidden\-\_\-layers}}
+\index{m\-\_\-hidden\-\_\-layers@{m\-\_\-hidden\-\_\-layers}!bpnet_mpi@{bpnet\-\_\-mpi}}
+\subsubsection[{m\-\_\-hidden\-\_\-layers}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$std\-::unique\-\_\-ptr$<${\bf layer}$>$ $>$ bpnet\-\_\-mpi\-::m\-\_\-hidden\-\_\-layers\hspace{0.3cm}{\ttfamily [protected]}}}\label{classbpnet__mpi_a590981e3b36b8c076fea1206a3d520ef}
+hidden layers holder \hypertarget{classbpnet__mpi_a0aa75e3e05f2506f42772dde626749f9}{\index{bpnet\-\_\-mpi@{bpnet\-\_\-mpi}!m\-\_\-input\-\_\-layer@{m\-\_\-input\-\_\-layer}}
+\index{m\-\_\-input\-\_\-layer@{m\-\_\-input\-\_\-layer}!bpnet_mpi@{bpnet\-\_\-mpi}}
+\subsubsection[{m\-\_\-input\-\_\-layer}]{\setlength{\rightskip}{0pt plus 5cm}std\-::unique\-\_\-ptr$<${\bf layer}$>$ bpnet\-\_\-mpi\-::m\-\_\-input\-\_\-layer\hspace{0.3cm}{\ttfamily [protected]}}}\label{classbpnet__mpi_a0aa75e3e05f2506f42772dde626749f9}
+input layer \hypertarget{classbpnet__mpi_ad734a9a35fb6f3deeccf4bc94a9c1ca4}{\index{bpnet\-\_\-mpi@{bpnet\-\_\-mpi}!m\-\_\-output\-\_\-layer@{m\-\_\-output\-\_\-layer}}
+\index{m\-\_\-output\-\_\-layer@{m\-\_\-output\-\_\-layer}!bpnet_mpi@{bpnet\-\_\-mpi}}
+\subsubsection[{m\-\_\-output\-\_\-layer}]{\setlength{\rightskip}{0pt plus 5cm}std\-::unique\-\_\-ptr$<${\bf layer}$>$ bpnet\-\_\-mpi\-::m\-\_\-output\-\_\-layer\hspace{0.3cm}{\ttfamily [protected]}}}\label{classbpnet__mpi_ad734a9a35fb6f3deeccf4bc94a9c1ca4}
+output layer 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/home/jiguangshen/\-H\-P\-C\-\_\-\-Machine\-Learning/\-M\-Lcpp/src/neural\-\_\-network.\-mpi/nnet.\-mpi.\-h\item 
+/home/jiguangshen/\-H\-P\-C\-\_\-\-Machine\-Learning/\-M\-Lcpp/src/neural\-\_\-network.\-mpi/nnet\-\_\-mpi.\-cpp\end{DoxyCompactItemize}

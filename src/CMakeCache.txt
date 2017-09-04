@@ -193,6 +193,9 @@ neural_net_LIB_DEPENDS:STATIC=general;/home/jiguangshen/opt/thirdparty/boost/1.5
 neural_net_dy_LIB_DEPENDS:STATIC=general;/home/jiguangshen/opt/thirdparty/boost/1.54/lib/libboost_random.so;general;/home/jiguangshen/opt/thirdparty/boost/1.54/lib/libboost_log.so;
 
 //Dependencies for the target
+neural_net_mpi_LIB_DEPENDS:STATIC=general;/home/jiguangshen/opt/thirdparty/boost/1.54/lib/libboost_random.so;general;/home/jiguangshen/opt/thirdparty/boost/1.54/lib/libboost_log.so;
+
+//Dependencies for the target
 pyhello_LIB_DEPENDS:STATIC=general;/home/jiguangshen/opt/thirdparty/boost/1.54/lib/libboost_python.so;
 
 
@@ -288,7 +291,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_LOCAL_GENERATORS:INTERNAL=5
+CMAKE_NUMBER_OF_LOCAL_GENERATORS:INTERNAL=6
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

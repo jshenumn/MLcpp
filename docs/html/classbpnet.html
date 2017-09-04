@@ -92,7 +92,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
-<p>A backpropagation neural network class The back-propagation network has the architecture of three components propagate, update and train.  
+<p>A backpropagation neural network class. The back-propagation network has the architecture of three components propagate, update and train.  
  <a href="classbpnet.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="nnet_8h_source.html">nnet.h</a>&gt;</code></p>
@@ -125,6 +125,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a653eae04b7dcfb4271421fd079849f89"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9da604c278a2d583511071fdc754c9c6"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbpnet.html#a9da604c278a2d583511071fdc754c9c6">get_output</a> (std::vector&lt; double &gt; &amp;input, std::vector&lt; double &gt; &amp;output)</td></tr>
 <tr class="separator:a9da604c278a2d583511071fdc754c9c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb2e9180ca3a3e42776f3487b9a3bfe9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acb2e9180ca3a3e42776f3487b9a3bfe9"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>extract_weights</b> (std::vector&lt; double &gt; &amp;weights_flattened, int &amp;dim)</td></tr>
+<tr class="separator:acb2e9180ca3a3e42776f3487b9a3bfe9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ae976225ed085139806242a7cefd84f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2ae976225ed085139806242a7cefd84f"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>broadcast_weights</b> (std::vector&lt; double &gt; &amp;weights_flattened, int &amp;dim)</td></tr>
+<tr class="separator:a2ae976225ed085139806242a7cefd84f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -152,7 +158,7 @@ std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>h
 <tr class="separator:a9bb6a37050d988b4dda40d903c573ab0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>A backpropagation neural network class The back-propagation network has the architecture of three components propagate, update and train. </p>
+<div class="textblock"><p>A backpropagation neural network class. The back-propagation network has the architecture of three components propagate, update and train. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="adfeeece0abde65630da85276488cc0b2"></a>
 <div class="memitem">
@@ -507,7 +513,7 @@ std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>h
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Aug 19 2017 23:34:12 for Machine Learning C++ by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Sep 2 2017 00:14:29 for Machine Learning C++ by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

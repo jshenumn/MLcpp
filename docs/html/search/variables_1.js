@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['hidden_5flayers',['hidden_layers',['../classbpnet.html#a9f1d31d7cdb034587768016a799c36f6',1,'bpnet']]]
+  ['deltas',['deltas',['../structneuron.html#adbb698db478b03d1df7da41d977a8690',1,'neuron']]]
 ];

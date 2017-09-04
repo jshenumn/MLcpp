@@ -91,26 +91,30 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">neuron Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>The neuron structure, which is the smallest unit of a neural network.  
+ <a href="structneuron.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="neuron_8h_source.html">neuron.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:abbe656fe98d44f42741b9b3412c05187"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abbe656fe98d44f42741b9b3412c05187"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>create</b> (int n_input)</td></tr>
+<tr class="memitem:a4d11d8f1c09393022c099f0ec07d1fbf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structneuron.html#a4d11d8f1c09393022c099f0ec07d1fbf">neuron</a> ()</td></tr>
+<tr class="separator:a4d11d8f1c09393022c099f0ec07d1fbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69a9b529ba8d2b4ad4c996bf08a8bd2f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structneuron.html#a69a9b529ba8d2b4ad4c996bf08a8bd2f">~neuron</a> ()</td></tr>
+<tr class="separator:a69a9b529ba8d2b4ad4c996bf08a8bd2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbe656fe98d44f42741b9b3412c05187"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structneuron.html#abbe656fe98d44f42741b9b3412c05187">create</a> (int n_input)</td></tr>
 <tr class="separator:abbe656fe98d44f42741b9b3412c05187"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6751788971a339ccc522333f740ffd41"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6751788971a339ccc522333f740ffd41"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>activate</b> ()</td></tr>
+<tr class="memitem:a6751788971a339ccc522333f740ffd41"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structneuron.html#a6751788971a339ccc522333f740ffd41">activate</a> ()</td></tr>
 <tr class="separator:a6751788971a339ccc522333f740ffd41"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adbea299710f3a6402e83433b3c0cabf9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adbea299710f3a6402e83433b3c0cabf9"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>deactivate</b> ()</td></tr>
+<tr class="memitem:adbea299710f3a6402e83433b3c0cabf9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structneuron.html#adbea299710f3a6402e83433b3c0cabf9">deactivate</a> ()</td></tr>
 <tr class="separator:adbea299710f3a6402e83433b3c0cabf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a46dd6f29c430390f623f708e12fdf333"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a46dd6f29c430390f623f708e12fdf333"></a>
-std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>weights</b></td></tr>
+<tr class="memitem:a46dd6f29c430390f623f708e12fdf333"><td class="memItemLeft" align="right" valign="top">std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structneuron.html#a46dd6f29c430390f623f708e12fdf333">weights</a></td></tr>
 <tr class="separator:a46dd6f29c430390f623f708e12fdf333"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adbb698db478b03d1df7da41d977a8690"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adbb698db478b03d1df7da41d977a8690"></a>
-std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>deltas</b></td></tr>
+<tr class="memitem:adbb698db478b03d1df7da41d977a8690"><td class="memItemLeft" align="right" valign="top">std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structneuron.html#adbb698db478b03d1df7da41d977a8690">deltas</a></td></tr>
 <tr class="separator:adbb698db478b03d1df7da41d977a8690"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae47a1f9995c0649c2d5811692c1d294f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae47a1f9995c0649c2d5811692c1d294f"></a>
 double&#160;</td><td class="memItemRight" valign="bottom"><b>output</b></td></tr>
@@ -121,10 +125,148 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>bias</b></td></tr>
 <tr class="memitem:a02ae7cb21e0edaf78e96b687ae10c2b6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a02ae7cb21e0edaf78e96b687ae10c2b6"></a>
 double&#160;</td><td class="memItemRight" valign="bottom"><b>w_bias</b></td></tr>
 <tr class="separator:a02ae7cb21e0edaf78e96b687ae10c2b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a23ae47a4501a58d5f9ac6b5d37622e9a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a23ae47a4501a58d5f9ac6b5d37622e9a"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>active</b></td></tr>
+<tr class="memitem:a23ae47a4501a58d5f9ac6b5d37622e9a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structneuron.html#a23ae47a4501a58d5f9ac6b5d37622e9a">active</a></td></tr>
 <tr class="separator:a23ae47a4501a58d5f9ac6b5d37622e9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>The neuron structure, which is the smallest unit of a neural network. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a4d11d8f1c09393022c099f0ec07d1fbf"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">neuron::neuron </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>constructor </p>
+
+</div>
+</div>
+<a class="anchor" id="a69a9b529ba8d2b4ad4c996bf08a8bd2f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">neuron::~neuron </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>destructor </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a6751788971a339ccc522333f740ffd41"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void neuron::activate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>activate neuron if deactivated </p>
+
+</div>
+</div>
+<a class="anchor" id="abbe656fe98d44f42741b9b3412c05187"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void neuron::create </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n_input</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>create the neuron </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n_input</td><td>the dimension of input </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="adbea299710f3a6402e83433b3c0cabf9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void neuron::deactivate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>deactivate neuron if activated </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a23ae47a4501a58d5f9ac6b5d37622e9a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool neuron::active</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>usuful when perform random shut down </p>
+
+</div>
+</div>
+<a class="anchor" id="adbb698db478b03d1df7da41d977a8690"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;double&gt; neuron::deltas</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The gradient increment </p>
+
+</div>
+</div>
+<a class="anchor" id="a46dd6f29c430390f623f708e12fdf333"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;double&gt; neuron::weights</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The weights (not include bias) </p>
+
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following files:<ul>
 <li>/home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network/<a class="el" href="neuron_8h_source.html">neuron.h</a></li>
 <li>/home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network/neuron.cpp</li>
@@ -132,7 +274,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>active</b></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Aug 19 2017 23:34:13 for Machine Learning C++ by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Sep 2 2017 00:14:30 for Machine Learning C++ by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

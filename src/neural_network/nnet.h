@@ -67,6 +67,11 @@ public:
       \param output output class label
     */
     virtual void get_output(std::vector<double>& input, std::vector<double>& output);
+
+    virtual void extract_weights(std::vector<double>& weights_flattened, int& dim);
+    virtual void broadcast_weights(std::vector<double>& weights_flattened, int& dim);
+
+
 };
 
 /*!
@@ -120,6 +125,9 @@ public:
       \param output output class label
     */
     void get_output(std::vector<double>& input, std::vector<double>& output);
+
+    void extract_weights(std::vector<double>& weights_flattened, int& dim);
+    void broadcast_weights(std::vector<double>& weights_flattened, int& dim);
 
 };
 
@@ -176,6 +184,9 @@ public:
       \param output output class label
     */
     void get_output(std::vector<double>& input, std::vector<double>& output);
+
+    void extract_weights(std::vector<double>& weights_flattened, int& dim);
+    void broadcast_weights(std::vector<double>& weights_flattened, int& dim);
 
 };
 

@@ -91,29 +91,35 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef NEURON_H</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define NEURON_H</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
-<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="structneuron.html">    5</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structneuron.html">neuron</a></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;{</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;   std::vector&lt;double&gt; weights;</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;   std::vector&lt;double&gt; deltas;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;   <span class="keywordtype">double</span> output;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;   <span class="keywordtype">double</span> bias;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;   <span class="keywordtype">double</span> w_bias;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;   <span class="keywordtype">bool</span> active;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;   <a class="code" href="structneuron.html">neuron</a>();</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  ~<a class="code" href="structneuron.html">neuron</a>(){};</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;   <span class="keywordtype">void</span> create(<span class="keywordtype">int</span> n_input);</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;   <span class="keywordtype">void</span> activate();</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;   <span class="keywordtype">void</span> deactivate();</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;};</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="structneuron_html"><div class="ttname"><a href="structneuron.html">neuron</a></div><div class="ttdef"><b>Definition:</b> neuron.h:5</div></div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="structneuron.html">    7</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structneuron.html">neuron</a></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;{</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="structneuron.html#a46dd6f29c430390f623f708e12fdf333">    9</a></span>&#160;   std::vector&lt;double&gt; <a class="code" href="structneuron.html#a46dd6f29c430390f623f708e12fdf333">weights</a>; </div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="structneuron.html#adbb698db478b03d1df7da41d977a8690">   10</a></span>&#160;   std::vector&lt;double&gt; <a class="code" href="structneuron.html#adbb698db478b03d1df7da41d977a8690">deltas</a>;  </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;   <span class="keywordtype">double</span> output;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;   <span class="keywordtype">double</span> bias;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;   <span class="keywordtype">double</span> w_bias;</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="structneuron.html#a23ae47a4501a58d5f9ac6b5d37622e9a">   14</a></span>&#160;   <span class="keywordtype">bool</span> <a class="code" href="structneuron.html#a23ae47a4501a58d5f9ac6b5d37622e9a">active</a>; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;   <a class="code" href="structneuron.html#a4d11d8f1c09393022c099f0ec07d1fbf">neuron</a>();</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="structneuron.html#a69a9b529ba8d2b4ad4c996bf08a8bd2f">   21</a></span>&#160;   <a class="code" href="structneuron.html#a69a9b529ba8d2b4ad4c996bf08a8bd2f">~neuron</a>(){};</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;   <span class="keywordtype">void</span> <a class="code" href="structneuron.html#abbe656fe98d44f42741b9b3412c05187">create</a>(<span class="keywordtype">int</span> n_input);  </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;   <span class="keywordtype">void</span> <a class="code" href="structneuron.html#a6751788971a339ccc522333f740ffd41">activate</a>();</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;   <span class="keywordtype">void</span> <a class="code" href="structneuron.html#adbea299710f3a6402e83433b3c0cabf9">deactivate</a>();</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;};</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="structneuron_html_a4d11d8f1c09393022c099f0ec07d1fbf"><div class="ttname"><a href="structneuron.html#a4d11d8f1c09393022c099f0ec07d1fbf">neuron::neuron</a></div><div class="ttdeci">neuron()</div><div class="ttdef"><b>Definition:</b> neuron.cpp:11</div></div>
+<div class="ttc" id="structneuron_html_a23ae47a4501a58d5f9ac6b5d37622e9a"><div class="ttname"><a href="structneuron.html#a23ae47a4501a58d5f9ac6b5d37622e9a">neuron::active</a></div><div class="ttdeci">bool active</div><div class="ttdef"><b>Definition:</b> neuron.h:14</div></div>
+<div class="ttc" id="structneuron_html_a6751788971a339ccc522333f740ffd41"><div class="ttname"><a href="structneuron.html#a6751788971a339ccc522333f740ffd41">neuron::activate</a></div><div class="ttdeci">void activate()</div><div class="ttdef"><b>Definition:</b> neuron.cpp:40</div></div>
+<div class="ttc" id="structneuron_html_adbea299710f3a6402e83433b3c0cabf9"><div class="ttname"><a href="structneuron.html#adbea299710f3a6402e83433b3c0cabf9">neuron::deactivate</a></div><div class="ttdeci">void deactivate()</div><div class="ttdef"><b>Definition:</b> neuron.cpp:45</div></div>
+<div class="ttc" id="structneuron_html_a69a9b529ba8d2b4ad4c996bf08a8bd2f"><div class="ttname"><a href="structneuron.html#a69a9b529ba8d2b4ad4c996bf08a8bd2f">neuron::~neuron</a></div><div class="ttdeci">~neuron()</div><div class="ttdef"><b>Definition:</b> neuron.h:21</div></div>
+<div class="ttc" id="structneuron_html"><div class="ttname"><a href="structneuron.html">neuron</a></div><div class="ttdoc">The neuron structure, which is the smallest unit of a neural network. </div><div class="ttdef"><b>Definition:</b> neuron.h:7</div></div>
+<div class="ttc" id="structneuron_html_adbb698db478b03d1df7da41d977a8690"><div class="ttname"><a href="structneuron.html#adbb698db478b03d1df7da41d977a8690">neuron::deltas</a></div><div class="ttdeci">std::vector&lt; double &gt; deltas</div><div class="ttdef"><b>Definition:</b> neuron.h:10</div></div>
+<div class="ttc" id="structneuron_html_abbe656fe98d44f42741b9b3412c05187"><div class="ttname"><a href="structneuron.html#abbe656fe98d44f42741b9b3412c05187">neuron::create</a></div><div class="ttdeci">void create(int n_input)</div><div class="ttdef"><b>Definition:</b> neuron.cpp:16</div></div>
+<div class="ttc" id="structneuron_html_a46dd6f29c430390f623f708e12fdf333"><div class="ttname"><a href="structneuron.html#a46dd6f29c430390f623f708e12fdf333">neuron::weights</a></div><div class="ttdeci">std::vector&lt; double &gt; weights</div><div class="ttdef"><b>Definition:</b> neuron.h:9</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Aug 19 2017 23:34:12 for Machine Learning C++ by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Sep 2 2017 00:14:28 for Machine Learning C++ by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

@@ -34,18 +34,6 @@ layer.h
 boost/log/trivial.hpp
 -
 
-/home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network.unittest/layer_test.cpp
-pch.h
-/home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network.unittest/pch.h
-../neural_network/layer.h
-/home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network.unittest/../neural_network/layer.h
-
-/home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network.unittest/neuron_test.cpp
-pch.h
-/home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network.unittest/pch.h
-../neural_network/neuron.h
-/home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network.unittest/../neural_network/neuron.h
-
 /home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network.unittest/nnet_test.cpp
 pch.h
 /home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network.unittest/pch.h

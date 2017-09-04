@@ -3,7 +3,7 @@
 }
 
 
-A backpropagation neural network class The back-\/propagation network has the architecture of three components propagate, update and train.  
+A backpropagation neural network class. The back-\/propagation network has the architecture of three components propagate, update and train.  
 
 
 
@@ -34,6 +34,12 @@ void \hyperlink{classbpnet_a87beae9040de4815cbcada7420f0df2a}{update} (int layer
 virtual double \hyperlink{classbpnet_a653eae04b7dcfb4271421fd079849f89}{train} (const std\-::vector$<$ double $>$ \&train\-\_\-data, const std\-::vector$<$ double $>$ \&train\-\_\-class, double learning\-\_\-rate, double momentum)
 \item 
 virtual void \hyperlink{classbpnet_a9da604c278a2d583511071fdc754c9c6}{get\-\_\-output} (std\-::vector$<$ double $>$ \&input, std\-::vector$<$ double $>$ \&output)
+\item 
+\hypertarget{classbpnet_acb2e9180ca3a3e42776f3487b9a3bfe9}{virtual void {\bfseries extract\-\_\-weights} (std\-::vector$<$ double $>$ \&weights\-\_\-flattened, int \&dim)}\label{classbpnet_acb2e9180ca3a3e42776f3487b9a3bfe9}
+
+\item 
+\hypertarget{classbpnet_a2ae976225ed085139806242a7cefd84f}{virtual void {\bfseries broadcast\-\_\-weights} (std\-::vector$<$ double $>$ \&weights\-\_\-flattened, int \&dim)}\label{classbpnet_a2ae976225ed085139806242a7cefd84f}
+
 \end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
@@ -63,7 +69,7 @@ $<$ \hyperlink{structlayer}{layer} $>$ $>$ \hyperlink{classbpnet_a9f1d31d7cdb034
 
 
 \subsection{Detailed Description}
-A backpropagation neural network class The back-\/propagation network has the architecture of three components propagate, update and train. 
+A backpropagation neural network class. The back-\/propagation network has the architecture of three components propagate, update and train. 
 
 \subsection{Constructor \& Destructor Documentation}
 \hypertarget{classbpnet_adfeeece0abde65630da85276488cc0b2}{\index{bpnet@{bpnet}!bpnet@{bpnet}}

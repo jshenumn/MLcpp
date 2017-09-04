@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['input_5flayer',['input_layer',['../classbpnet.html#aeb161ecafe664d9f6e0d188b94c778f4',1,'bpnet']]]
+  ['hidden_5flayers',['hidden_layers',['../classbpnet.html#a9f1d31d7cdb034587768016a799c36f6',1,'bpnet']]]
 ];

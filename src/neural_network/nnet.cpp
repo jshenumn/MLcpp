@@ -84,6 +84,102 @@ void bpnet::update(int layer_index)
     }
 }
 
+void bpnet::extract_weights(std::vector<double>& weights_flattened, int& dim)
+{
+    weights_flattened.clear(); //clean up weights
+
+    //harvest input layer
+    for(int j = 0; j < n_neurons_in; j++)
+    {
+        // first push back the bias weights
+        weights_flattened.push_back(input_layer->neurons[j].w_bias);
+        // then  all other weights
+        for(int k = 0; k < dim; k++)
+        {
+            weights_flattened.push_back(input_layer->neurons[j].weights[k]);
+        }
+    }
+
+    //harvest all hidden layers
+    for(int i = 0; i < n_hidden_layers; i++)
+    {
+        for(int j = 0; j < n_neurons_in; j++)
+        {
+            // first push back the bias weights
+            weights_flattened.push_back(hidden_layers[i]->neurons[j].w_bias);
+            // then  all other weights
+            for(int k = 0; k < dim; k++)
+            {
+                weights_flattened.push_back(hidden_layers[i]->neurons[j].weights[k]);
+            }
+        }
+    }
+
+    //harvest the output layers
+    for(int j = 0; j < n_output; j++)
+    {
+        // first push back the bias weights
+        weights_flattened.push_back(output_layer->neurons[j].w_bias);
+        // then  all other weights
+        for(int k = 0; k < dim; k++)
+        {
+            weights_flattened.push_back(output_layer->neurons[j].weights[k]);
+        }
+    }
+
+}
+
+
+// take the update from the main process and update the slaves
+void bpnet::broadcast_weights(std::vector<double>& weights_flattened, int& dim)
+{
+    int index = 0;
+    //broadcast input layer
+    for(int j = 0; j < n_neurons_in; j++)
+    {
+        // first update the bias weights
+        input_layer->neurons[j].w_bias = weights_flattened[index];
+        index++;
+        // then  all other weights
+        for(int k = 0; k < dim; k++)
+        {
+            input_layer->neurons[j].weights[k] = weights_flattened[index];
+            index++;
+        }
+    }
+
+    //broadcast all hidden layers
+    for(int i = 0; i < n_hidden_layers; i++)
+    {
+        for(int j = 0; j < n_neurons_in; j++)
+        {
+            // first the bias weights
+            hidden_layers[i]->neurons[j].w_bias = weights_flattened[index];
+            index++;
+            // then  all other weights
+            for(int k = 0; k < dim; k++)
+            {
+               hidden_layers[i]->neurons[j].weights[k] = weights_flattened[index];
+               index++;
+            }
+        }
+    }
+
+    //broadcast the output layers
+    for(int j = 0; j < n_output; j++)
+    {
+        // first the bias weights
+        output_layer->neurons[j].w_bias = weights_flattened[index];
+        index++;
+        // then  all other weights
+        for(int k = 0; k < dim; k++)
+        {
+            output_layer->neurons[j].weights[k] = weights_flattened[index];
+            index++;
+        }
+    }
+
+}
 
 
 // =========   MSE loss function with sigmoid activation =========//
@@ -136,10 +232,19 @@ void bpnet_MSE_sigmoid::propagate(const std::vector<double>& input)
     bpnet::propagate(input);
 }
 
-
 void bpnet_MSE_sigmoid::update(int layer_index)
 {
     bpnet::update(layer_index);
+}
+
+void bpnet_MSE_sigmoid::extract_weights(std::vector<double>& weights_flattened, int& dim)
+{
+    bpnet::extract_weights(weights_flattened, dim);
+}
+
+void bpnet_MSE_sigmoid::broadcast_weights(std::vector<double>& weights_flattened, int& dim)
+{
+    bpnet::broadcast_weights(weights_flattened, dim);
 }
 
 double bpnet_MSE_sigmoid::train(const std::vector<double>& train_data, const std::vector<double>& train_class, double learning_rate, double momentum)
@@ -295,6 +400,16 @@ void bpnet_CrossEntropy_softmax::propagate(const std::vector<double>& input)
 void bpnet_CrossEntropy_softmax::update(int layer_index)
 {
     bpnet::update(layer_index);
+}
+
+void bpnet_CrossEntropy_softmax::extract_weights(std::vector<double>& weights_flattened, int& dim)
+{
+    bpnet::extract_weights(weights_flattened, dim);
+}
+
+void bpnet_CrossEntropy_softmax::broadcast_weights(std::vector<double>& weights_flattened, int& dim)
+{
+    bpnet::broadcast_weights(weights_flattened, dim);
 }
 
 double bpnet_CrossEntropy_softmax::train(const std::vector<double>& train_data, const std::vector<double>& train_class, double learning_rate, double momentum)

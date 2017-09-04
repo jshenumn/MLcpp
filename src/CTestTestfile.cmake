@@ -8,4 +8,5 @@ ADD_TEST(neuron_network_tests "/home/jiguangshen/HPC_MachineLearning/MLcpp/bin/n
 SUBDIRS(neural_network)
 SUBDIRS(examples)
 SUBDIRS(python_wrapper)
+SUBDIRS(neural_network.mpi)
 SUBDIRS(neural_network.unittest)

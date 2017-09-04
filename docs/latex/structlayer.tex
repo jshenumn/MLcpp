@@ -1,6 +1,15 @@
 \hypertarget{structlayer}{\section{layer Struct Reference}
 \label{structlayer}\index{layer@{layer}}
 }
+
+
+the layer structure which consists of neurons and an activation function.  
+
+
+
+
+{\ttfamily \#include $<$layer.\-h$>$}
+
 Inheritance diagram for layer\-:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -10,11 +19,13 @@ Inheritance diagram for layer\-:\begin{figure}[H]
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{structlayer_a50ca540d57f99add95b7e92c96498810}{void {\bfseries create} (int \-\_\-n\-\_\-input, int \-\_\-n\-\_\-neuron)}\label{structlayer_a50ca540d57f99add95b7e92c96498810}
-
+\hyperlink{structlayer_a95796de3b5f8aa07f49effa03a03f6f8}{layer} ()
 \item 
-\hypertarget{structlayer_aacf7297d77c1ea2933d5551636f7c9ad}{virtual void {\bfseries calculate} ()=0}\label{structlayer_aacf7297d77c1ea2933d5551636f7c9ad}
-
+virtual \hyperlink{structlayer_ae0781f14cd91478477526183951eb052}{$\sim$layer} ()
+\item 
+void \hyperlink{structlayer_a50ca540d57f99add95b7e92c96498810}{create} (int \-\_\-n\-\_\-input, int \-\_\-n\-\_\-neuron)
+\item 
+virtual void \hyperlink{structlayer_aacf7297d77c1ea2933d5551636f7c9ad}{calculate} ()=0
 \end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
@@ -31,6 +42,55 @@ Inheritance diagram for layer\-:\begin{figure}[H]
 \hypertarget{structlayer_a8323a6ef4cab8f81515ca964b79034fe}{int {\bfseries n\-\_\-input}}\label{structlayer_a8323a6ef4cab8f81515ca964b79034fe}
 
 \end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+the layer structure which consists of neurons and an activation function. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{structlayer_a95796de3b5f8aa07f49effa03a03f6f8}{\index{layer@{layer}!layer@{layer}}
+\index{layer@{layer}!layer@{layer}}
+\subsubsection[{layer}]{\setlength{\rightskip}{0pt plus 5cm}layer\-::layer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{structlayer_a95796de3b5f8aa07f49effa03a03f6f8}
+constructor \hypertarget{structlayer_ae0781f14cd91478477526183951eb052}{\index{layer@{layer}!$\sim$layer@{$\sim$layer}}
+\index{$\sim$layer@{$\sim$layer}!layer@{layer}}
+\subsubsection[{$\sim$layer}]{\setlength{\rightskip}{0pt plus 5cm}virtual layer\-::$\sim$layer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{structlayer_ae0781f14cd91478477526183951eb052}
+destructor 
+
+\subsection{Member Function Documentation}
+\hypertarget{structlayer_aacf7297d77c1ea2933d5551636f7c9ad}{\index{layer@{layer}!calculate@{calculate}}
+\index{calculate@{calculate}!layer@{layer}}
+\subsubsection[{calculate}]{\setlength{\rightskip}{0pt plus 5cm}virtual void layer\-::calculate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{structlayer_aacf7297d77c1ea2933d5551636f7c9ad}
+pure virtual function to calculate layer output based on the activation function 
+
+Implemented in \hyperlink{structlayer__softmax_addf2fcfd6b5c0131e2429f49835bf8e8}{layer\-\_\-softmax}, \hyperlink{structlayer__tanh_aa06a41d4ddfa798cafd99cf1e22f1a48}{layer\-\_\-tanh}, and \hyperlink{structlayer__sigmoid_a04a54d415eb5412fcd78478b3e113f3f}{layer\-\_\-sigmoid}.
+
+\hypertarget{structlayer_a50ca540d57f99add95b7e92c96498810}{\index{layer@{layer}!create@{create}}
+\index{create@{create}!layer@{layer}}
+\subsubsection[{create}]{\setlength{\rightskip}{0pt plus 5cm}void layer\-::create (
+\begin{DoxyParamCaption}
+\item[{int}]{\-\_\-n\-\_\-input, }
+\item[{int}]{\-\_\-n\-\_\-neuron}
+\end{DoxyParamCaption}
+)}}\label{structlayer_a50ca540d57f99add95b7e92c96498810}
+create a layer 
+\begin{DoxyParams}{Parameters}
+{\em \-\_\-n\-\_\-input} & the number of inputs \\
+\hline
+{\em \-\_\-n\-\_\-neuron} & the number of neurons in the layer \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this struct was generated from the following files\-:\begin{DoxyCompactItemize}

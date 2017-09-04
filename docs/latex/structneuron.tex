@@ -1,26 +1,34 @@
 \hypertarget{structneuron}{\section{neuron Struct Reference}
 \label{structneuron}\index{neuron@{neuron}}
 }
+
+
+The neuron structure, which is the smallest unit of a neural network.  
+
+
+
+
+{\ttfamily \#include $<$neuron.\-h$>$}
+
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{structneuron_abbe656fe98d44f42741b9b3412c05187}{void {\bfseries create} (int n\-\_\-input)}\label{structneuron_abbe656fe98d44f42741b9b3412c05187}
-
+\hyperlink{structneuron_a4d11d8f1c09393022c099f0ec07d1fbf}{neuron} ()
 \item 
-\hypertarget{structneuron_a6751788971a339ccc522333f740ffd41}{void {\bfseries activate} ()}\label{structneuron_a6751788971a339ccc522333f740ffd41}
-
+\hyperlink{structneuron_a69a9b529ba8d2b4ad4c996bf08a8bd2f}{$\sim$neuron} ()
 \item 
-\hypertarget{structneuron_adbea299710f3a6402e83433b3c0cabf9}{void {\bfseries deactivate} ()}\label{structneuron_adbea299710f3a6402e83433b3c0cabf9}
-
+void \hyperlink{structneuron_abbe656fe98d44f42741b9b3412c05187}{create} (int n\-\_\-input)
+\item 
+void \hyperlink{structneuron_a6751788971a339ccc522333f740ffd41}{activate} ()
+\item 
+void \hyperlink{structneuron_adbea299710f3a6402e83433b3c0cabf9}{deactivate} ()
 \end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{structneuron_a46dd6f29c430390f623f708e12fdf333}{std\-::vector$<$ double $>$ {\bfseries weights}}\label{structneuron_a46dd6f29c430390f623f708e12fdf333}
-
+std\-::vector$<$ double $>$ \hyperlink{structneuron_a46dd6f29c430390f623f708e12fdf333}{weights}
 \item 
-\hypertarget{structneuron_adbb698db478b03d1df7da41d977a8690}{std\-::vector$<$ double $>$ {\bfseries deltas}}\label{structneuron_adbb698db478b03d1df7da41d977a8690}
-
+std\-::vector$<$ double $>$ \hyperlink{structneuron_adbb698db478b03d1df7da41d977a8690}{deltas}
 \item 
 \hypertarget{structneuron_ae47a1f9995c0649c2d5811692c1d294f}{double {\bfseries output}}\label{structneuron_ae47a1f9995c0649c2d5811692c1d294f}
 
@@ -31,10 +39,70 @@
 \hypertarget{structneuron_a02ae7cb21e0edaf78e96b687ae10c2b6}{double {\bfseries w\-\_\-bias}}\label{structneuron_a02ae7cb21e0edaf78e96b687ae10c2b6}
 
 \item 
-\hypertarget{structneuron_a23ae47a4501a58d5f9ac6b5d37622e9a}{bool {\bfseries active}}\label{structneuron_a23ae47a4501a58d5f9ac6b5d37622e9a}
-
+bool \hyperlink{structneuron_a23ae47a4501a58d5f9ac6b5d37622e9a}{active}
 \end{DoxyCompactItemize}
 
+
+\subsection{Detailed Description}
+The neuron structure, which is the smallest unit of a neural network. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{structneuron_a4d11d8f1c09393022c099f0ec07d1fbf}{\index{neuron@{neuron}!neuron@{neuron}}
+\index{neuron@{neuron}!neuron@{neuron}}
+\subsubsection[{neuron}]{\setlength{\rightskip}{0pt plus 5cm}neuron\-::neuron (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{structneuron_a4d11d8f1c09393022c099f0ec07d1fbf}
+constructor \hypertarget{structneuron_a69a9b529ba8d2b4ad4c996bf08a8bd2f}{\index{neuron@{neuron}!$\sim$neuron@{$\sim$neuron}}
+\index{$\sim$neuron@{$\sim$neuron}!neuron@{neuron}}
+\subsubsection[{$\sim$neuron}]{\setlength{\rightskip}{0pt plus 5cm}neuron\-::$\sim$neuron (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structneuron_a69a9b529ba8d2b4ad4c996bf08a8bd2f}
+destructor 
+
+\subsection{Member Function Documentation}
+\hypertarget{structneuron_a6751788971a339ccc522333f740ffd41}{\index{neuron@{neuron}!activate@{activate}}
+\index{activate@{activate}!neuron@{neuron}}
+\subsubsection[{activate}]{\setlength{\rightskip}{0pt plus 5cm}void neuron\-::activate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{structneuron_a6751788971a339ccc522333f740ffd41}
+activate neuron if deactivated \hypertarget{structneuron_abbe656fe98d44f42741b9b3412c05187}{\index{neuron@{neuron}!create@{create}}
+\index{create@{create}!neuron@{neuron}}
+\subsubsection[{create}]{\setlength{\rightskip}{0pt plus 5cm}void neuron\-::create (
+\begin{DoxyParamCaption}
+\item[{int}]{n\-\_\-input}
+\end{DoxyParamCaption}
+)}}\label{structneuron_abbe656fe98d44f42741b9b3412c05187}
+create the neuron 
+\begin{DoxyParams}{Parameters}
+{\em n\-\_\-input} & the dimension of input \\
+\hline
+\end{DoxyParams}
+\hypertarget{structneuron_adbea299710f3a6402e83433b3c0cabf9}{\index{neuron@{neuron}!deactivate@{deactivate}}
+\index{deactivate@{deactivate}!neuron@{neuron}}
+\subsubsection[{deactivate}]{\setlength{\rightskip}{0pt plus 5cm}void neuron\-::deactivate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{structneuron_adbea299710f3a6402e83433b3c0cabf9}
+deactivate neuron if activated 
+
+\subsection{Member Data Documentation}
+\hypertarget{structneuron_a23ae47a4501a58d5f9ac6b5d37622e9a}{\index{neuron@{neuron}!active@{active}}
+\index{active@{active}!neuron@{neuron}}
+\subsubsection[{active}]{\setlength{\rightskip}{0pt plus 5cm}bool neuron\-::active}}\label{structneuron_a23ae47a4501a58d5f9ac6b5d37622e9a}
+usuful when perform random shut down \hypertarget{structneuron_adbb698db478b03d1df7da41d977a8690}{\index{neuron@{neuron}!deltas@{deltas}}
+\index{deltas@{deltas}!neuron@{neuron}}
+\subsubsection[{deltas}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$double$>$ neuron\-::deltas}}\label{structneuron_adbb698db478b03d1df7da41d977a8690}
+The gradient increment \hypertarget{structneuron_a46dd6f29c430390f623f708e12fdf333}{\index{neuron@{neuron}!weights@{weights}}
+\index{weights@{weights}!neuron@{neuron}}
+\subsubsection[{weights}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$double$>$ neuron\-::weights}}\label{structneuron_a46dd6f29c430390f623f708e12fdf333}
+The weights (not include bias) 
 
 The documentation for this struct was generated from the following files\-:\begin{DoxyCompactItemize}
 \item 

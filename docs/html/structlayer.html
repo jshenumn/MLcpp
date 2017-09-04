@@ -91,25 +91,32 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">layer Struct Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>the layer structure which consists of neurons and an activation function.  
+ <a href="structlayer.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="layer_8h_source.html">layer.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for layer:</div>
 <div class="dyncontent">
  <div class="center">
   <img src="structlayer.png" usemap="#layer_map" alt=""/>
   <map id="layer_map" name="layer_map">
-<area href="structlayer__sigmoid.html" alt="layer_sigmoid" shape="rect" coords="0,56,90,80"/>
-<area href="structlayer__softmax.html" alt="layer_softmax" shape="rect" coords="100,56,190,80"/>
-<area href="structlayer__tanh.html" alt="layer_tanh" shape="rect" coords="200,56,290,80"/>
+<area href="structlayer__sigmoid.html" title="The layer with a sigmoid activation. " alt="layer_sigmoid" shape="rect" coords="0,56,90,80"/>
+<area href="structlayer__softmax.html" title="The layer with a softmax activation, which is popular for multi-class cases. " alt="layer_softmax" shape="rect" coords="100,56,190,80"/>
+<area href="structlayer__tanh.html" title="The layer with a tanh activation. " alt="layer_tanh" shape="rect" coords="200,56,290,80"/>
 </map>
  </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a50ca540d57f99add95b7e92c96498810"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a50ca540d57f99add95b7e92c96498810"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>create</b> (int _n_input, int _n_neuron)</td></tr>
+<tr class="memitem:a95796de3b5f8aa07f49effa03a03f6f8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlayer.html#a95796de3b5f8aa07f49effa03a03f6f8">layer</a> ()</td></tr>
+<tr class="separator:a95796de3b5f8aa07f49effa03a03f6f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0781f14cd91478477526183951eb052"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlayer.html#ae0781f14cd91478477526183951eb052">~layer</a> ()</td></tr>
+<tr class="separator:ae0781f14cd91478477526183951eb052"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50ca540d57f99add95b7e92c96498810"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlayer.html#a50ca540d57f99add95b7e92c96498810">create</a> (int _n_input, int _n_neuron)</td></tr>
 <tr class="separator:a50ca540d57f99add95b7e92c96498810"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aacf7297d77c1ea2933d5551636f7c9ad"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aacf7297d77c1ea2933d5551636f7c9ad"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>calculate</b> ()=0</td></tr>
+<tr class="memitem:aacf7297d77c1ea2933d5551636f7c9ad"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlayer.html#aacf7297d77c1ea2933d5551636f7c9ad">calculate</a> ()=0</td></tr>
 <tr class="separator:aacf7297d77c1ea2933d5551636f7c9ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
@@ -127,6 +134,110 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>n_neuron</b></td></tr>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>n_input</b></td></tr>
 <tr class="separator:a8323a6ef4cab8f81515ca964b79034fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>the layer structure which consists of neurons and an activation function. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a95796de3b5f8aa07f49effa03a03f6f8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">layer::layer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>constructor </p>
+
+</div>
+</div>
+<a class="anchor" id="ae0781f14cd91478477526183951eb052"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual layer::~layer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>destructor </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="aacf7297d77c1ea2933d5551636f7c9ad"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void layer::calculate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>pure virtual function to calculate layer output based on the activation function </p>
+
+<p>Implemented in <a class="el" href="structlayer__softmax.html#addf2fcfd6b5c0131e2429f49835bf8e8">layer_softmax</a>, <a class="el" href="structlayer__tanh.html#aa06a41d4ddfa798cafd99cf1e22f1a48">layer_tanh</a>, and <a class="el" href="structlayer__sigmoid.html#a04a54d415eb5412fcd78478b3e113f3f">layer_sigmoid</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a50ca540d57f99add95b7e92c96498810"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void layer::create </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>_n_input</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>_n_neuron</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>create a layer </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_n_input</td><td>the number of inputs </td></tr>
+    <tr><td class="paramname">_n_neuron</td><td>the number of neurons in the layer </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following files:<ul>
 <li>/home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network/<a class="el" href="layer_8h_source.html">layer.h</a></li>
 <li>/home/jiguangshen/HPC_MachineLearning/MLcpp/src/neural_network/layer.cpp</li>
@@ -134,7 +245,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>n_input</b></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Aug 19 2017 23:34:13 for Machine Learning C++ by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Sep 2 2017 00:14:29 for Machine Learning C++ by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
